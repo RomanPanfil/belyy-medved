@@ -1978,7 +1978,6 @@ img {
 }
 @media (max-width: 992px) {
   .screen-promo {
-    padding-left: 40px;
     height: calc(var(--vh, 1vh) * 100);
   }
   .screen-promo-content {
