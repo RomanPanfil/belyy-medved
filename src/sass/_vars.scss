@@ -1,0 +1,89 @@
+// Colors & BG's ---
+$bgc: #23372B;
+$font: #FFF;
+// $font_dark: #1D1D1B;
+// $font_2: #2D2835;
+// $titles: #2D2835;
+$error: #FC8585;
+
+$primary: #FFF8D9;
+$primary_hover: lighten($primary, 10%);
+$primary_active: lighten($primary, 16%);
+
+
+$link: $primary;
+$link_hover: $primary_hover;
+// $link_active: $primary_active;
+$link_border: $primary_hover;
+$link_border_hover: transparent;
+
+$border: #dbdbdb;
+$border_light: #F1F1F1;
+$devider: #d6d6d6;
+
+
+
+$input_border: #D4D4D4;
+$input_hover: darken($input_border, 15%);
+$input_focus: $primary;
+$input_shadow: #f6f6f6;
+$jq_border: #a3a3a3;
+$jq_hover: darken($jq_border,15%);
+$jq_focus: $primary;
+
+
+// Layouts
+$inner: 1520px;
+$gutter: 50px;
+$col_gutter: 15px;
+$block_margin: 0 0 25px;
+
+
+// Grid
+$breakpoints: ("xl":1440,"lg":1260,"md":1024,"sm":768,"xs":599,"us":400);
+
+
+// Typography ---
+$fontsize: 18;
+$weight: 400;
+$basefont: 'Bebas Neue Pro';
+$inter: 'Inter';
+$lh: 1.42;
+$th: 1.42;
+$paragraph_margin: 0px 0px 18px;
+
+// headings
+$headings_font_family: $basefont;
+$headings_margin: 40px 0px 40px;
+$headings_font_weight: 500;
+// $headings_color: $titles;
+$headings_text_transform: none;
+$h1: 72;
+$h2: 54;
+$h3: 40;
+$h4: 30;
+$h5: 24;
+$h6: $fontsize;
+
+$block_heading_font_size: 24;
+$block_heading_font_weight: 700;
+
+// article typography
+// $article_font_size: 18;
+// $article_line_height: (22/$article_font_size);
+// $article_paragraph_margin: $paragraph_margin;
+// $article_img_margin: $paragraph_margin;
+// $article_font_weight: $weight;
+
+
+// $trn_d: .4s; //transition-delay
+
+
+@mixin fz($f_size) {
+	font-size: $f_size + px;
+	font-size: $f_size/16 + rem;
+}
+
+@mixin ls($lsp) {
+	letter-spacing: $lsp/1000 + em;
+}
