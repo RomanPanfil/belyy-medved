@@ -677,15 +677,6 @@ img {
 }
 @media (max-width: 768px) {
   .ui-btn {
-    font-size: 12px;
-    font-size: 0.75rem;
-    height: 35px;
-    line-height: 35px;
-    padding: 0px 20px;
-  }
-}
-@media (max-width: 599px) {
-  .ui-btn {
     font-size: 20px;
     font-size: 1.25rem;
     height: 64px;
@@ -1907,18 +1898,13 @@ img {
   visibility: hidden;
   display: none;
 }
-.screen-promo-logo {
-  position: absolute;
-  top: 0;
-  right: 7.633vw;
-}
 .screen-promo-btn {
   margin: 0 auto;
 }
-@media (max-width: 599px) {
+@media (max-width: 768px) {
   .screen-promo-btn {
     position: absolute;
-    bottom: 120px;
+    bottom: 40px;
     z-index: 3;
     left: 50%;
     -webkit-transform: translate(-50%, 0);
@@ -1962,18 +1948,10 @@ img {
   .screen-promo-content {
     max-width: 260px;
   }
-  .screen-promo-logo {
-    margin-bottom: 40px;
-    max-width: 150px;
-  }
 }
 @media (max-width: 1180px) {
   .screen-promo-content {
     max-width: 200px;
-  }
-  .screen-promo-logo {
-    margin-bottom: 25px;
-    max-width: 120px;
   }
 }
 @media (max-width: 992px) {
@@ -1982,9 +1960,6 @@ img {
   }
   .screen-promo-content {
     max-width: 275px;
-  }
-  .screen-promo-logo {
-    max-width: 80px;
   }
   .screen-promo-bottles {
     right: -5%;
@@ -2001,7 +1976,7 @@ img {
     max-width: 115%;
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 768px) {
   .screen-promo {
     padding-left: 30px;
     padding-right: 30px;
@@ -2926,6 +2901,12 @@ img {
     padding: 30px 0px;
   }
 }
+@media (max-width: 768px) {
+  .screen-promo-left .screen-promo-btn {
+    display: none;
+    visibility: hidden;
+  }
+}
 
 .screen-promo-bottle {
   height: 100vh;
@@ -2959,7 +2940,7 @@ img {
     padding: 30px 0px;
   }
 }
-@media (max-width: 599px) {
+@media (max-width: 768px) {
   .screen-promo-bottle {
     position: absolute;
     width: 100%;
@@ -2970,6 +2951,21 @@ img {
         -ms-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
+}
+.screen-promo-bottle .screen-promo-btn {
+  display: none;
+  visibility: hidden;
+}
+@media (max-width: 768px) {
+  .screen-promo-bottle .screen-promo-btn {
+    display: block;
+    visibility: visible;
+  }
+}
+
+.screen-promo-imgs {
+  margin-left: -60px;
+  margin-right: -60px;
 }
 
 .screen-promo-bottle img {
