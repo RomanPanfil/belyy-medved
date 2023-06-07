@@ -870,16 +870,17 @@
     &-content {
       padding-left: 20px;
       padding-right: 20px;
-      padding-top: 20px;
+      padding-top: 130px;
       padding-bottom: 20px;
     }
     &-logo {
-      display: none;
-      // margin-bottom: 20px;
+      // display: none;
+      margin-bottom: 20px;
 
-      // img {
-      //   width: 180px;
-      // }
+      img {
+        // width: 180px;
+        max-height: 120px;
+      }
     }
     &-question {
       margin-bottom: 25px;

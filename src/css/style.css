@@ -2739,11 +2739,14 @@ img {
   .agree-content {
     padding-left: 20px;
     padding-right: 20px;
-    padding-top: 20px;
+    padding-top: 130px;
     padding-bottom: 20px;
   }
   .agree-logo {
-    display: none;
+    margin-bottom: 20px;
+  }
+  .agree-logo img {
+    max-height: 120px;
   }
   .agree-question {
     margin-bottom: 25px;
