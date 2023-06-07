@@ -2983,7 +2983,7 @@ img {
 }
 @media (max-width: 992px) {
   .screen-promo-bottle img {
-    max-height: calc(100vh - 60px);
+    max-height: calc(85vh - 60px);
   }
 }
 
