@@ -157,45 +157,42 @@
     padding-right: 30px;
 
     &-logo {
-      margin: 0 auto;
-      right: unset;
-      left: 50%;     
-      transform: translateX(-50%);
-      max-width: 156px;
+      display: none;
+      visibility: hidden;
     }
     &-content {
       margin: 0 auto;
       max-width: 100%;
       text-align: center;
-      margin-top: 74px;
+      margin-top: 65vh;
     }
     &-slogan {
       visibility: hidden;
       display: none;  
-      &-mobile {
+      &-mobile {        
         visibility: visible;
         display: block;
         @include fz(42);
         line-height: 1.2;
         color: $font;
+        position: absolute;
+        top: 0;
+        right: 0;
         img {
+          max-width: 46%;
           display: block;
           margin-left: auto;
-          margin-right: -20px;
-          margin-top: 22px;
-          padding-bottom: 14vh;
         }
       }    
     }   
     &-bottles {
-      top: 254px;
+      top: 50%;
       right: unset;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translate(-50%, -50%);
     }   
   }
   @media (max-width: 390px) {
-    // padding-top: 10vh;
     min-height: 550px;
   }
 }
@@ -273,28 +270,28 @@
   }
 
   &-content {    
-    padding: min(16vh,160px) 100px 0 40px;
+    padding: min(16vh,160px) 120px 0 150px;
     background: url(../images/bottom-screen-bg.png) right center no-repeat;
     background-size: auto 100%;
   }
 
   &-inner {
-    max-width: 500px;
+    max-width: 870px;
     margin: 0 auto;
   }
 
-  &-title {
-    @include fz(68);
-    line-height: 1.1;
-    margin-bottom: min(6vh, 60px);   
+  // &-title {
+  //   @include fz(68);
+  //   line-height: 1.1;
+  //   margin-bottom: min(6vh, 60px);   
 
-    @media (min-width: 1921px) {
-      @include fz(90);
-    }
-  }
+  //   @media (min-width: 1921px) {
+  //     @include fz(90);
+  //   }
+  // }
 
   &-descr {
-    max-height: 22vh;
+    @include fz(48);    
     overflow-y: auto;
     color: #F3E8D4;
     padding-right: 40px;
@@ -332,9 +329,9 @@
     &-content {
       padding-left: 80px;
     }
-    &-title {
-      @include fz(54);
-    }
+    // &-title {
+    //   @include fz(54);
+    // }
     &-descr {
       padding-right: 25px;
     }
@@ -358,10 +355,10 @@
     &-inner {
       max-width: 380px;
     }
-    &-title {
-      @include fz(48);
-      margin-bottom: 35px;
-    }
+    // &-title {
+    //   @include fz(48);
+    //   margin-bottom: 35px;
+    // }
   }
 
   @media (max-width: 1180px) {
@@ -498,11 +495,10 @@
   &-preview {
     display: inline-block;
     vertical-align: middle;
-    width: 60px;
-    height: 60px;
+    width: 72px;
+    height: 72px;
     background-color: rgba(#FFF,.85);
-    position: relative;
-    border-radius: 30px;
+    position: relative;    
     overflow: hidden;
     margin: 0px 6px 0px;
     cursor: pointer;

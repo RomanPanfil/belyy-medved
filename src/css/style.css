@@ -2001,19 +2001,14 @@ img {
     padding-right: 30px;
   }
   .screen-promo-logo {
-    margin: 0 auto;
-    right: unset;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
-    max-width: 156px;
+    display: none;
+    visibility: hidden;
   }
   .screen-promo-content {
     margin: 0 auto;
     max-width: 100%;
     text-align: center;
-    margin-top: 74px;
+    margin-top: 65vh;
   }
   .screen-promo-slogan {
     visibility: hidden;
@@ -2026,21 +2021,22 @@ img {
     font-size: 2.625rem;
     line-height: 1.2;
     color: #FFF;
+    position: absolute;
+    top: 0;
+    right: 0;
   }
   .screen-promo-slogan-mobile img {
+    max-width: 46%;
     display: block;
     margin-left: auto;
-    margin-right: -20px;
-    margin-top: 22px;
-    padding-bottom: 14vh;
   }
   .screen-promo-bottles {
-    top: 254px;
+    top: 50%;
     right: unset;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-            transform: translateX(-50%);
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 @media (max-width: 390px) {
@@ -2123,28 +2119,17 @@ img {
      object-position: center;
 }
 .benefits-slide-content {
-  padding: min(16vh, 160px) 100px 0 40px;
+  padding: min(16vh, 160px) 120px 0 150px;
   background: url(../images/bottom-screen-bg.png) right center no-repeat;
   background-size: auto 100%;
 }
 .benefits-slide-inner {
-  max-width: 500px;
+  max-width: 870px;
   margin: 0 auto;
 }
-.benefits-slide-title {
-  font-size: 68px;
-  font-size: 4.25rem;
-  line-height: 1.1;
-  margin-bottom: min(6vh, 60px);
-}
-@media (min-width: 1921px) {
-  .benefits-slide-title {
-    font-size: 90px;
-    font-size: 5.625rem;
-  }
-}
 .benefits-slide-descr {
-  max-height: 22vh;
+  font-size: 48px;
+  font-size: 3rem;
   overflow-y: auto;
   color: #F3E8D4;
   padding-right: 40px;
@@ -2180,10 +2165,6 @@ img {
   .benefits-slide-content {
     padding-left: 80px;
   }
-  .benefits-slide-title {
-    font-size: 54px;
-    font-size: 3.375rem;
-  }
   .benefits-slide-descr {
     padding-right: 25px;
   }
@@ -2208,11 +2189,6 @@ img {
   }
   .benefits-slide-inner {
     max-width: 380px;
-  }
-  .benefits-slide-title {
-    font-size: 48px;
-    font-size: 3rem;
-    margin-bottom: 35px;
   }
 }
 @media (max-width: 1180px) {
@@ -2338,11 +2314,10 @@ img {
 .benefits-slider-preview {
   display: inline-block;
   vertical-align: middle;
-  width: 60px;
-  height: 60px;
+  width: 72px;
+  height: 72px;
   background-color: rgba(255, 255, 255, 0.85);
   position: relative;
-  border-radius: 30px;
   overflow: hidden;
   margin: 0px 6px 0px;
   cursor: pointer;
