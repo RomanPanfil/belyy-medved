@@ -62,6 +62,29 @@ function buildPreviews(swiper) {
     const current = inst.activeIndex
     document.querySelectorAll('.benefits-slider-preview').forEach(item => item.classList.remove('active'))
     document.querySelectorAll('.benefits-slider-preview')[current].classList.add('active')
+
+    setTimeout(() => {
+      if (!document.querySelector('.swiper-slide-active .benefits-slide-inner') || !document.querySelector('.benefits-slider-nav')) return;
+
+      const sliderTextBlock = document.querySelector('.swiper-slide-active .benefits-slide-inner .benefits-slide-descr');
+      const textBlockHeight = sliderTextBlock.offsetHeight;
+    
+      const sliderNavigation = document.querySelector('.benefits-slider-nav');
+    
+      // Получаем текущую ширину окна браузера
+      const windowWidth = window.innerWidth;
+    
+      // Проверяем условие разрешения для установки значения top
+      if (windowWidth <= 1180) {
+        sliderNavigation.style.top = `${textBlockHeight + 110}px`;
+      } else if (windowWidth <= 1366) {
+        sliderNavigation.style.top = `${textBlockHeight + 130}px`;
+      } else if (windowWidth <= 1680) {
+        sliderNavigation.style.top = `${textBlockHeight + 160}px`;
+      } else {
+        sliderNavigation.style.top = `${textBlockHeight + 220}px`;
+      }
+    })   
   })
 }
 
@@ -78,11 +101,13 @@ buildPreviews(benefitsSwiper);
 (function () {
   if (!document.querySelector('.screen-promo-btn.benefits') || !document.querySelector('.screen-benefits')) return
 
-  document.querySelector('.screen-promo-btn.benefits').addEventListener('click', (e) => {
-    e.preventDefault()
-
-    document.querySelector('.screen-benefits').scrollIntoView({behavior: "smooth"})
+  document.querySelectorAll('.screen-promo-btn.benefits').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault()
+      document.querySelector('.screen-benefits').scrollIntoView({behavior: "smooth"})
+    })
   })
+
 }());
 
 
@@ -231,5 +256,55 @@ document.addEventListener('DOMContentLoaded', function() {
   function removeError() {
     document.querySelector('.agree-date-inputs .year').classList.remove('error');
     document.querySelector('.agree-date-error-text').classList.add('hidden');
+  }
+});
+
+
+// расположение навигации слайдера
+
+window.addEventListener('resize', function() {
+  if (!document.querySelector('.swiper-slide-active .benefits-slide-inner') || !document.querySelector('.benefits-slider-nav')) return;
+
+  const sliderTextBlock = document.querySelector('.swiper-slide-active .benefits-slide-inner .benefits-slide-descr');
+  const textBlockHeight = sliderTextBlock.offsetHeight;
+
+  const sliderNavigation = document.querySelector('.benefits-slider-nav');
+
+  // Получаем текущую ширину окна браузера
+  const windowWidth = window.innerWidth;
+
+  // Проверяем условие разрешения для установки значения top
+  if (windowWidth <= 1180) {
+    sliderNavigation.style.top = `${textBlockHeight + 110}px`;
+  } else if (windowWidth <= 1366) {
+    sliderNavigation.style.top = `${textBlockHeight + 130}px`;
+  } else if (windowWidth <= 1680) {
+    sliderNavigation.style.top = `${textBlockHeight + 160}px`;
+  } else {
+    sliderNavigation.style.top = `${textBlockHeight + 220}px`;
+  }
+});
+
+// Выполнить первоначальное задание значения top при загрузке страницы
+window.addEventListener('load', function() {
+  if (!document.querySelector('.swiper-slide-active .benefits-slide-inner') || !document.querySelector('.benefits-slider-nav')) return;
+
+  const sliderTextBlock = document.querySelector('.swiper-slide-active .benefits-slide-inner .benefits-slide-descr');
+  const textBlockHeight = sliderTextBlock.offsetHeight;
+
+  const sliderNavigation = document.querySelector('.benefits-slider-nav');
+
+  // Получаем текущую ширину окна браузера
+  const windowWidth = window.innerWidth;
+
+  // Проверяем условие разрешения для установки значения top
+  if (windowWidth <= 1180) {
+    sliderNavigation.style.top = `${textBlockHeight + 110}px`;
+  } else if (windowWidth <= 1366) {
+    sliderNavigation.style.top = `${textBlockHeight + 130}px`;
+  } else if (windowWidth <= 1680) {
+    sliderNavigation.style.top = `${textBlockHeight + 160}px`;
+  } else {
+    sliderNavigation.style.top = `${textBlockHeight + 220}px`;
   }
 });

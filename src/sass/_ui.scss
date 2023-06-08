@@ -176,9 +176,7 @@ img {
 		box-shadow: 10px 10px 0px #5E6738;	
 	}
 
-	svg {
-		// position: absolute;
-		// top: 50%;
+	svg {		
 		transform: translate(0, 20%);
 		margin-right: 8px;
 		@media (max-width: 1140px) {
@@ -197,12 +195,11 @@ img {
 	}
 
 	&:hover {
-		box-shadow: none;
-		transform: translate(0px, 1px);		
+		box-shadow: none;	
 	}
-	&:active {		
-		transform: translate(0px, 2px);
-	}
+	// &:active {		
+	// 	transform: translate(0px, 2px);
+	// }
 
 	@media (max-width: 1180px) {
 		@include fz(16);
@@ -211,13 +208,7 @@ img {
 		padding: 0px 33px;
 	}
 
-	// @media (max-width: 768px) {
-	// 	@include fz(12);
-	// 	height: 35px;
-	// 	line-height: 35px;
-	// 	padding: 0px 20px;;
-	//   }
-
+	
 	@media (max-width: 768px) {
 		@include fz(20);
 		height: 64px;
