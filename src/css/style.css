@@ -2135,6 +2135,12 @@ img {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 992px) {
+  .benefits-slide-descr {
+    font-size: 21px;
+    font-size: 1.3125rem;
+  }
+}
 @media (max-width: 599px) {
   .benefits-slide-descr {
     font-size: 20px;
@@ -2183,6 +2189,11 @@ img {
     max-height: 130px;
   }
 }
+@media (max-width: 992px) {
+  .benefits-slide-slogan img {
+    max-height: 100px;
+  }
+}
 .benefits-slide-where {
   position: absolute;
   left: 43%;
@@ -2208,6 +2219,11 @@ img {
     height: 100px;
   }
 }
+@media (max-width: 992px) {
+  .benefits-slide-where {
+    height: 70px;
+  }
+}
 @media (max-width: 1680px) {
   .benefits-slide-content {
     padding: 106px 110px 70px 100px;
@@ -2229,16 +2245,12 @@ img {
   }
   .benefits-slide-content {
     max-width: 100%;
-    padding: 40px 40px 120px;
+    padding: 40px 50px 80px;
   }
   .benefits-slide-title {
     font-size: 36px;
     font-size: 2.25rem;
     margin-bottom: 20px;
-  }
-  .benefits-slide-where {
-    display: none;
-    visibility: hidden;
   }
   .benefits-slide-descr {
     padding-right: 0px;
@@ -2260,6 +2272,10 @@ img {
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 100%;
+  }
+  .benefits-slide-where {
+    display: none;
+    visibility: hidden;
   }
 }
 @media (max-width: 599px) {
@@ -2308,7 +2324,7 @@ img {
 }
 @media (max-width: 992px) {
   .benefits-slider-nav {
-    margin-left: 40px;
+    margin-left: 50px;
   }
 }
 .benefits-slider-nav-inner {

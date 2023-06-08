@@ -75,7 +75,9 @@ function buildPreviews(swiper) {
       const windowWidth = window.innerWidth;
     
       // Проверяем условие разрешения для установки значения top
-      if (windowWidth <= 1180) {
+      if (windowWidth <= 992) {
+        sliderNavigation.style.top = `${textBlockHeight + 70}px`;
+      } else if (windowWidth <= 1180) {
         sliderNavigation.style.top = `${textBlockHeight + 110}px`;
       } else if (windowWidth <= 1366) {
         sliderNavigation.style.top = `${textBlockHeight + 130}px`;
@@ -274,7 +276,9 @@ window.addEventListener('resize', function() {
   const windowWidth = window.innerWidth;
 
   // Проверяем условие разрешения для установки значения top
-  if (windowWidth <= 1180) {
+  if (windowWidth <= 992) {
+    sliderNavigation.style.top = `${textBlockHeight + 70}px`;
+  } else if (windowWidth <= 1180) {
     sliderNavigation.style.top = `${textBlockHeight + 110}px`;
   } else if (windowWidth <= 1366) {
     sliderNavigation.style.top = `${textBlockHeight + 130}px`;
@@ -298,7 +302,9 @@ window.addEventListener('load', function() {
   const windowWidth = window.innerWidth;
 
   // Проверяем условие разрешения для установки значения top
-  if (windowWidth <= 1180) {
+  if (windowWidth <= 992) {
+    sliderNavigation.style.top = `${textBlockHeight + 70}px`;
+  } else if (windowWidth <= 1180) {
     sliderNavigation.style.top = `${textBlockHeight + 110}px`;
   } else if (windowWidth <= 1366) {
     sliderNavigation.style.top = `${textBlockHeight + 130}px`;
