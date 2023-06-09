@@ -212,7 +212,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   yearInput.addEventListener('input', function(event) {
     removeError()
-    const inputValue = event.target.value;
+    let inputValue = event.target.value;
     inputValue = inputValue.replace(/\D/g, ''); // Оставляем только числа
     inputValue = inputValue.slice(0, 4); // Ограничиваем ввод до четырех символов
     event.target.value = inputValue;
