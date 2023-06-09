@@ -203,6 +203,7 @@
     height: auto;
     min-height: 100vh;
     background: #315d34 url(../images/bottom-screen-bg.png) right center no-repeat;
+    background-size: cover;
 
     .screen-alert, .screen-alert.mobile {
       display: none;
