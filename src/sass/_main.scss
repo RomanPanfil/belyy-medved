@@ -939,3 +939,37 @@
 .non-scroll {
   overflow: hidden !important;
 }
+
+
+.footer {
+  background-color: #19211C;
+  @include fz(20);
+  letter-spacing: 0.6px;
+  padding-bottom: 16px;
+  overflow: hidden; 
+  @media (max-width: 1366px) {
+    @include fz(18);
+  }  
+  @media (max-width: 599px) {
+    @include fz(16);
+  }
+
+  &-logo {
+    margin-top: -10px;
+    margin-right: 42px;  
+    @media (max-width: 1366px) {
+      max-height: -8px;
+    }   
+
+    img {
+      max-height: 144px;
+      @media (max-width: 1366px) {
+        max-height: 114px;
+      }     
+    }
+  }
+
+  &-signature {
+    align-self: center;
+  }
+}

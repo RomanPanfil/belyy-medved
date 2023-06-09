@@ -2969,4 +2969,46 @@ img {
 .non-scroll {
   overflow: hidden !important;
 }
+
+.footer {
+  background-color: #19211C;
+  font-size: 20px;
+  font-size: 1.25rem;
+  letter-spacing: 0.6px;
+  padding-bottom: 16px;
+  overflow: hidden;
+}
+@media (max-width: 1366px) {
+  .footer {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+@media (max-width: 599px) {
+  .footer {
+    font-size: 16px;
+    font-size: 1rem;
+  }
+}
+.footer-logo {
+  margin-top: -10px;
+  margin-right: 42px;
+}
+@media (max-width: 1366px) {
+  .footer-logo {
+    max-height: -8px;
+  }
+}
+.footer-logo img {
+  max-height: 144px;
+}
+@media (max-width: 1366px) {
+  .footer-logo img {
+    max-height: 114px;
+  }
+}
+.footer-signature {
+  -ms-flex-item-align: center;
+      align-self: center;
+}
 /*# sourceMappingURL=sourcemaps/style.css.map */
