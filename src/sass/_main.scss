@@ -574,7 +574,7 @@
   text-align: right;
 
   img {
-    max-height: 33vh;
+    max-height: 29vh;
   }
 
   @media (max-width: 1780px) {
@@ -934,4 +934,8 @@
 
 .screen-promo-logo {  
   text-align: center;
+}
+
+.non-scroll {
+  overflow: hidden !important;
 }

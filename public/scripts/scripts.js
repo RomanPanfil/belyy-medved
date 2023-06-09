@@ -116,6 +116,7 @@ vhFix();
 
 if (localStorage.getItem('age_confirm') && localStorage.getItem('age_confirm') === 'Y') {
   document.querySelector('.agree').classList.add('enter')
+  document.querySelector('.screens').classList.remove('non-scroll')
   setTimeout(()=> {
     document.querySelector('.agree').remove()
   },750)
@@ -152,6 +153,7 @@ if (localStorage.getItem('age_confirm') && localStorage.getItem('age_confirm') =
       document.querySelector('.agree-date-inputs .year').classList.add('error')
       } else {
         document.querySelector('.agree').classList.add('enter')
+        document.querySelector('.screens').classList.remove('non-scroll')
         setTimeout(()=> {
           document.querySelector('.agree').remove()
         },500)

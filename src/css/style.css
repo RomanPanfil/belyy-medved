@@ -2366,6 +2366,7 @@ img {
   transition: opacity 0.2s;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
 .benefits-preview:hover, .benefits-preview.active {
   opacity: 1;
@@ -2468,6 +2469,10 @@ img {
           transform: translate(-100%, 0);
   width: 240px;
   max-width: 12%;
+  text-align: right;
+}
+.benefits-slogan img {
+  max-height: 29vh;
 }
 @media (max-width: 1780px) {
   .benefits-slogan {
@@ -2959,5 +2964,9 @@ img {
 
 .screen-promo-logo {
   text-align: center;
+}
+
+.non-scroll {
+  overflow: hidden !important;
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */
