@@ -35,7 +35,7 @@ const FARBA = {
 //делаем превьюшки фоток и навешиваем на них события
 function buildPreviews(swiper) {
   const imgs = document.querySelectorAll('.benefits-slide-img img')
-  const previews = document.querySelector('.benefits-slider-previews')
+  const previews = document.querySelector('.benefits-previews')
   if (!imgs.length || !previews) return
 
 
@@ -43,7 +43,7 @@ function buildPreviews(swiper) {
     const clone = el.cloneNode()
     clone.removeAttribute('class')
     const preview = document.createElement('div')
-    preview.className = index === 0 ? 'benefits-slider-preview active' : 'benefits-slider-preview'
+    preview.className = index === 0 ? 'benefits-preview active' : 'benefits-preview'
     preview.appendChild(clone)
     previews.appendChild(preview)
 
@@ -52,7 +52,7 @@ function buildPreviews(swiper) {
       e.preventDefault()
 
       swiper.slideTo(index)
-      document.querySelectorAll('.benefits-slider-preview').forEach(item => item.classList.remove('active'))
+      document.querySelectorAll('.benefits-preview').forEach(item => item.classList.remove('active'))
       preview.classList.add('active')
     })
   })
@@ -60,41 +60,16 @@ function buildPreviews(swiper) {
 
   swiper.on('slideChange', function(inst) {
     const current = inst.activeIndex
-    document.querySelectorAll('.benefits-slider-preview').forEach(item => item.classList.remove('active'))
-    document.querySelectorAll('.benefits-slider-preview')[current].classList.add('active')
-
-    setTimeout(() => {
-      if (!document.querySelector('.swiper-slide-active .benefits-slide-inner') || !document.querySelector('.benefits-slider-nav')) return;
-
-      const sliderTextBlock = document.querySelector('.swiper-slide-active .benefits-slide-inner .benefits-slide-descr');
-      const textBlockHeight = sliderTextBlock.offsetHeight;
-    
-      const sliderNavigation = document.querySelector('.benefits-slider-nav');
-    
-      // Получаем текущую ширину окна браузера
-      const windowWidth = window.innerWidth;
-    
-      // Проверяем условие разрешения для установки значения top
-      if (windowWidth <= 992) {
-        sliderNavigation.style.top = `${textBlockHeight + 70}px`;
-      } else if (windowWidth <= 1180) {
-        sliderNavigation.style.top = `${textBlockHeight + 110}px`;
-      } else if (windowWidth <= 1366) {
-        sliderNavigation.style.top = `${textBlockHeight + 130}px`;
-      } else if (windowWidth <= 1680) {
-        sliderNavigation.style.top = `${textBlockHeight + 160}px`;
-      } else {
-        sliderNavigation.style.top = `${textBlockHeight + 220}px`;
-      }
-    })   
+    document.querySelectorAll('.benefits-preview').forEach(item => item.classList.remove('active'))
+    document.querySelectorAll('.benefits-preview')[current].classList.add('active')
   })
 }
 
 const benefitsSwiper = new Swiper('.benefits-slider', {
   autoHeight: true,
   navigation: {
-    nextEl: '.benefits-slider-next',
-    prevEl: '.benefits-slider-prev',
+    nextEl: '.benefits-next',
+    prevEl: '.benefits-prev',
   },
 });
 
@@ -262,55 +237,55 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-// расположение навигации слайдера
+// // расположение навигации слайдера
 
-window.addEventListener('resize', function() {
-  if (!document.querySelector('.swiper-slide-active .benefits-slide-inner') || !document.querySelector('.benefits-slider-nav')) return;
+// window.addEventListener('resize', function() {
+//   if (!document.querySelector('.swiper-slide-active .benefits-slide-inner') || !document.querySelector('.benefits-nav')) return;
 
-  const sliderTextBlock = document.querySelector('.swiper-slide-active .benefits-slide-inner .benefits-slide-descr');
-  const textBlockHeight = sliderTextBlock.offsetHeight;
+//   const sliderTextBlock = document.querySelector('.swiper-slide-active .benefits-slide-inner .benefits-slide-descr');
+//   const textBlockHeight = sliderTextBlock.offsetHeight;
 
-  const sliderNavigation = document.querySelector('.benefits-slider-nav');
+//   const sliderNavigation = document.querySelector('.benefits-nav');
 
-  // Получаем текущую ширину окна браузера
-  const windowWidth = window.innerWidth;
+//   // Получаем текущую ширину окна браузера
+//   const windowWidth = window.innerWidth;
 
-  // Проверяем условие разрешения для установки значения top
-  if (windowWidth <= 992) {
-    sliderNavigation.style.top = `${textBlockHeight + 70}px`;
-  } else if (windowWidth <= 1180) {
-    sliderNavigation.style.top = `${textBlockHeight + 110}px`;
-  } else if (windowWidth <= 1366) {
-    sliderNavigation.style.top = `${textBlockHeight + 130}px`;
-  } else if (windowWidth <= 1680) {
-    sliderNavigation.style.top = `${textBlockHeight + 160}px`;
-  } else {
-    sliderNavigation.style.top = `${textBlockHeight + 220}px`;
-  }
-});
+//   // Проверяем условие разрешения для установки значения top
+//   if (windowWidth <= 992) {
+//     sliderNavigation.style.top = `${textBlockHeight + 70}px`;
+//   } else if (windowWidth <= 1180) {
+//     sliderNavigation.style.top = `${textBlockHeight + 110}px`;
+//   } else if (windowWidth <= 1366) {
+//     sliderNavigation.style.top = `${textBlockHeight + 130}px`;
+//   } else if (windowWidth <= 1680) {
+//     sliderNavigation.style.top = `${textBlockHeight + 160}px`;
+//   } else {
+//     sliderNavigation.style.top = `${textBlockHeight + 220}px`;
+//   }
+// });
 
-// Выполнить первоначальное задание значения top при загрузке страницы
-window.addEventListener('load', function() {
-  if (!document.querySelector('.swiper-slide-active .benefits-slide-inner') || !document.querySelector('.benefits-slider-nav')) return;
+// // Выполнить первоначальное задание значения top при загрузке страницы
+// window.addEventListener('load', function() {
+//   if (!document.querySelector('.swiper-slide-active .benefits-slide-inner') || !document.querySelector('.benefits-nav')) return;
 
-  const sliderTextBlock = document.querySelector('.swiper-slide-active .benefits-slide-inner .benefits-slide-descr');
-  const textBlockHeight = sliderTextBlock.offsetHeight;
+//   const sliderTextBlock = document.querySelector('.swiper-slide-active .benefits-slide-inner .benefits-slide-descr');
+//   const textBlockHeight = sliderTextBlock.offsetHeight;
 
-  const sliderNavigation = document.querySelector('.benefits-slider-nav');
+//   const sliderNavigation = document.querySelector('.benefits-nav');
 
-  // Получаем текущую ширину окна браузера
-  const windowWidth = window.innerWidth;
+//   // Получаем текущую ширину окна браузера
+//   const windowWidth = window.innerWidth;
 
-  // Проверяем условие разрешения для установки значения top
-  if (windowWidth <= 992) {
-    sliderNavigation.style.top = `${textBlockHeight + 70}px`;
-  } else if (windowWidth <= 1180) {
-    sliderNavigation.style.top = `${textBlockHeight + 110}px`;
-  } else if (windowWidth <= 1366) {
-    sliderNavigation.style.top = `${textBlockHeight + 130}px`;
-  } else if (windowWidth <= 1680) {
-    sliderNavigation.style.top = `${textBlockHeight + 160}px`;
-  } else {
-    sliderNavigation.style.top = `${textBlockHeight + 220}px`;
-  }
-});
+//   // Проверяем условие разрешения для установки значения top
+//   if (windowWidth <= 992) {
+//     sliderNavigation.style.top = `${textBlockHeight + 70}px`;
+//   } else if (windowWidth <= 1180) {
+//     sliderNavigation.style.top = `${textBlockHeight + 110}px`;
+//   } else if (windowWidth <= 1366) {
+//     sliderNavigation.style.top = `${textBlockHeight + 130}px`;
+//   } else if (windowWidth <= 1680) {
+//     sliderNavigation.style.top = `${textBlockHeight + 160}px`;
+//   } else {
+//     sliderNavigation.style.top = `${textBlockHeight + 220}px`;
+//   }
+// });

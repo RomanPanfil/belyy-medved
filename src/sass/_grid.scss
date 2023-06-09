@@ -32,12 +32,17 @@
   }
 
   @media (max-width: 992px) {
-    padding-left: 30px;
-    padding-right: 30px;
+    padding-left: 35px;
+    padding-right: 35px;
   }
 
   @media (max-width: 599px) {
     position: unset;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (max-width: 420px) {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -212,9 +217,9 @@
   padding-left: $col_gutter;
   padding-right: $col_gutter;
 }
-.inner, .container {
-  max-width: $inner+px;
-}
+// .inner, .container {
+//   max-width: $inner+px;
+// }
 
 @for $i from 1 through 12 {
   .col-#{$i} {
