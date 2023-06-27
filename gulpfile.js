@@ -73,6 +73,7 @@ const copyAll = async () => {
             './src/ajax/**/*',
             './src/*.html',
             './src/.htaccess',
+            './src/popups/**/*',
         ],
         { base: './src' }
     )

@@ -87,6 +87,27 @@ buildPreviews(benefitsSwiper);
 
 }());
 
+(function () {
+  if (!document.querySelector('.contest-steps .ui-btn') || !document.querySelector('.screen-contest-form')) return
+
+  document.querySelectorAll('.contest-steps .ui-btn').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault()
+      document.querySelector('.screen-contest-form').scrollIntoView({behavior: "smooth"})
+    })
+  })
+}());
+
+(function () {
+  if (!document.querySelector('.screen-plans-pagination__create') || !document.querySelector('.screen-contest-form')) return
+
+  document.querySelectorAll('.screen-plans-pagination__create').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.preventDefault()
+      document.querySelector('.screen-contest-form').scrollIntoView({behavior: "smooth"})
+    })
+  })
+}());
 
 function vhFix() {
   let ornt = window.innerWidth > window.innerHeight ? 'land' : 'port'
@@ -291,3 +312,128 @@ document.addEventListener('DOMContentLoaded', function() {
 //     sliderNavigation.style.top = `${textBlockHeight + 220}px`;
 //   }
 // });
+
+
+// (function() {
+//   if(!document.querySelector('.burger-btn') || !document.querySelector('.header-nav ul')) return
+
+//   const menuBtn = document.querySelector('.burger-btn');
+//   const menu = document.querySelector('.header-nav ul');
+
+//   menuBtn.addEventListener('click', openMenu);
+
+//   function openMenu() {
+//     menu.classList.toggle('active')
+//   }
+
+// })()
+
+
+// стилизация селекта
+(function() {
+  if(!document.querySelector('.screen-plans-select select')) return
+
+  $('.screen-plans-select select').styler();
+})()
+
+
+$(document).on("click", ".mfp-link", function () {
+  var a = $(this);
+  $.magnificPopup.open({
+    items: { src: a.attr("data-href") },
+    type: "ajax",
+    overflowY: "scroll",
+    removalDelay: 300,
+    mainClass: 'my-mfp-zoom-in',
+    ajax: {
+      tError: "Error. Not valid url",
+    },
+    callbacks: {
+      open: function () {
+        setTimeout(function(){
+          $('.mfp-wrap').addClass('not_delay');
+          $('.mfp-popup').addClass('not_delay');
+        },700);
+
+        document.documentElement.style.overflow = 'hidden'
+      },
+
+      close: function() {
+        document.documentElement.style.overflow = ''
+      }
+    }
+  });
+  return false;
+});
+
+
+$(document).ready(function () {
+  $("form.contest-form").validate({
+    submitHandler: function(form, event) {    
+      event.preventDefault()
+      form.reset()
+
+      var a = $('.screen-contest-form-bottom button');
+      $.magnificPopup.open({
+        items: { src: a.attr("data-href") },
+        type: "ajax",
+        overflowY: "scroll",
+        removalDelay: 300,
+        mainClass: 'my-mfp-zoom-in',
+        ajax: {
+          tError: "Error. Not valid url",
+        },
+        callbacks: {
+          open: function () {
+            setTimeout(function(){
+              $('.mfp-wrap').addClass('not_delay');
+              $('.mfp-popup').addClass('not_delay');
+            },700);
+    
+            document.documentElement.style.overflow = 'hidden'
+
+            $(document).on('click', '.popup-button-moderation', function() {
+              $.magnificPopup.close();
+            });
+          },
+    
+          close: function() {           
+            document.documentElement.style.overflow = ''
+          }
+        }
+      });     
+    },
+    errorPlacement: function(error, element) {
+      // Ничего не делать
+    }
+    // rules: {
+    //   contest_first_name: {
+    //     required: true,
+    //   },
+    //   contest_last_name: {
+    //     required: true,
+    //   },
+    //   contest_email: {
+    //     email: true,
+    //   },
+    //   contest_text: {
+    //     required: true,
+    //   }        
+    // },
+  });
+});
+
+
+(function() {
+  if(!document.querySelector('.burger-btn') || !document.querySelector('.header-nav ul')) return
+
+  const menuBtn = document.querySelector('.burger-btn');
+  const menu = document.querySelector('.header-nav ul');
+
+  menuBtn.addEventListener('click', openMenu);
+
+  function openMenu() {
+    menu.classList.toggle('active')
+  }
+
+})()

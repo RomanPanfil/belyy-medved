@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=1024"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Белый медведь — исследуй и создавай!</title>
+  <meta name="keywords" content="Белый медведь, Природа дружбы, исследуй создавай, пиво" />
+  <meta name="description" content="Белый медведь — исследуй и создавай!" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no" />
+
+  <style>
+    @font-face {
+      font-family: 'Bebas Neue Pro';
+      src: local('Bebas Neue Pro'), local('Bebas Neue Pro Regular'),
+        url('./fonts/bebas/BebasNeuePro-Regular.woff2') format('woff2'),
+        url('./fonts/bebas/BebasNeuePro-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Bebas Neue Pro';
+      src: local('Bebas Neue Pro'), local('Bebas Neue Pro Bold'),
+        url('./fonts/bebas/BebasNeuePro-Bold.woff2') format('woff2'),
+        url('./fonts/bebas/BebasNeuePro-Bold.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css">
+
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+
+  <!-- <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon"> -->
+
+  <!--[if lt IE 9]>
+      <script>
+      var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+      "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+      "progress,section,time,video").split(',');
+      for (var i = 0; i < e.length; i++) {
+      document.createElement(e[i]);
+      }
+      </script>
+    <![endif]-->
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MLTPHBD');
+
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <div id="screens" class="screens non-scroll">
+    <header class="screen screen-header">
+      <div class="container">
+        <div class="header-flex">
+          <div class="header-logo">
+            <a href="#">
+              <img src="./images/logo-main.png" alt="logo">
+            </a>
+          </div>
+          <nav class="header-nav">
+            <button class="burger-btn">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#" class="active">Конкурс</a>
+              </li>
+              <li>
+                <a href="#">О бренде</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <div class="screen screen-about-contest">
+      <div class="container">
+        <div class="h2 screen-about-contest__title">
+          ИССЛЕДУЙ ЛЕТО ВМЕСТЕ
+          С “БЕЛЫМ МЕДВЕДЕМ”
+        </div>
+        <div class="screen-about-contest__period">
+          С 1 июля по 30 сентября
+        </div>
+        <div class="screen-about-contest__text">
+          <p>
+            Каждые 2 недели мы будем выбирать три самых
+            интересных и амбициозных плана на лето.
+          </p>
+          <p>
+            Из авторы получат ценные призы, которые сделают
+            исследование лета еще более захватывающим!
+          </p>
+        </div>
+        <!-- <div class="screen-about-contest__cards">
+          <div class="card-item">
+            <div class="card-item-title">
+              6 розыгрышей
+            </div>
+            <p class="card-item-text">
+              3 победителя каждые 2 недели
+            </p>
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">
+              18 уникальных призов
+            </div>
+            <div class="card-item-images">
+              <div class="card-item-images__image">
+                <img src="./images/present-1.png" alt="present">
+              </div>
+              <div class="card-item-images__image">
+                <img src="./images/present-2.png" alt="present">
+              </div>
+              <div class="card-item-images__image">
+                <img src="./images/present-3.png" alt="present">
+              </div>
+              <div class="card-item-images__image">
+                <span>+15</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">
+              Шанс есть у каждого
+            </div>
+            <p class="card-item-text">
+              Призы получат самые креативные и амбициозные исследователи!
+            </p>
+          </div>
+        </div> -->
+
+
+        <div class="screen-about-contest__cards">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card-item">
+                <div class="card-item-title">
+                  6 розыгрышей
+                </div>
+                <p class="card-item-text">
+                  3 победителя каждые 2 недели
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-item">
+                <div class="card-item-title">
+                  18 уникальных призов
+                </div>
+                <div class="card-item-images">
+                  <div class="card-item-images__image">
+                    <img src="./images/present-1.png" alt="present">
+                  </div>
+                  <div class="card-item-images__image">
+                    <img src="./images/present-2.png" alt="present">
+                  </div>
+                  <div class="card-item-images__image">
+                    <img src="./images/present-3.png" alt="present">
+                  </div>
+                  <div class="card-item-images__image mfp-link" data-href="./popups/popup-presents.html">
+                    <span>+15</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-item">
+                <div class="card-item-title">
+                  Шанс есть у каждого
+                </div>
+                <p class="card-item-text">
+                  Призы получат самые креативные и амбициозные исследователи!
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- <div class="contest-steps">
+          <div class="contest-steps-item">
+            <div class="contest-steps-item__num">
+              <img src="./images/star.png" alt="star">
+              <span>1</span>
+            </div>
+            <div class="contest-steps-item__text">
+              Расскажи, что бы ты хотел открыть для себя этим летом
+            </div>
+            <img src="./images/path-1.svg" alt="path" class="contest-steps-item__path">
+          </div>
+          <div class="contest-steps-item">
+            <img src="./images/path-2.svg" alt="path" class="contest-steps-item__path">
+            <div class="contest-steps-item__num">
+              <img src="./images/star.png" alt="star">
+              <span>2</span>
+            </div>
+            <div class="contest-steps-item__text">
+              Позови друзей поддержать
+              твои планы!
+            </div>
+          </div>
+          <div class="contest-steps-item">
+            <div class="contest-steps-item__num">
+              <img src="./images/star.png" alt="star">
+              <span>3</span>
+            </div>
+            <div class="contest-steps-item__text">
+              Авторы самых креативных и популярных историй
+              получат призы для яркого летнего отдыха
+            </div>
+            <img src="./images/path-3.svg" alt="path" class="contest-steps-item__path">
+          </div>
+
+          <button class="ui-btn mfp-link" data-href="./popups/popup-presents.html">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12.1499 16.5V18.6" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M7.1499 22H17.1499V21C17.1499 19.9 16.2499 19 15.1499 19H9.1499C8.0499 19 7.1499 19.9 7.1499 21V22V22Z"
+                stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
+              <path d="M6.1499 22H18.1499" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M12 16C8.13 16 5 12.87 5 9V6C5 3.79 6.79 2 9 2H15C17.21 2 19 3.79 19 6V9C19 12.87 15.87 16 12 16Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M5.47004 11.65C4.72004 11.41 4.06004 10.97 3.54004 10.45C2.64004 9.44998 2.04004 8.24998 2.04004 6.84998C2.04004 5.44998 3.14004 4.34998 4.54004 4.34998H5.19004C4.99004 4.80998 4.89004 5.31998 4.89004 5.84998V8.84998C4.89004 9.84998 5.10004 10.79 5.47004 11.65Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M18.53 11.65C19.28 11.41 19.94 10.97 20.46 10.45C21.36 9.44998 21.96 8.24998 21.96 6.84998C21.96 5.44998 20.86 4.34998 19.46 4.34998H18.81C19.01 4.80998 19.11 5.31998 19.11 5.84998V8.84998C19.11 9.84998 18.9 10.79 18.53 11.65Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Что нужно делать
+          </button>
+        </div> -->
+
+
+        <div class="contest-steps">
+          <img src="./images/steps-all.svg" alt="steps">
+
+          <button class="ui-btn ui-btn-colored">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12.1499 16.5V18.6" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M7.1499 22H17.1499V21C17.1499 19.9 16.2499 19 15.1499 19H9.1499C8.0499 19 7.1499 19.9 7.1499 21V22V22Z"
+                stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
+              <path d="M6.1499 22H18.1499" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M12 16C8.13 16 5 12.87 5 9V6C5 3.79 6.79 2 9 2H15C17.21 2 19 3.79 19 6V9C19 12.87 15.87 16 12 16Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M5.47004 11.65C4.72004 11.41 4.06004 10.97 3.54004 10.45C2.64004 9.44998 2.04004 8.24998 2.04004 6.84998C2.04004 5.44998 3.14004 4.34998 4.54004 4.34998H5.19004C4.99004 4.80998 4.89004 5.31998 4.89004 5.84998V8.84998C4.89004 9.84998 5.10004 10.79 5.47004 11.65Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M18.53 11.65C19.28 11.41 19.94 10.97 20.46 10.45C21.36 9.44998 21.96 8.24998 21.96 6.84998C21.96 5.44998 20.86 4.34998 19.46 4.34998H18.81C19.01 4.80998 19.11 5.31998 19.11 5.84998V8.84998C19.11 9.84998 18.9 10.79 18.53 11.65Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Принять участие
+          </button>
+        </div>
+
+        <img src="./images/gold.png" alt="ticket" class="ticket">
+      </div>
+      <img src="./images/alert.svg" alt="alert" class="screen-alert">
+      <!-- <img src="./images/about-contest-bg.jpg" alt="bg" class="screen-about-contest-bg"> -->
+    </div>
+
+    <div class="screen screen-plans">
+      <div class="container">
+        <div class="screen-plans-head">
+          <div class="h3 screen-plans-title">
+            Планы
+          </div>
+          <div class="screen-plans-search">
+            <input type="search" placeholder="Найти план: Введите email">
+            <button>
+              <img src="./images/search-normal.svg" alt="search">
+            </button>
+          </div>
+          <div class="screen-plans-select">
+            <select>
+              <option value="1">Случайные</option>
+              <option value="2">неслучайные</option>
+              <option value="3">Случайные</option>
+              <option value="4">неслучайные случайные</option>
+            </select>
+          </div>
+        </div>
+        <div class="screen-plans-cards">
+          <div class="row">
+
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-12">
+              <div class="screen-plans-item">
+                <div class="screen-plans-item__likes">
+                  <p>24</p>
+                  <img src="./images/lapa.svg" alt="lag">
+                </div>
+                <div class="screen-plans-item__head">
+                  <div class="screen-plans-item__image">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="screen-plans-item__title">
+                    Петровский Василий
+                  </div>
+                  <div class="screen-plans-item__count">
+                    #12
+                  </div>
+                </div>
+                <div class="screen-plans-item__text">
+                  Немного текста истории пользователя о том какой у него план на это лето и много чего еще и превью в 3
+                  строчки. Немного текста истории пользователя о том какой у него план на это лето и много чего еще и
+                  превью в 3
+                  строчки
+                </div>
+                <a class="screen-plans-item__more mfp-link" href="javascript:void(0)"
+                  data-href="./popups/popup-plane.html">
+                  Читать весь план
+                </a>
+              </div>
+            </div>
+
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-12">
+              <div class="screen-plans-item">
+                <div class="screen-plans-item__likes">
+                  <p>21</p>
+                  <img src="./images/lapa.svg" alt="lag">
+                </div>
+                <div class="screen-plans-item__head">
+                  <div class="screen-plans-item__image">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="screen-plans-item__title">
+                    Петров Василий
+                  </div>
+                  <div class="screen-plans-item__count">
+                    #1
+                  </div>
+                </div>
+                <div class="screen-plans-item__text">
+                  Немного текста истории пользователя о том какой у него план на это лето и много чего еще и превью в 3
+                  строчки...
+                </div>
+                <a class="screen-plans-item__more mfp-link" href="javascript:void(0)"
+                  data-href="./popups/popup-plane.html">
+                  Читать весь план
+                </a>
+              </div>
+            </div>
+
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-12">
+              <div class="screen-plans-item">
+                <div class="screen-plans-item__likes">
+                  <p>34</p>
+                  <img src="./images/lapa.svg" alt="lag">
+                </div>
+                <div class="screen-plans-item__head">
+                  <div class="screen-plans-item__image">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="screen-plans-item__title">
+                    Петров Василий
+                  </div>
+                  <div class="screen-plans-item__count">
+                    #41
+                  </div>
+                </div>
+                <div class="screen-plans-item__text">
+                  Немного текста истории пользователя о том какой у него план на это лето и много чего еще и превью в 3
+                  строчки...
+                </div>
+                <a class="screen-plans-item__more mfp-link" href="javascript:void(0)"
+                  data-href="./popups/popup-plane.html">
+                  Читать весь план
+                </a>
+              </div>
+            </div>
+
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-12">
+              <div class="screen-plans-item">
+                <div class="screen-plans-item__likes">
+                  <p>412</p>
+                  <img src="./images/lapa.svg" alt="lag">
+                </div>
+                <div class="screen-plans-item__head">
+                  <div class="screen-plans-item__image">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="screen-plans-item__title">
+                    Петров Василий
+                  </div>
+                  <div class="screen-plans-item__count">
+                    #154
+                  </div>
+                </div>
+                <div class="screen-plans-item__text">
+                  Немного текста истории пользователя о том какой у него план на это лето и много чего еще и превью в 3
+                  строчки...
+                </div>
+                <a class="screen-plans-item__more mfp-link" href="javascript:void(0)"
+                  data-href="./popups/popup-plane.html">
+                  Читать весь план
+                </a>
+              </div>
+            </div>
+
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-12">
+              <div class="screen-plans-item">
+                <div class="screen-plans-item__likes">
+                  <p>24</p>
+                  <img src="./images/lapa.svg" alt="lag">
+                </div>
+                <div class="screen-plans-item__head">
+                  <div class="screen-plans-item__image">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="screen-plans-item__title">
+                    Петров Василий
+                  </div>
+                  <div class="screen-plans-item__count">
+                    #12
+                  </div>
+                </div>
+                <div class="screen-plans-item__text">
+                  Немного текста истории пользователя о том какой у него план на это лето и много чего еще и превью в 3
+                  строчки...
+                </div>
+                <a class="screen-plans-item__more mfp-link" href="javascript:void(0)"
+                  data-href="./popups/popup-plane.html">
+                  Читать весь план
+                </a>
+              </div>
+            </div>
+
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-12">
+              <div class="screen-plans-item">
+                <div class="screen-plans-item__likes">
+                  <p>21</p>
+                  <img src="./images/lapa.svg" alt="lag">
+                </div>
+                <div class="screen-plans-item__head">
+                  <div class="screen-plans-item__image">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="screen-plans-item__title">
+                    Петров Василий
+                  </div>
+                  <div class="screen-plans-item__count">
+                    #1
+                  </div>
+                </div>
+                <div class="screen-plans-item__text">
+                  Немного текста истории пользователя о том какой у него план на это лето и много чего еще и превью в 3
+                  строчки...
+                </div>
+                <a class="screen-plans-item__more mfp-link" href="javascript:void(0)"
+                  data-href="./popups/popup-plane.html">
+                  Читать весь план
+                </a>
+              </div>
+            </div>
+
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-12">
+              <div class="screen-plans-item">
+                <div class="screen-plans-item__likes">
+                  <p>34</p>
+                  <img src="./images/lapa.svg" alt="lag">
+                </div>
+                <div class="screen-plans-item__head">
+                  <div class="screen-plans-item__image">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="screen-plans-item__title">
+                    Петров Василий
+                  </div>
+                  <div class="screen-plans-item__count">
+                    #41
+                  </div>
+                </div>
+                <div class="screen-plans-item__text">
+                  Немного текста истории пользователя о том какой у него план на это лето и много чего еще и превью в 3
+                  строчки...
+                </div>
+                <a class="screen-plans-item__more mfp-link" href="javascript:void(0)"
+                  data-href="./popups/popup-plane.html">
+                  Читать весь план
+                </a>
+              </div>
+            </div>
+
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-12">
+              <div class="screen-plans-item">
+                <div class="screen-plans-item__likes">
+                  <p>412</p>
+                  <img src="./images/lapa.svg" alt="lag">
+                </div>
+                <div class="screen-plans-item__head">
+                  <div class="screen-plans-item__image">
+                    <img src="./images/avatar.png" alt="avatar">
+                  </div>
+                  <div class="screen-plans-item__title">
+                    Петров Василий
+                  </div>
+                  <div class="screen-plans-item__count">
+                    #154
+                  </div>
+                </div>
+                <div class="screen-plans-item__text">
+                  Немного текста истории пользователя о том какой у него план на это лето и много чего еще и превью в 3
+                  строчки...
+                </div>
+                <a class="screen-plans-item__more mfp-link" href="javascript:void(0)"
+                  data-href="./popups/popup-plane.html">
+                  Читать весь план
+                </a>
+              </div>
+            </div>
+
+          </div>
+          <div class="screen-plans-pagination">
+            <div class="pagination-pages">
+              <button class="pagination-btn">
+                1
+              </button>
+              <button class="pagination-btn active">
+                2
+              </button>
+              <button class="pagination-btn">
+                3
+              </button>
+              <span class="pagination-dots">...</span>
+              <button class="pagination-btn">12</button>
+            </div>
+            <div class="screen-plans-pagination__create">
+              <button class="ui-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 2V5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M16 2V5" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path
+                    d="M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z"
+                    stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M8 11H16" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M8 16H12" stroke="#292D32" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+                Создать свой план
+              </button>
+            </div>
+            <div class="pagination__arrows">
+              <button class="arrow-btn prew disabled"></button>
+              <button class="arrow-btn next"></button>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <img src="./images/alert.svg" alt="alert" class="screen-alert">
+    </div>
+
+    <div class="screen screen-contest-form">
+      <div class="container">
+        <form class="contest-form">
+          <div class="h2">
+            Расскажи о своем плане на лето и испытай удачу
+          </div>
+          <div class="screen-contest-form-left">
+            <input type="text" placeholder="Как вас зовут ?" required name="contest_first_name" id="contest_first_name">
+            <input type="text" placeholder="Ваша фамилия?" required name="contest_last_name" id="contest_last_name">
+            <input type="email" placeholder="Ввести email" required name="contest_email" id="contest_email">
+          </div>
+          <div class="screen-contest-form-right">
+            <textarea placeholder="Расскажите о том как хотите провести своё лето?" required name="contest_text"
+              id="contest_text"></textarea>
+          </div>
+          <div class="screen-contest-form-bottom">
+            <button type="submit" class="ui-btn ui-btn-dark" data-href="./popups/popup-moderation.html">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M7.40005 6.31997L15.8901 3.48997C19.7001 2.21997 21.7701 4.29997 20.5101 8.10997L17.6801 16.6C15.7801 22.31 12.6601 22.31 10.7601 16.6L9.92005 14.08L7.40005 13.24C1.69005 11.34 1.69005 8.22997 7.40005 6.31997Z"
+                  stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M10.11 13.65L13.69 10.06" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+              Отправить на модерацию
+            </button>
+            <div class="screen-contest-form-links">
+              <a href="#" class="tw">
+                <svg width="26" height="21" viewBox="0 0 26 21" fill="none">
+                  <path
+                    d="M12.2213 5.69981L12.2759 6.59947L11.3665 6.48931C8.0566 6.06702 5.16496 4.63491 2.70978 2.2297L1.50948 1.03628L1.20031 1.91757C0.545594 3.88213 0.963882 5.95686 2.32787 7.35225C3.05533 8.12338 2.89165 8.23354 1.63678 7.77454C1.20031 7.62765 0.818391 7.51749 0.782018 7.57257C0.654713 7.70109 1.09119 9.37189 1.43673 10.0329C1.90958 10.9509 2.87346 11.8505 3.92828 12.383L4.81941 12.8053L3.7646 12.8236C2.74616 12.8236 2.70978 12.842 2.8189 13.2276C3.18263 14.421 4.61936 15.6879 6.21977 16.2387L7.34733 16.6242L6.36526 17.2118C4.91035 18.0563 3.20082 18.5337 1.49129 18.5704C0.672899 18.5888 0 18.6622 0 18.7173C0 18.9009 2.21875 19.9291 3.50999 20.333C7.3837 21.5265 11.9849 21.0124 15.4403 18.9744C17.8955 17.5239 20.3507 14.6413 21.4964 11.8505C22.1147 10.3633 22.7331 7.64601 22.7331 6.34243C22.7331 5.49785 22.7876 5.38769 23.8061 4.37786C24.4062 3.79033 24.97 3.14772 25.0791 2.96412C25.261 2.61527 25.2428 2.61527 24.3153 2.9274C22.7695 3.47821 22.5512 3.40476 23.315 2.57855C23.8788 1.99102 24.5517 0.926114 24.5517 0.613987C24.5517 0.558906 24.2789 0.650708 23.9698 0.815951C23.6424 0.999555 22.9149 1.27496 22.3694 1.4402L21.3873 1.75233L20.4961 1.14644C20.0051 0.815951 19.314 0.448744 18.9503 0.338582C18.0228 0.0815362 16.6042 0.118257 15.7677 0.412023C13.4944 1.23824 12.0576 3.36804 12.2213 5.69981Z"
+                    fill="white" />
+                </svg>
+              </a>
+              <a href="#" class="vk">
+                <svg width="30" height="18" viewBox="0 0 30 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M28.4206 1.53616C28.6294 0.857663 28.4206 0.364179 27.4958 0.364179H24.4233C23.6477 0.364179 23.2897 0.795932 23.0809 1.25864C23.0809 1.25864 21.4998 5.20643 19.2924 7.76627C18.5764 8.5065 18.2483 8.75324 17.8606 8.75324C17.6517 8.75324 17.3833 8.5065 17.3833 7.828V1.50529C17.3833 0.703427 17.1446 0.333313 16.4883 0.333313H11.6558C11.1785 0.333313 10.8802 0.703427 10.8802 1.07354C10.8802 1.84463 11.9839 2.02964 12.1032 4.18859V8.87661C12.1032 9.89444 11.9243 10.0795 11.5365 10.0795C10.4924 10.0795 7.95681 6.1008 6.43544 1.56702C6.13708 0.672561 5.83882 0.333313 5.06325 0.333313H1.96081C1.06591 0.333313 0.916748 0.765158 0.916748 1.22778C0.916748 2.06051 1.96081 6.25504 5.77911 11.8067C8.31478 15.6002 11.9243 17.6358 15.1758 17.6358C17.1446 17.6358 17.3833 17.1732 17.3833 16.4022V13.5338C17.3833 12.6085 17.5622 12.4544 18.1887 12.4544C18.6361 12.4544 19.4416 12.701 21.2612 14.5207C23.3493 16.6797 23.7073 17.6666 24.8707 17.6666H27.9433C28.8382 17.6666 29.2559 17.204 29.0172 16.3096C28.7487 15.4152 27.7345 14.1198 26.4219 12.5777C25.706 11.7141 24.6321 10.758 24.3039 10.2953C23.8565 9.67857 23.9758 9.43182 24.3039 8.87661C24.2742 8.87661 28.0328 3.38673 28.4206 1.53616Z"
+                    fill="white" />
+                </svg>
+              </a>
+              <a href="#" class="ok">
+                <svg width="16" height="26" viewBox="0 0 16 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.8122 18.8937L14.6978 22.6447C15.4938 23.4115 15.4938 24.6568 14.6978 25.4243C13.9026 26.1919 12.6138 26.1919 11.8195 25.4243L7.99924 21.7383L4.1823 25.4243C3.78431 25.8077 3.26279 25.9996 2.74128 25.9996C2.2206 25.9996 1.69992 25.8077 1.30193 25.4243C0.506765 24.6568 0.506765 23.4123 1.30109 22.6447L5.18707 18.8937C3.77225 18.5825 2.40775 18.0414 1.15096 17.2803C0.199846 16.7014 -0.0858625 15.4886 0.513419 14.5697C1.11104 13.6496 2.36782 13.3726 3.3206 13.9515C6.16604 15.6793 9.8316 15.6797 12.6787 13.9515C13.6315 13.3726 14.8879 13.6496 15.4867 14.5697C16.086 15.4878 15.7995 16.7014 14.8483 17.2803C13.5916 18.0422 12.2271 18.5825 10.8122 18.8937Z"
+                    fill="white" />
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M1.03174 6.70971C1.03174 10.4086 4.14917 13.4174 7.98232 13.4174C11.8163 13.4174 14.9329 10.4086 14.9329 6.70971C14.9329 3.00962 11.8163 0 7.98232 0C4.14917 0 1.03174 3.00962 1.03174 6.70971ZM10.8602 6.70971C10.8602 5.17781 9.56931 3.93213 7.98232 3.93213C6.39658 3.93213 5.10444 5.17781 5.10444 6.70971C5.10444 8.24041 6.39658 9.48689 7.98232 9.48689C9.56931 9.48689 10.8602 8.24041 10.8602 6.70971Z"
+                    fill="white" />
+                </svg>
+              </a>
+              <a href="#" class="dw">
+                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M17.8101 9.64166C21.7101 9.9775 23.3026 11.9817 23.3026 16.3692V16.51C23.3026 21.3525 21.3634 23.2917 16.5209 23.2917H9.46843C4.62593 23.2917 2.68677 21.3525 2.68677 16.51V16.3692C2.68677 12.0142 4.2576 10.01 8.0926 9.6525"
+                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M13 16.25V3.92169" stroke="white" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M16.6292 6.33748L13 2.70831L9.37085 6.33748" stroke="white" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <img src="./images/alert.svg" alt="alert" class="screen-alert">
+    </div>
+
+
+    <footer class="footer screen screen-footer">
+      <div class="container">
+        <div class="flex">
+          <div class="footer-logo">
+            <a href="#">
+              <img src="./images/footer-logo.png" alt="logo">
+            </a>
+
+          </div>
+          <div class="footer-signature">
+            <div class="copy">
+              ©2023, ИООО «ЭфесТрэйд БиУай», УНП 190980621
+            </div>
+            <a href="#">
+              Согласие на обработку персональных данных
+            </a>
+            <a href="#">
+              Условия конкурса
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <!-- confirm block start -->
+  <div class="agree">
+    <div class="agree-flex">
+      <div class="agree-content">
+        <div class="agree-logo">
+          <img src="./images/Logo-big.png" alt="logo">
+        </div>
+        <div class="agree-question">Добро пожаловать на сайт Белый Медведь. Доступ разрешен только лицам
+          старше 18 лет. Укажите дату своего рождения, чтобы войти на сайт.</div>
+        <form class="agree-date">
+          <div class="agree-date-inputs">
+            <input type="text" autocomplete="off" placeholder="01" id="day" class="day" value="01">
+            <input type="text" autocomplete="off" placeholder="01" id="month" class="month" value="01">
+            <input type="text" autocomplete="off" placeholder="1970" id="year" class="year" value="1970">
+          </div>
+          <div class="agree-date-error-text hidden">
+            Ваш возраст не позволяет нам пустить вас на сайт :(
+          </div>
+          <button type="submit" class="ui-btn agree-confirm-btn">Подтвердить</button>
+        </form>
+      </div>
+    </div>
+
+    <img src="./images/Noise.png" class="agree-bg" alt="bg">
+  </div>
+  <!-- confirm block end -->
+
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLTPHBD" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <script src="./scripts/scripts.js"></script>
+
+</body>
+
+</html>

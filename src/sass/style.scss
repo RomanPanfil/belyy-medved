@@ -49,6 +49,15 @@ body {
   }
 }
 
+input::-ms-clear {
+  display: none;
+}
+
+/* Для Safari */
+input[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
 @import "ui";
 
 @import "grid";
