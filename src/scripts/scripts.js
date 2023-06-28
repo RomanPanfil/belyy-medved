@@ -403,25 +403,68 @@ $(document).ready(function () {
         }
       });     
     },
-    errorPlacement: function(error, element) {
-      // Ничего не делать
+    // errorPlacement: function(error, element) {
+    //   // Ничего не делать
+    // }
+    rules: {
+      contest_first_name: {
+        required: true,
+      },
+      contest_last_name: {
+        required: true,
+      },
+      contest_email: {
+        email: true,
+      },
+      contest_text: {
+        required: true,
+      }        
+    },
+    messages: {
+      contest_first_name: "Пожалуйста, введите ваше имя",
+      contest_last_name: "Пожалуйста, введите вашу фамилию",
+      contest_email: {
+        required: "Пожалуйста, введите ваш адрес электронной почты",
+        email: "Пожалуйста, введите корректный адрес электронной почты"
+      },
+      contest_text: "Пожалуйста, заполните это поле"
     }
-    // rules: {
-    //   contest_first_name: {
-    //     required: true,
-    //   },
-    //   contest_last_name: {
-    //     required: true,
-    //   },
-    //   contest_email: {
-    //     email: true,
-    //   },
-    //   contest_text: {
-    //     required: true,
-    //   }        
-    // },
   });
 });
+
+
+// отображение кол-ва карточек в зависимости от разрешения
+
+(function() {
+  if(!document.querySelector('.screen-plans-cards') || !document.querySelector('.screen-plans-item')) return
+  function updateScreenPlansItems() {
+    const screenPlansCards = document.querySelector('.screen-plans-cards');
+    const screenPlansItems = screenPlansCards.querySelectorAll('.screen-plans-item');
+    if (window.innerWidth < 768) {
+      if (screenPlansItems.length > 4) {
+        for (let i = 4; i < screenPlansItems.length; i++) {
+          screenPlansItems[i].style.display = 'none';
+        }
+      }
+    } else if (window.innerWidth < 1023) {
+      for (let i = 0; i < screenPlansItems.length; i++) {
+        screenPlansItems[i].style.display = '';
+      }
+      if (screenPlansItems.length > 6) {
+        for (let i = 6; i < screenPlansItems.length; i++) {
+          screenPlansItems[i].style.display = 'none';
+        }
+      }
+    } else {
+      for (let i = 0; i < screenPlansItems.length; i++) {
+        screenPlansItems[i].style.display = '';
+      }
+    }
+  }
+  
+  updateScreenPlansItems();
+  window.addEventListener('resize', updateScreenPlansItems);
+})();
 
 
 (function() {
@@ -436,4 +479,4 @@ $(document).ready(function () {
     menu.classList.toggle('active')
   }
 
-})()
+})();
