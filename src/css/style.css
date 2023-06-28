@@ -3207,6 +3207,26 @@ img {
   margin-right: auto;
   margin-left: 62px;
 }
+@media (max-width: 1680px) {
+  .screen-header .header-nav {
+    margin-left: 55px;
+  }
+}
+@media (max-width: 1366px) {
+  .screen-header .header-nav {
+    margin-left: 50px;
+  }
+}
+@media (max-width: 1140px) {
+  .screen-header .header-nav {
+    margin-left: 46px;
+  }
+}
+@media (max-width: 992px) {
+  .screen-header .header-nav {
+    margin-left: 36px;
+  }
+}
 @media (max-width: 768px) {
   .screen-header .header-nav {
     margin-left: unset;
@@ -3252,6 +3272,26 @@ img {
   display: flex;
   gap: 60px;
 }
+@media (max-width: 1680px) {
+  .screen-header .header-nav ul {
+    gap: 55px;
+  }
+}
+@media (max-width: 1366px) {
+  .screen-header .header-nav ul {
+    gap: 50px;
+  }
+}
+@media (max-width: 1140px) {
+  .screen-header .header-nav ul {
+    gap: 45px;
+  }
+}
+@media (max-width: 992px) {
+  .screen-header .header-nav ul {
+    gap: 35px;
+  }
+}
 @media (max-width: 768px) {
   .screen-header .header-nav ul {
     position: absolute;
@@ -3292,6 +3332,30 @@ img {
   font-weight: 400;
   color: #FFF;
   opacity: 0.6;
+}
+@media (max-width: 1680px) {
+  .screen-header .header-nav ul a {
+    font-size: 24px;
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 1366px) {
+  .screen-header .header-nav ul a {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+}
+@media (max-width: 1140px) {
+  .screen-header .header-nav ul a {
+    font-size: 20px;
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 992px) {
+  .screen-header .header-nav ul a {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
 }
 .screen-header .header-nav ul a.active {
   opacity: 1;
@@ -4505,28 +4569,32 @@ img {
   right: 0;
   top: -140px;
   padding-right: 52px;
+  top: 46px;
+  right: 114px;
 }
 @media (max-width: 1680px) {
   .screen-about-contest .ticket {
-    max-height: 130px;
+    max-height: 150px;
+    right: 80px;
   }
 }
 @media (max-width: 1366px) {
   .screen-about-contest .ticket {
-    max-height: 110px;
-    top: -130px;
+    max-height: 120px;
+    top: 40px;
+    right: 40px;
   }
 }
 @media (max-width: 1140px) {
   .screen-about-contest .ticket {
-    max-height: 90px;
-    top: -114px;
+    max-height: 110px;
+    top: 30px;
+    right: 30px;
   }
 }
 @media (max-width: 992px) {
   .screen-about-contest .ticket {
     max-height: 80px;
-    top: -100px;
   }
 }
 @media (max-width: 768px) {

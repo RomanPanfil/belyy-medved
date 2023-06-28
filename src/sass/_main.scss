@@ -1019,6 +1019,18 @@
   .header-nav {
     margin-right: auto;
     margin-left: 62px;
+    @media (max-width: 1680px) {
+      margin-left: 55px;
+    }
+    @media (max-width: 1366px) {
+      margin-left: 50px;
+    }
+    @media (max-width: 1140px) {
+      margin-left: 46px;;
+    }
+    @media (max-width: 992px) {
+      margin-left: 36px;
+    }
     @media (max-width: 768px) {
       margin-left: unset;
       margin-right: unset;
@@ -1049,6 +1061,18 @@
     ul {
       display: flex;   
       gap: 60px; 
+      @media (max-width: 1680px) {
+        gap: 55px;
+      }
+      @media (max-width: 1366px) {
+        gap: 50px;
+      }
+      @media (max-width: 1140px) {
+        gap: 45px;
+      }
+      @media (max-width: 992px) {
+        gap: 35px;
+      }
       @media (max-width: 768px) {
         position: absolute;
         padding-top: 200px;
@@ -1063,7 +1087,7 @@
         z-index: 5;
         height: 100vh;   
         transform: translateY(-100%);  
-        transition: 0.3s;   
+        transition: 0.3s;         
         &.active {
           transform: translateY(0%);
         }
@@ -1075,6 +1099,19 @@
         font-weight: 400;
         color: $font;
         opacity: 0.6;
+        @media (max-width: 1680px) {
+          @include fz(24);
+        }
+        @media (max-width: 1366px) {
+          @include fz(22);
+        }
+        @media (max-width: 1140px) {
+          @include fz(20);
+        }
+        @media (max-width: 992px) {
+          @include fz(18);
+        }
+
         &.active {
           opacity: 1;
         }
@@ -1987,20 +2024,27 @@
     right: 0;
     top: -140px;
     padding-right: 52px;
+    top: 46px;
+    right: 114px;
     @media (max-width: 1680px) {
-      max-height: 130px;
+      max-height: 150px;
+      right: 80px;
     }
     @media (max-width: 1366px) {
-      max-height: 110px;
-      top: -130px;
+      max-height: 120px;
+      top: 40px;
+      right: 40px;
+      // top: -130px;
     }
     @media (max-width: 1140px) {
-      max-height: 90px;
-      top: -114px;
+      max-height: 110px;
+      top: 30px;
+      right: 30px;
+      // top: -114px;
     }
     @media (max-width: 992px) {
       max-height: 80px;
-      top: -100px;
+      // top: -100px;
     }
     @media (max-width: 768px) {
       display: none;
