@@ -3569,7 +3569,7 @@ img {
 .screen-plans {
   position: relative;
   background-color: #23372B;
-  background-image: url(../images/plans-contest-bg.jpg);
+  background-image: url(../images/plans-bg-mask.svg), url(../images/plans-contest-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -4131,7 +4131,7 @@ img {
   position: relative;
   height: 100vh;
   background-color: #538c57;
-  background-image: url(../images/about-contest-bg.jpg);
+  background-image: url(../images/about-bg-mask.svg), url(../images/about-contest-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -4177,13 +4177,35 @@ img {
     scroll-snap-align: unset;
   }
 }
+.screen-about-contest .contest-content {
+  max-width: 652px;
+}
+@media (max-width: 1366px) {
+  .screen-about-contest .contest-content {
+    max-width: 382px;
+  }
+}
+@media (max-width: 1280px) {
+  .screen-about-contest .contest-content {
+    max-width: 382px;
+  }
+}
+@media (max-width: 1140px) {
+  .screen-about-contest .contest-content {
+    max-width: 268px;
+  }
+}
+@media (max-width: 768px) {
+  .screen-about-contest .contest-content {
+    max-width: 100%;
+  }
+}
 .screen-about-contest__title {
   margin-top: 0;
   color: #FFF;
   font-size: 80px;
   font-size: 5rem;
   font-weight: 700;
-  max-width: 652px;
   margin-bottom: 20px;
 }
 @media (max-width: 1680px) {
@@ -4198,7 +4220,6 @@ img {
     font-size: 50px;
     font-size: 3.125rem;
     margin-bottom: 14px;
-    max-width: 382px;
   }
 }
 @media (max-width: 1280px) {
@@ -4206,7 +4227,6 @@ img {
     font-size: 46px;
     font-size: 2.875rem;
     margin-bottom: 14px;
-    max-width: 382px;
   }
 }
 @media (max-width: 1140px) {
@@ -4214,12 +4234,10 @@ img {
     font-size: 34px;
     font-size: 2.125rem;
     margin-bottom: 10px;
-    max-width: 268px;
   }
 }
 @media (max-width: 768px) {
   .screen-about-contest__title {
-    max-width: 100%;
     font-size: 50px;
     font-size: 3.125rem;
   }
@@ -4307,7 +4325,6 @@ img {
 }
 @media (max-width: 1280px) {
   .screen-about-contest__text {
-    max-width: 442px;
     font-size: 12px;
     font-size: 0.75rem;
     margin-bottom: 28px;
@@ -5240,7 +5257,7 @@ img {
 .screen-contest-form {
   position: relative;
   height: 100vh;
-  background-image: url(../images/form-contest-bg.jpg);
+  background-image: url(../images/form-mask-bg.svg), url(../images/form-contest-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -5538,7 +5555,7 @@ img {
 }
 
 .footer {
-  background-color: #19211C;
+  background-color: #23372B;
   font-size: 20px;
   font-size: 1.25rem;
   letter-spacing: 0.6px;

@@ -1129,7 +1129,7 @@
 .screen-plans {
   position: relative;
   background-color: #23372B;
-  background-image: url(../images/plans-contest-bg.jpg);
+  background-image: url(../images/plans-bg-mask.svg), url(../images/plans-contest-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -1472,7 +1472,7 @@
   position: relative;
   height: 100vh;
   background-color: #538c57;
-  background-image: url(../images/about-contest-bg.jpg);
+  background-image: url(../images/about-bg-mask.svg), url(../images/about-contest-bg.jpg);  
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -1506,12 +1506,26 @@
     scroll-snap-align: unset;
   }
 
+  .contest-content {
+    max-width: 652px;   
+    @media (max-width: 1366px) {     
+      max-width: 382px;
+    }
+    @media (max-width: 1280px) {     
+      max-width: 382px;
+    }
+    @media (max-width: 1140px) {     
+      max-width: 268px;
+    }
+    @media (max-width: 768px) {
+      max-width: 100%;      
+    }    
+  }
   &__title {
     margin-top: 0;
     color: $font;
     @include fz(80);  
-    font-weight: 700;
-    max-width: 652px;
+    font-weight: 700;   
     margin-bottom: 20px;
     @media (max-width: 1680px) {
       @include fz(65); 
@@ -1519,21 +1533,17 @@
     }
     @media (max-width: 1366px) {
       @include fz(50); 
-      margin-bottom: 14px;
-      max-width: 382px;
+      margin-bottom: 14px;  
     }
     @media (max-width: 1280px) {
       @include fz(46); 
       margin-bottom: 14px;
-      max-width: 382px;
     }
     @media (max-width: 1140px) {
       @include fz(34); 
       margin-bottom: 10px;
-      max-width: 268px;
     }
     @media (max-width: 768px) {
-      max-width: 100%;
       @include fz(50); 
     }
     @media (max-width: 480px) {    
@@ -1591,8 +1601,7 @@
       @include fz(14);
       margin-bottom: 32px;
     }
-    @media (max-width: 1280px) {
-      max-width: 442px;
+    @media (max-width: 1280px) {     
       @include fz(12);
       margin-bottom: 28px;
     }
@@ -2350,7 +2359,7 @@
 .screen-contest-form {
   position: relative;
   height: 100vh;
-  background-image: url(../images/form-contest-bg.jpg);
+  background-image: url(../images/form-mask-bg.svg), url(../images/form-contest-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -2575,7 +2584,7 @@
 
 
 .footer {
-  background-color: #19211C;
+  background-color: #23372B;
   @include fz(20);
   letter-spacing: 0.6px;
   overflow: hidden; 
