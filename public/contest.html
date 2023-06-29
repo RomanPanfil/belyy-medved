@@ -615,13 +615,24 @@
             Расскажи о своем плане на лето и испытай удачу
           </div>
           <div class="screen-contest-form-left">
-            <input type="text" placeholder="Как вас зовут ?" required name="contest_first_name" id="contest_first_name">
-            <input type="text" placeholder="Ваша фамилия?" required name="contest_last_name" id="contest_last_name">
-            <input type="email" placeholder="Ввести email" required name="contest_email" id="contest_email">
+            <div class="ui-field">
+              <input class="ui-input" type="text" placeholder="Как вас зовут ?" required name="contest_first_name"
+                id="contest_first_name">
+            </div>
+            <div class="ui-field">
+              <input class="ui-input" type="text" placeholder="Ваша фамилия?" required name="contest_last_name"
+                id="contest_last_name">
+            </div>
+            <div class="ui-field">
+              <input class="ui-input" type="email" placeholder="Ввести email" required name="contest_email"
+                id="contest_email">
+            </div>
           </div>
           <div class="screen-contest-form-right">
-            <textarea placeholder="Расскажите о том как хотите провести своё лето?" required name="contest_text"
-              id="contest_text"></textarea>
+            <div class="ui-field">
+              <textarea class="ui-textarea" placeholder="Расскажите о том как хотите провести своё лето?" required
+                name="contest_text" id="contest_text"></textarea>
+            </div>
           </div>
           <div class="screen-contest-form-bottom">
             <button type="submit" class="ui-btn ui-btn-dark" data-href="./popups/popup-moderation.html">
