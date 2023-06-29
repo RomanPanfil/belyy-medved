@@ -3602,6 +3602,11 @@ img {
     padding-top: 30px;
   }
 }
+@media (max-width: 599px) {
+  .screen-plans {
+    padding-bottom: 100px;
+  }
+}
 @media (max-width: 480px) {
   .screen-plans {
     padding-top: 15px;
