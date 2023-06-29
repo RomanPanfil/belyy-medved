@@ -1010,6 +1010,9 @@
       @media (max-width: 1140px) {
         max-height: 100px;
       }
+      @media (max-width: 992px) {
+        max-height: 80px;
+      }
       @media (max-width: 768px) {
         position: relative;
         z-index: 10;
@@ -1206,13 +1209,14 @@
   &-search {
     display: flex;
     margin-left: auto;
-    @media (max-width: 768px) {
-      // margin-left: 20px;
+    @media (max-width: 768px) {     
       width: 100%;
       // margin-bottom: 20px;
     }
     @media (max-width: 480px) {
-      width: 80%;
+      width: 78%;
+      margin-left: 0;
+      margin-right: auto
     }
     input {
       width: 415px;
@@ -1229,6 +1233,7 @@
       padding-right: 25px;
 
       @media (max-width: 1366px) {
+        width: 315px;
         height: 47px;
         padding: 18px 10px;
         border-radius: 8px 0px 0px 8px;       
@@ -1296,7 +1301,7 @@
 
       @media (max-width: 1366px) {
         height: 47px;
-        padding: 11px 24px;
+        padding: 11px 16px;
         border-radius: 0px 8px 8px 0px;
       }
       @media (max-width: 992px) {
@@ -1362,6 +1367,7 @@
     @media (max-width: 1366px) {
       @include fz(14);
       height: 47px;
+      width: 170px;
       line-height: 47px;
       border-radius: 8px;
     }
@@ -1401,7 +1407,12 @@
     align-items: center;
     width: 100%;
     padding-left: 38px;
-    padding-right: 38px;   
+    padding-right: 38px;  
+    @media (max-width: 1366px) {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+
     @media (max-width: 992px) {
       padding-left: 16px;
       padding-right: 16px;
@@ -1411,12 +1422,12 @@
       padding-top: 19px;
     }
     @media (max-width: 599px) {
-      padding-left: 15px;
-      padding-top: 15px;
+      padding-left: 16px;
+      padding-top: 16px;
     }
     @media (max-width: 480px) {
-      padding-left: 12px;
-      padding-top: 12px;
+      padding-left: 11px;
+      padding-top: 11px;
     }
 
   }
@@ -1492,11 +1503,9 @@
   }
   @media (max-width: 1280px) {
     padding-top: 124px;
-    padding-bottom: 36px;
   }
-  @media (max-width: 960px) {
-    padding-top: 97px;
-    padding-bottom: 36px;
+  @media (max-width: 992px) {
+    padding-top: 86px;
   }  
 
   .container {
@@ -1644,6 +1653,16 @@
     display: flex;
     // gap: 20px;
     max-width: 68%;
+    @media (max-width: 1680px) {     
+      .row {
+        margin-left: -12px;
+        margin-right: -12px;
+      }
+      [class*=col-] {
+        padding-left: 12px;
+        padding-right: 12px;
+      }
+    }
     @media (max-width: 1366px) {
       max-width: 62%;
       .row {
@@ -2130,6 +2149,12 @@
         // padding-bottom: 10px;
         margin-bottom: 16px;
       }
+      @media (max-width: 480px) {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
       &__likes {
         position: absolute;
         top: 8px;
@@ -2152,19 +2177,36 @@
             max-width: 18px;
           }
         }
-
-        @media (max-width: 480px) {
-          @include fz(13);
+        @media (max-width: 992px) {
+          @include fz(14);
           padding: 2px 8px;
 
           img {
-            max-width: 14px;
+            max-width: 16px;
+          }
+        }
+
+        @media (max-width: 480px) {
+          @include fz(12);
+          padding: 2px 8px;
+
+          img {
+            max-width: 13px;
           }
         }
 
         p {
           margin: 0;
           margin-right: 10px;
+          @media (max-width: 1366px) {
+            margin-right: 8px;
+          }
+          @media (max-width: 768px) {
+            margin-right: 6px;
+          }
+          @media (max-width: 480px) {
+            margin-right: 4px;
+          }
         }
       }
 
@@ -2194,14 +2236,17 @@
         @media (max-width: 992px) {
           width: 26px;
           height: 26px;
+          margin-right: 10px;
         }
         @media (max-width: 768px) {
           width: 30px;
           height: 30px;
+          margin-right: 6px; 
         }
         @media (max-width: 480px) {
           width: 22px;
           height: 22px;
+          margin-right: 4px;   
         }
       }
       &__title {
@@ -2220,9 +2265,11 @@
         }
         @media (max-width: 768px) {
           @include fz(22);
+          margin-right: 6px;
         }
         @media (max-width: 480px) {
-          @include fz(18);
+          @include fz(16);
+          margin-right: 4px;
         }
       }
       &__count {
@@ -2269,7 +2316,7 @@
           @include fz(12);
         }
         @media (max-width: 480px) {
-          @include fz(10);
+          @include fz(9);
         }
       }
       &__more {
@@ -2291,7 +2338,7 @@
           @include fz(11);
         }
         @media (max-width: 480px) {
-          @include fz(9);
+          @include fz(8);
         }
       }
     }

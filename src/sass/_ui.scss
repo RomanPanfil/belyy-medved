@@ -177,6 +177,10 @@ img {
 		color: $font;
 		background-color: #C74403;		
 		box-shadow: 0px 0px 0px 0px rgba(20, 31, 24, 0.05), 4px 2px 10px 0px rgba(20, 31, 24, 0.05), 16px 9px 18px 0px rgba(20, 31, 24, 0.04), 36px 19px 24px 0px rgba(20, 31, 24, 0.03), 64px 34px 29px 0px rgba(20, 31, 24, 0.01), 99px 54px 32px 0px rgba(20, 31, 24, 0.00), 14px 14px 0px 0px #DECA99;	
+		
+		@media (max-width: 1680px) {
+			box-shadow: 0px 0px 0px 0px rgba(20, 31, 24, 0.05), 4px 2px 10px 0px rgba(20, 31, 24, 0.05), 16px 9px 18px 0px rgba(20, 31, 24, 0.04), 36px 19px 24px 0px rgba(20, 31, 24, 0.03), 64px 34px 29px 0px rgba(20, 31, 24, 0.01), 99px 54px 32px 0px rgba(20, 31, 24, 0.00), 10px 10px 0px 0px #DECA99;	
+		}
 		@media (max-width: 1140px) {
 			box-shadow: 0px 0px 0px 0px rgba(20, 31, 24, 0.05), 4px 2px 10px 0px rgba(20, 31, 24, 0.05), 16px 9px 18px 0px rgba(20, 31, 24, 0.04), 36px 19px 24px 0px rgba(20, 31, 24, 0.03), 64px 34px 29px 0px rgba(20, 31, 24, 0.01), 99px 54px 32px 0px rgba(20, 31, 24, 0.00), 7px 7px 0px 0px #DECA99;	
 		}	
@@ -186,7 +190,7 @@ img {
 		background-color: #23372B;	
 		box-shadow: 14px 14px 0px 0px #5E6738;
 		text-overflow: ellipsis;
-		@media (max-width: 1280px) {
+		@media (max-width: 1680px) {
 			box-shadow: 10px 10px 0px 0px #5E6738;
 		}
 		@media (max-width: 1140px) {
@@ -231,6 +235,7 @@ img {
 		height: 50px;
 		line-height: 50px;
 		padding: 0px 34px;
+		box-shadow: 10px 10px 0px #5E6738;	
 	}
 
 	@media (max-width: 1280px) {
