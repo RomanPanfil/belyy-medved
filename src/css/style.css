@@ -4329,29 +4329,26 @@ img {
   }
 }
 .screen-about-contest__text p {
-  margin: unset;
-}
-.screen-about-contest__text p + p {
-  margin-top: 32px;
+  margin-bottom: 32px;
 }
 @media (max-width: 1680px) {
-  .screen-about-contest__text p + p {
-    margin-top: 22px;
+  .screen-about-contest__text p {
+    margin-bottom: 22px;
   }
 }
 @media (max-width: 1366px) {
-  .screen-about-contest__text p + p {
-    margin-top: 18px;
+  .screen-about-contest__text p {
+    margin-bottom: 18px;
   }
 }
 @media (max-width: 1280px) {
-  .screen-about-contest__text p + p {
-    margin-top: 14px;
+  .screen-about-contest__text p {
+    margin-bottom: 14px;
   }
 }
 @media (max-width: 1140px) {
-  .screen-about-contest__text p + p {
-    margin-top: 12px;
+  .screen-about-contest__text p {
+    margin-bottom: 12px;
   }
 }
 .screen-about-contest__cards {

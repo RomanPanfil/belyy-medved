@@ -1151,7 +1151,6 @@
   }
 
   @media (max-width: 768px) {
-    // display: inherit;
     padding-top: 30px;
   }
   @media (max-width: 480px) {
@@ -1196,12 +1195,8 @@
     }
     @media (max-width: 1280px) {
       @include fz(42);
-    }
-    @media (max-width: 768px) {
-      // margin-bottom: 30px;
-    }
-    @media (max-width: 480px) {
-      // margin-bottom: 20px;
+    }   
+    @media (max-width: 480px) {      
       @include fz(36);
     }
   }
@@ -1210,8 +1205,7 @@
     display: flex;
     margin-left: auto;
     @media (max-width: 768px) {     
-      width: 100%;
-      // margin-bottom: 20px;
+      width: 100%;     
     }
     @media (max-width: 480px) {
       width: 78%;
@@ -1269,8 +1263,7 @@
       &::placeholder {
         @include fz(17);
         color: $primary;
-        text-align: center;   
-        // font-family: $inter;
+        text-align: center;  
 
         @media (max-width: 1366px) {
           @include fz(14);  
@@ -1343,10 +1336,6 @@
       }    
     }    
   }
-
-  // &-select {
-  //   width: 200px;
-  // }
 
   .jq-selectbox__select-text {
     @media (max-width: 768px) {
@@ -1510,19 +1499,7 @@
 
   .container {
     width: 100%;
-  }
-  @media (max-width: 1680px) {
-    // padding-top: 185px;
-  }
-  @media (max-width: 1366px) {
-    // padding-top: 160px;
-  }
-  @media (max-width: 1280px) {
-    // padding-top: 150px;
-  }
-  @media (max-width: 960px) {
-    // padding-top: 130px;
-  }
+  }  
   @media (max-width: 768px) {   
     padding-top: 130px; 
     height: max-content;
@@ -1629,23 +1606,20 @@
       max-width: 100%;
     }
 
-    p {
-      margin: unset;
-    }
-    p + p {
-      margin-top: 32px;
-      @media (max-width: 1680px) {
-        margin-top: 22px;
-      }
-      @media (max-width: 1366px) {
-        margin-top: 18px;
-      }
-      @media (max-width: 1280px) {
-        margin-top: 14px;
-      }
-      @media (max-width: 1140px) {
-        margin-top: 12px;
-      }
+    p {         
+        margin-bottom: 32px;
+        @media (max-width: 1680px) {
+          margin-bottom: 22px;
+        }
+        @media (max-width: 1366px) {
+          margin-bottom: 18px;
+        }
+        @media (max-width: 1280px) {
+          margin-bottom: 14px;
+        }
+        @media (max-width: 1140px) {
+          margin-bottom: 12px;
+        }    
     }
   }
 
