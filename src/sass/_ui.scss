@@ -26,22 +26,26 @@ h1, h2, h3, h4, h5, h6,
 h1, .h1 {
 	@include fz($h1);
 	margin-top: 0;
-	line-height: 1;
+	line-height: 1.15;
 
-	@media (min-width: 1440px) {
-		@include fz(60);
+	// @media (min-width: 1440px) {
+	// 	@include fz(60);
+	// }
+
+	@media (max-width: 1680px) {
+		@include fz(76);
 	}
 
-	@media (max-width: 1259px) {
-		@include fz(54);
+	@media (max-width: 1366px) {
+		@include fz(58);
 	}
 
-	@media (max-width: 1259px) {
-		@include fz(46);
+	@media (max-width: 1140px) {
+		@include fz(50);
 	}
 
 	@media (max-width: 959px) {
-		@include fz(42);
+		@include fz(48);
 		line-height: 1.1;
 	}
 

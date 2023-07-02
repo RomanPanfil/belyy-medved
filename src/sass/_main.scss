@@ -8,16 +8,84 @@
   scroll-snap-type: y mandatory;
 }
 .screen {
+  position: relative;
   scroll-snap-align: start;
+
+  .screen-slogan {
+    max-height: 24vh;
+    position: absolute;
+    right: 6vh;
+    top: 6vh;
+    @media (max-width: 768px) {
+      max-height: 14vh;
+      right: 4vh;
+      top: 12vh;
+    }
+  }
+
+  .screen-ticket {
+    position: absolute;
+    right: 6vh;
+    bottom: 8vh;
+    max-height: 22vh;
+    @media (max-width: 768px) {
+      max-height: 12vh;
+      right: 4vh;
+      bottom: 15vh;
+    }
+  }
 }
 
 .screen-promo {
-  height: 100vh;
   max-height: 1366px;
   overflow: hidden;
   position: relative;
   z-index: 1;
   background-color: #538c57;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 170px;
+  padding-bottom: 70px;
+  min-height: 100vh;
+
+  @media (max-width: 1366px) {
+    padding-top: 124px;
+    padding-bottom: 36px;
+  }
+  @media (max-width: 1280px) {
+    padding-top: 124px;
+  }
+  @media (max-width: 992px) {
+    padding-top: 86px;
+  }  
+
+  .container {
+    width: 100%;
+  }
+
+  .bottle-wrapper {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    @media (max-width: 768px) {
+      top: unset;
+      bottom: 80px;
+    }
+
+    img {
+      height: 100vh;
+      display: block;
+      margin-left: auto;
+      @media (max-width: 768px) {
+        object-fit: contain;
+        height: 50vh;      
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
 
   &-content {    
     max-width: 358px;
@@ -44,10 +112,10 @@
   }
 
   &-btn {
-    margin: 0 auto;
+    // margin: 0 auto;
     @media (max-width: 768px) {      
       position: absolute;
-      bottom: 40px;      
+      bottom: 70px;      
       z-index: 3;
       left: 50%;
       transform: translate(-50%, 0);
@@ -95,7 +163,7 @@
   }
 
   @media (max-width: 992px) {
-    height: calc(var(--vh, 1vh) * 100);
+    // height: calc(var(--vh, 1vh) * 100);
 
     &-content {
       max-width: 275px;
@@ -155,9 +223,9 @@
       transform: translate(-50%, -50%);
     }   
   }
-  @media (max-width: 390px) {
-    min-height: 550px;
-  }
+  // @media (max-width: 390px) {
+  //   min-height: 550px;
+  // }
 }
 
 .screen-benefits {
@@ -832,12 +900,12 @@
 }
 
 .screen-promo-left {
-  height: 100vh;
+  height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  padding: 30px 0px 80px;
+  // padding: 30px 0px 80px;
 
   @media (max-width: 1600px) {
     padding: 20px 0px 60px;
@@ -853,12 +921,59 @@
   }
 
   .screen-promo-btn {
-    @media (max-width: 768px) {
-      display: none;
-      visibility: hidden;
-    }
+    // @media (max-width: 768px) {
+    //   display: none;
+    //   visibility: hidden;
+    // }
     @media (max-width: 992px) and (min-width: 768px) {
       margin: 0;
+    }
+  }
+
+  .promo-text {
+    max-width: 682px;
+    @media (max-width: 1680px) {
+      max-width: 468px;
+    }
+    @media (max-width: 1366px) {
+      max-width: 360px;
+    }
+    @media (max-width: 1140px) {
+      max-width: 300px;
+    }
+    @media (max-width: 768px) {
+      max-width: 100%;
+    }
+    &-title {
+      text-transform: uppercase;
+      font-weight: 700;
+      margin-bottom: 24px;
+      @media (max-width: 1366px) {
+        margin-bottom: 20px;
+      }
+      @media (max-width: 1140px) {
+        margin-bottom: 16px;
+      }
+
+    }
+    &-question {
+      font-family: $inter;
+      font-weight: 400;
+      @include fz(20);
+      margin-bottom: 60px;
+
+      @media (max-width: 1680px) {
+        @include fz(16);
+        margin-bottom: 56px;
+      }
+      @media (max-width: 1366px) {
+        @include fz(12);
+        margin-bottom: 46px;
+      }
+      @media (max-width: 1140px) {
+        @include fz(11);
+        margin-bottom: 38px;
+      }
     }
   }
 }
@@ -879,12 +994,14 @@
 }
 
 .screen-promo-bottle {
-  height: 100vh;
+  position: absolute;
+  // height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 60px 0px;
+  // padding: 60px 0px;
+  margin-top: -170px;
 
   @media (max-width: 1600px) {
     padding: 50px 0px;
@@ -922,7 +1039,7 @@
 
 
 .screen-promo-bottle img {
-  max-height: calc(100vh - 120px);
+  max-height: calc(100vh - 10px);
   @media (max-width: 1600px) {
     max-height: calc(100vh - 100px);
   }
@@ -1489,7 +1606,7 @@
   min-height: 100vh;
 
 
-@media (max-width: 1366px) {
+  @media (max-width: 1366px) {
     padding-top: 124px;
     padding-bottom: 36px;
   }
