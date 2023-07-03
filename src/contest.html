@@ -82,7 +82,7 @@
 </head>
 
 <body>
-  <div id="screens" class="screens non-scroll">
+  <div id="screens" class="screens non-scroll contest">
     <header class="screen screen-header">
       <div class="container">
         <div class="header-flex">
@@ -116,21 +116,21 @@
     <div class="screen screen-about-contest">
       <div class="container">
         <div class="contest-content">
-          <div class="h2 screen-about-contest__title">
-            ИССЛЕДУЙ ЛЕТО ВМЕСТЕ
-            С “БЕЛЫМ МЕДВЕДЕМ”
+          <div class="h3 screen-about-contest__title">
+            Поделись своими планами
+            и получи возможность
+            выиграть приз!
           </div>
           <div class="screen-about-contest__period">
             С 1 июля по 30 сентября
           </div>
           <div class="screen-about-contest__text">
             <p>
-              Каждые 2 недели мы будем выбирать три самых
-              интересных и амбициозных плана на лето.
+              Каждые 2 недели будут выбираться три самых интересных и ярких плана на лето.
             </p>
             <p>
-              Из авторы получат ценные призы, которые сделают
-              исследование лета еще более захватывающим!
+              Авторы самых креативных историй получат ценные призы от бренда «Белый Медведь», которые сделают лето еще
+              более захватывающим!
             </p>
           </div>
         </div>
@@ -283,7 +283,14 @@
 
 
         <div class="contest-steps">
-          <img src="./images/steps-all-2.svg" alt="steps">
+          <!-- <img src="./images/steps-all-2.svg" alt="steps">
+          <img src="./images/steps-all-desc-min.svg" alt=""> -->
+          <picture>
+            <source srcset="./images/steps-all-2.svg" media="(min-width: 1367px)">
+            <source srcset="./images/steps-all-desc-min.svg" media="(min-width: 1025px)">
+            <source srcset="./images/steps-all-tablet.svg" media="(min-width: 599px)">
+            <img src="./images/steps-all-mobile.svg" alt="alt" loading="lazy" />
+          </picture>
 
           <button class="ui-btn ui-btn-colored">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
@@ -337,7 +344,7 @@
         <div class="screen-plans-cards">
           <div class="row">
 
-            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-us-6">
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-6">
               <div class="screen-plans-item">
                 <div class="screen-plans-item__likes">
                   <p>24</p>
@@ -367,7 +374,7 @@
               </div>
             </div>
 
-            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-us-6">
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-6">
               <div class="screen-plans-item">
                 <div class="screen-plans-item__likes">
                   <p>21</p>
@@ -395,7 +402,7 @@
               </div>
             </div>
 
-            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-us-6">
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-6">
               <div class="screen-plans-item">
                 <div class="screen-plans-item__likes">
                   <p>34</p>
@@ -423,7 +430,7 @@
               </div>
             </div>
 
-            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-us-6">
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-6">
               <div class="screen-plans-item">
                 <div class="screen-plans-item__likes">
                   <p>412</p>
@@ -451,7 +458,7 @@
               </div>
             </div>
 
-            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-us-6">
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-6">
               <div class="screen-plans-item">
                 <div class="screen-plans-item__likes">
                   <p>24</p>
@@ -479,7 +486,7 @@
               </div>
             </div>
 
-            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-us-6">
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-6">
               <div class="screen-plans-item">
                 <div class="screen-plans-item__likes">
                   <p>21</p>
@@ -507,7 +514,7 @@
               </div>
             </div>
 
-            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-us-6">
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-6">
               <div class="screen-plans-item">
                 <div class="screen-plans-item__likes">
                   <p>34</p>
@@ -535,7 +542,7 @@
               </div>
             </div>
 
-            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-us-6">
+            <div class="screen-plans-cards__wrapper col-md-3 col-sm-4 col-xs-6">
               <div class="screen-plans-item">
                 <div class="screen-plans-item__likes">
                   <p>412</p>

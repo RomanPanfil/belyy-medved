@@ -205,18 +205,18 @@ img {
 		transform: translate(0, 20%);
 		margin-right: 8px;
 		@media (max-width: 1680px) {
-			width: 18px;
-			height: 18px;
+			width: 20px;
+			height: 20px;
 		}
 		@media (max-width: 1140px) {
 			width: 16px;
 			height: 16px;
 		}
-		@media (max-width: 768px) {
-			width: 20px;
-			height: 20px;
-			margin-right: 5px;
-		}
+		// @media (max-width: 768px) {
+		// 	width: 20px;
+		// 	height: 20px;
+		// 	margin-right: 5px;
+		// }
 		@media (max-width: 599px) {
 			width: 20px;
 			height: 20px;			
@@ -231,19 +231,19 @@ img {
 	// }
 
 	@media (max-width: 1680px) {
-		@include fz(16);
-		height: 50px;
-		line-height: 50px;
-		padding: 0px 34px;
+		@include fz(18);
+		height: 60px;
+		line-height: 60px;
+		padding: 0px 46px;
 		box-shadow: 10px 10px 0px #5E6738;	
 	}
 
-	@media (max-width: 1280px) {
-		@include fz(14);
-		height: 46px;
-		line-height: 46px;
-		padding: 0px 30px;
-	}
+	// @media (max-width: 1280px) {
+	// 	@include fz(14);
+	// 	height: 46px;
+	// 	line-height: 46px;
+	// 	padding: 0px 30px;
+	// }
 
 	@media (max-width: 1140px) {
 		@include fz(12);
@@ -254,7 +254,7 @@ img {
 	}
 
 	
-	@media (max-width: 768px) {
+	@media (max-width: 599px) {
 		@include fz(20);
 		height: 64px;
 		line-height: 60px;
@@ -358,9 +358,9 @@ img {
 	&:last-child {
 		margin-bottom: 0;
 	}
-	@media (max-width: 992px) {
-		margin-bottom: 16px;
-	}
+	// @media (max-width: 992px) {
+	// 	margin-bottom: 16px;
+	// }
 	label.error {
 		position: absolute;
 		color: $error;
@@ -404,27 +404,27 @@ img {
         margin-bottom: 0px;
       }  
 
-      @media (max-width: 1366px) {
-        @include fz(14); 
-        padding: 18px 26px;
-      }
+    //   @media (max-width: 1366px) {
+    //     @include fz(14); 
+    //     padding: 18px 26px;
+    //   }
       @media (max-width: 1024px) {
-        @include fz(12); 
-        padding: 12px 20px;
+        @include fz(15); 
+        padding: 16px 20px;
       }
-      @media (max-width: 992px) {
-        @include fz(12); 
-        padding: 12px 20px;
-        // margin-bottom: 10px;
-      }
-      @media (max-width: 768px) {
-        @include fz(18); 
-        padding: 18px 26px;
-      }
-      @media (max-width: 480px) {
-        @include fz(12); 
-        padding: 12px 20px;
-      }
+    //   @media (max-width: 992px) {
+    //     @include fz(12); 
+    //     padding: 12px 20px;
+    //     // margin-bottom: 10px;
+    //   }
+    //   @media (max-width: 768px) {
+    //     @include fz(18); 
+    //     padding: 18px 26px;
+    //   }
+    //   @media (max-width: 480px) {
+    //     @include fz(12); 
+    //     padding: 12px 20px;
+    //   }
       &::placeholder {
         color: $bgc;
       }
