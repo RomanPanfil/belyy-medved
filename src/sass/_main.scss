@@ -523,6 +523,7 @@
       top: -4px;
       bottom: -4px;
       border: 1px solid #FFF8D9;
+      border-radius: 10px;
     }
   }
 
@@ -530,6 +531,7 @@
     display: block;
     width: 72px;
     height: 72px;
+    border-radius: 10px;
     object-fit: cover;
     object-position: center;
 
@@ -551,6 +553,7 @@
 .benefits-arrow {
   width: 72px;
   height: 72px;
+  border-radius: 10px;
   background-color: $primary;
   display: inline-block;
   vertical-align: middle;
@@ -770,6 +773,7 @@
         padding: 24px;
         background: rgba(35, 55, 43, 0.1);
         border: 1px solid #7E9185;
+        border-radius: 10px;
         backdrop-filter: blur(7.5px); 
         width: unset;    
         min-width: unset;
