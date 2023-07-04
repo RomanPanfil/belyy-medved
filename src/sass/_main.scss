@@ -2383,30 +2383,15 @@
           img {
             max-width: 18px;
           }
-        }
-        // @media (max-width: 992px) {
-        //   @include fz(14);
-        //   padding: 2px 8px;
+        }        
 
-        //   img {
-        //     max-width: 16px;
-        //   }
-        // }
-
-        // @media (max-width: 480px) {
-        //   @include fz(12);
-        //   padding: 2px 8px;
-
-        //   img {
-        //     max-width: 13px;
-        //   }
-        // }
-
-        p {
-          margin: 0;
+        span {
+          @include fz(22);
+          font-weight: 700;
+          color: $bgc;
           margin-right: 10px;
-          @media (max-width: 1366px) {
-            // margin-right: 8px;
+          @media (max-width: 1366px) {           
+            @include fz(18);
           }
           @media (max-width: 768px) {
             margin-right: 6px;
@@ -2414,7 +2399,7 @@
           @media (max-width: 480px) {
             margin-right: 4px;
           }
-        }
+        }       
       }
 
       &__head {

@@ -4921,17 +4921,26 @@ img {
     max-width: 18px;
   }
 }
-.screen-plans-cards .screen-plans-item__likes p {
-  margin: 0;
+.screen-plans-cards .screen-plans-item__likes span {
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 700;
+  color: #23372B;
   margin-right: 10px;
 }
+@media (max-width: 1366px) {
+  .screen-plans-cards .screen-plans-item__likes span {
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
 @media (max-width: 768px) {
-  .screen-plans-cards .screen-plans-item__likes p {
+  .screen-plans-cards .screen-plans-item__likes span {
     margin-right: 6px;
   }
 }
 @media (max-width: 480px) {
-  .screen-plans-cards .screen-plans-item__likes p {
+  .screen-plans-cards .screen-plans-item__likes span {
     margin-right: 4px;
   }
 }
