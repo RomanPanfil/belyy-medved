@@ -477,6 +477,7 @@ $(document).ready(function () {
 
   function openMenu() {
     menu.classList.toggle('active')
+    document.querySelector('.burger-btn span').classList.toggle('active')
   }
 
 })();

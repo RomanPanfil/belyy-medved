@@ -1080,7 +1080,7 @@
     }
     .burger-btn {     
       width: 30px;
-      height: 20px;
+      // height: 20px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -1099,6 +1099,35 @@
         height: 2px;
         width: 100%;
         background-color: #fff;
+        display: block;
+        &:before,
+        &:after {
+          content: "";
+          display: block;
+          width: 30px;
+          height: 2px;
+          background-color: #fff;
+          position: absolute;
+          left: 0;
+          transition: transform 0.2s ease-in-out;
+        }   
+        &:before {
+          top: -10px;
+        }
+        &:after {
+          top: 10px;
+        }    
+        &.active {
+          transform: rotate(45deg);
+          &:before {
+            top: 0;
+            transform: rotate(-90deg);
+          }
+          &:after {
+            top: 0;
+            transform: rotate(90deg);
+          }
+        }
       }
     }
     ul {

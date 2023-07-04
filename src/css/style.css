@@ -3461,7 +3461,6 @@ img {
 }
 .screen-header .header-nav .burger-btn {
   width: 30px;
-  height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3491,6 +3490,44 @@ img {
   height: 2px;
   width: 100%;
   background-color: #fff;
+  display: block;
+}
+.screen-header .header-nav .burger-btn span:before, .screen-header .header-nav .burger-btn span:after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: #fff;
+  position: absolute;
+  left: 0;
+  -webkit-transition: -webkit-transform 0.2s ease-in-out;
+  transition: -webkit-transform 0.2s ease-in-out;
+  -o-transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+}
+.screen-header .header-nav .burger-btn span:before {
+  top: -10px;
+}
+.screen-header .header-nav .burger-btn span:after {
+  top: 10px;
+}
+.screen-header .header-nav .burger-btn span.active {
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+.screen-header .header-nav .burger-btn span.active:before {
+  top: 0;
+  -webkit-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+.screen-header .header-nav .burger-btn span.active:after {
+  top: 0;
+  -webkit-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+          transform: rotate(90deg);
 }
 .screen-header .header-nav ul {
   display: -webkit-box;
