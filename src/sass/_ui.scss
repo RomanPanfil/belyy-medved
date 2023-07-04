@@ -275,6 +275,9 @@ img {
 	@media (max-width: 1680px) {
 		gap: 6px;
 	}
+	@media (max-width: 768px) {
+		align-items: flex-end;;
+	}
 }
 
 .pagination-btn {	

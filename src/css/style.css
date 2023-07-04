@@ -761,6 +761,13 @@ img {
     gap: 6px;
   }
 }
+@media (max-width: 768px) {
+  .pagination-pages {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+  }
+}
 
 .pagination-btn {
   display: block;
@@ -5117,14 +5124,13 @@ img {
 
 .screen-contest-form {
   position: relative;
-  height: 100vh;
   background-image: url(../images/form-mask-bg.svg), url(../images/form-contest-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-color: #538c57;
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   color: #23372B;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -5132,17 +5138,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  min-height: 100vh;
 }
 @media (max-width: 1366px) {
   .screen-contest-form {
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-}
-@media (max-width: 1280px) {
-  .screen-contest-form {
-    padding-top: 60px;
-    padding-bottom: 60px;
+    padding-top: 40px;
+    padding-bottom: 40px;
   }
 }
 @media (max-width: 1024px) {
