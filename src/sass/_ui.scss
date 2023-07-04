@@ -278,6 +278,9 @@ img {
 }
 
 .pagination-btn {	
+	display: block;
+	text-align: center;
+	line-height: 61px;
 	width: 61px;
 	height: 61px;		
 	border-radius: 10px;
@@ -291,11 +294,13 @@ img {
 		width: 50px;
 		height: 50px;
 		@include fz(16);
+		line-height: 50px;
 	}
 	@media (max-width: 1140px) {
 		width: 42px;
 		height: 42px;
 		@include fz(14);
+		line-height: 42px;
 	}
 	&.active {
 		border: 2px solid #FFF8D9;
@@ -315,7 +320,7 @@ img {
 .pagination__arrows {
 	display: flex;
 	align-items: center;
-	button + button {
+	a + a {
 		margin-left: 10px;
 	}
 }

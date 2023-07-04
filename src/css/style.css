@@ -763,6 +763,9 @@ img {
 }
 
 .pagination-btn {
+  display: block;
+  text-align: center;
+  line-height: 61px;
   width: 61px;
   height: 61px;
   border-radius: 10px;
@@ -780,6 +783,7 @@ img {
     height: 50px;
     font-size: 16px;
     font-size: 1rem;
+    line-height: 50px;
   }
 }
 @media (max-width: 1140px) {
@@ -788,6 +792,7 @@ img {
     height: 42px;
     font-size: 14px;
     font-size: 0.875rem;
+    line-height: 42px;
   }
 }
 .pagination-btn.active {
@@ -813,7 +818,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
 }
-.pagination__arrows button + button {
+.pagination__arrows a + a {
   margin-left: 10px;
 }
 
