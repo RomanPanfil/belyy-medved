@@ -1286,7 +1286,9 @@
       width: 415px;
       height: 57px;
       padding: 18px 10px;
-      border-radius: 10px 0px 0px 10px;
+      // border-radius: 10px 0px 0px 10px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
       border: 1px solid $primary;
       background-color: transparent;
       outline: none;
@@ -1300,7 +1302,9 @@
         width: 378px;
         height: 47px;
         padding: 18px 10px;
-        border-radius: 8px 0px 0px 8px;       
+        border-radius: 8px 0px 0px 8px;     
+        border-top-left-radius: 8px;
+        border-bottom-left-radius: 8px;  
         @include fz(14);      
         padding-left: 20px;
         padding-right: 20px;
@@ -1328,7 +1332,7 @@
       @media (max-width: 480px) {
         height: 40px;
         padding: 18px 10px;
-        border-radius: 8px 0px 0px 8px;       
+        // border-radius: 8px 0px 0px 8px;       
         @include fz(11);      
         padding-left: 10px;
         padding-right: 10px;
@@ -2345,17 +2349,17 @@
         margin-bottom: 25px;
       }
       @media (max-width: 768px) {
-        // padding-right: 10px;
-        // padding-left: 10px;
-        // padding-top: 20px;
-        // padding-bottom: 10px;
-        margin-bottom: 16px;
+        padding-right: 15px;
+        padding-left: 15px;
+        padding-top: 25px;
+        padding-bottom: 24px;        
+        margin-bottom: 22px;
       }
       @media (max-width: 480px) {
         padding-right: 10px;
         padding-left: 10px;
         padding-top: 20px;
-        padding-bottom: 10px;
+        padding-bottom: 20px;
       }
       &__likes {
         position: absolute;
@@ -2577,24 +2581,12 @@
       } 
       @media (max-width: 768px) {
         // position: relative;
-        flex-wrap: wrap;
-        .ui-btn {
-          // position: absolute;
-          // bottom: -74px;
-          // left: 50%;
-          // transform: translateX(-50%);
-        }
-        // @media (max-width: 480px) {
-        //   justify-content: center;
-        //   .pagination__arrows {
-        //     display: none;            
-        //   }          
-        // }        
+        flex-wrap: wrap;              
       }
  
-      .pagination-pages {
-        align-items: flex-end;       
-      }
+      // .pagination-pages {
+      //   align-items: flex-end;       
+      // }
       .pagination__arrows {
         @media (max-width: 768px) {
           position: absolute;
