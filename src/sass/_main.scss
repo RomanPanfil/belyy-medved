@@ -2927,6 +2927,7 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  position: relative;
   &.orange {
     background-color: #BD7F40;
     background-image: url(../images/slider-bg-1.jpg);
@@ -2945,6 +2946,21 @@
     display: flex;
     gap: 30px;
 
+    &-container {
+      max-width: 1920px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 5;
+    }
+
+    &-navigation {
+      position: relative;
+      z-index: 6;
+    }
+
     &-item-bg {
       &:nth-child(1) {
         border-radius: 0px 0px 80px 80px;
@@ -2961,6 +2977,57 @@
   
   .slider-content {
     display: none;
+
+    &-title {
+      @include fz(80);
+      font-weight: 700;
+      color: $font;
+      margin-bottom: 25px;
+      span {
+        display: block;
+      }
+    }
+
+    p {
+      @include fz(20);
+      font-weight: 400;
+      font-family: $inter;
+      min-height: 224px;
+    }
+
+    &-description {
+      display: flex;
+      gap: 40px;
+      margin-bottom: 45px;  
+      
+      &__wrapper {
+        display: flex;
+        align-items: center;
+        .image {
+          position: relative;
+          border-radius: 50%;
+          width: 60px;
+          height: 60px;
+          background-color: $primary;
+          margin-right: 16px;
+          img {
+            position: absolute;
+            top: -24%;
+            max-width: 85px;
+          }
+        }
+        .param {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          span {
+            text-transform: uppercase;
+            @include fz(24);
+            font-weight: 700;
+          }
+        }
+      }
+    }
   }
   
   .slider-content.active {
@@ -2969,11 +3036,16 @@
   
   .slider-left {
     width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .slider-right {
-    width: 80%;
+    width: 58%;
     position: relative;
-    left: 11%;
+    left: 4%;
     max-height: 75vh;
   }
   .slider-right {
