@@ -2223,6 +2223,27 @@ img {
         scroll-snap-type: unset;
   }
 }
+.screens.main .screen-about-contest {
+  padding-top: 90px;
+}
+@media (max-width: 1680px) {
+  .screens.main .screen-about-contest {
+    padding-top: 60px;
+  }
+}
+@media (max-width: 1366px) {
+  .screens.main .screen-about-contest {
+    padding-top: 50px;
+  }
+}
+.screens.main .screen-about-contest .screen-about-contest .ticket {
+  padding-top: 40px;
+}
+@media (max-width: 1024px) {
+  .screens.main .screen-about-contest .ticket {
+    display: none;
+  }
+}
 
 .screen {
   position: relative;
@@ -2299,6 +2320,7 @@ img {
     min-height: unset;
     padding-top: 150px;
     padding-bottom: 10px;
+    overflow: unset;
   }
 }
 @media (max-width: 768px) {
@@ -5047,52 +5069,52 @@ img {
     max-height: 330px;
   }
 }
-.screen-about-contest .contest-steps button {
+.screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
   position: absolute;
   bottom: -85px;
   right: 238px;
 }
 @media (max-width: 1680px) {
-  .screen-about-contest .contest-steps button {
+  .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
     right: 212px;
     bottom: -75px;
   }
 }
 @media (max-width: 1366px) {
-  .screen-about-contest .contest-steps button {
+  .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
     right: 17px;
     bottom: -75px;
   }
 }
 @media (max-width: 1280px) {
-  .screen-about-contest .contest-steps button {
+  .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
     right: 17px;
     bottom: -75px;
   }
 }
 @media (max-width: 1140px) {
-  .screen-about-contest .contest-steps button {
+  .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
     right: unset;
     bottom: -44px;
     left: 386px;
   }
 }
 @media (max-width: 1024px) {
-  .screen-about-contest .contest-steps button {
+  .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
     right: unset;
     bottom: 34px;
     left: 485px;
   }
 }
 @media (max-width: 768px) {
-  .screen-about-contest .contest-steps button {
+  .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
     right: unset;
     bottom: 30px;
     left: 56vw;
   }
 }
 @media (max-width: 599px) {
-  .screen-about-contest .contest-steps button {
+  .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
     width: 100%;
     display: block;
     position: unset;

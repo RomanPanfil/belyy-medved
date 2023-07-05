@@ -10,6 +10,26 @@
   @media (max-width: 1024px) {
     scroll-snap-type: unset;
   }
+
+  &.main {
+    .screen-about-contest {
+      padding-top: 90px;
+      @media (max-width: 1680px) {
+        padding-top: 60px;    
+      }
+      @media (max-width: 1366px) {
+        padding-top: 50px;        
+      }
+      .screen-about-contest .ticket {
+        padding-top: 40px;
+      } 
+      .ticket {
+        @media (max-width: 1024px) {
+          display: none;
+        }
+      }   
+    }
+  }
 }
 .screen {
   position: relative;
@@ -71,6 +91,7 @@
     min-height: unset;
     padding-top: 150px;
     padding-bottom: 10px;
+    overflow: unset;
   }
   // @media (max-width: 992px) {
   //   padding-top: 86px;
@@ -2493,7 +2514,7 @@
     //   }
     // }
 
-    button {
+    button, a {
       position: absolute;
       // margin-top: 14px;
       // margin-left: 422px;
