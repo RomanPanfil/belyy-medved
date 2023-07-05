@@ -2591,6 +2591,7 @@ img {
     display: block;
     z-index: 1;
     position: sticky;
+    bottom: 10px;
     left: unset;
     -webkit-transform: unset;
         -ms-transform: unset;
@@ -2645,6 +2646,7 @@ img {
     -webkit-transform: translateY(-120%);
         -ms-transform: translateY(-120%);
             transform: translateY(-120%);
+    bottom: 0;
   }
 }
 @media (max-width: 880px) {
@@ -6311,6 +6313,11 @@ img {
   background-position: center;
   background-size: cover;
   position: relative;
+}
+@media (max-width: 1024px) {
+  .screen-slider {
+    padding-bottom: 10px;
+  }
 }
 .screen-slider.orange {
   background-color: #BD7F40;

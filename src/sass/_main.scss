@@ -372,6 +372,7 @@
 
       
       position: sticky;
+      bottom: 10px;
       left: unset;
       transform: unset;
       padding-left: 15px;
@@ -421,6 +422,7 @@
     .screen-alert {     
       padding-top: 0;
       transform: translateY(-120%);
+      bottom: 0;
     }
   }  
 
@@ -3608,6 +3610,9 @@
   background-position: center;
   background-size: cover;
   position: relative;
+  @media (max-width: 1024px) {
+    padding-bottom: 10px;
+  }
   &.orange {
     background-color: #BD7F40;
     background-image: url(../images/slider-mask.svg), url(../images/slider-bg-1.jpg);
