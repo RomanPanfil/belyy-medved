@@ -481,3 +481,18 @@ $(document).ready(function () {
   }
 
 })();
+
+// очистка инпута поиска
+(function() {
+  if(!document.querySelector('.screen-plans-search button.cross') || !document.querySelector('.screen-plans-search input')) return
+
+  const cross = document.querySelector('.screen-plans-search button.cross');
+  const input = document.querySelector('.screen-plans-search input');
+
+  cross.addEventListener('click', removeInputValue);
+
+  function removeInputValue() {
+    input.value = '';
+  }
+
+})();

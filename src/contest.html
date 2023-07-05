@@ -327,16 +327,23 @@
           </div>
           <div class="screen-plans-search">
             <input type="search" placeholder="Найти план: Введите email">
-            <button>
+            <button class="cross visible">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M9.375 2.625L2.625 9.375" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+                <path d="M9.375 9.375L2.625 2.625" stroke="white" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+            <button class="search">
               <img src="./images/search-normal.svg" alt="search">
             </button>
           </div>
           <div class="screen-plans-select">
             <select>
               <option value="1">Случайные</option>
-              <option value="2">неслучайные</option>
-              <option value="3">Случайные</option>
-              <option value="4">неслучайные случайные</option>
+              <option value="2">Популярные</option>
+              <option value="3">Новые</option>
             </select>
           </div>
         </div>
