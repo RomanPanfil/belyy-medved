@@ -2606,6 +2606,7 @@ img {
   .screen-alert {
     visibility: hidden;
     display: none;
+    bottom: 20px;
   }
 }
 .screen-alert.mobile {
@@ -2662,6 +2663,7 @@ img {
     -webkit-transform: translateY(-16%);
         -ms-transform: translateY(-16%);
             transform: translateY(-16%);
+    bottom: 10px;
   }
 }
 

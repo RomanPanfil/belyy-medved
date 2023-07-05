@@ -367,10 +367,7 @@
   @media (max-width: 1024px) {
     visibility: visible;
       display: block;
-      z-index: 1;
-
-
-      
+      z-index: 1;      
       position: sticky;
       bottom: 10px;
       left: unset;
@@ -384,6 +381,7 @@
   @media (max-width: 599px) {
     visibility: hidden;
     display: none;
+    bottom: 20px;
   }
   &.mobile {
     visibility: hidden;
@@ -432,9 +430,10 @@
     height: unset;
     max-height: unset;
   } 
-  @media (max-width: 599px) {
+  @media (max-width: 599px) {   
     .screen-alert {     
       transform: translateY(-16%);
+      bottom: 10px;
     }    
   }
 }
