@@ -83,49 +83,90 @@
 
 <body>
   <div id="screens" class="screens non-scroll">
+
+    <!-- header start -->
+    <header class="screen screen-header">
+      <div class="container">
+        <div class="header-flex">
+          <div class="header-logo">
+            <a href="#">
+              <img src="./images/logo-main.png" alt="logo">
+            </a>
+          </div>
+          <nav class="header-nav">
+            <button class="burger-btn">
+              <span></span>
+
+            </button>
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#" class="active">Конкурс</a>
+              </li>
+              <li>
+                <a href="#">О бренде</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
     <!-- main screen start -->
     <div class="screen screen-promo">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-sm-4 col-xs-4">
+          <div class="col-md-5 col-sm-6 col-xs-12">
             <div class="screen-promo-left">
-              <div class="screen-promo-slogan">
-                <img src="./images/slogan@2x.png" srcset="./images/slogan@2x.png 2x" alt="slogan">
+              <div class="promo-text">
+                <div class="h1 promo-text-title">
+                  Исследуй новое - создавай свое идеальное лето!
+                </div>
+                <p class="promo-text-question">
+                  Готов наполнить своё лето новыми впечатлениями и незабываемыми открытиями?
+                </p>
               </div>
-              <button class="screen-promo-btn ui-btn benefits">
+              <button class="screen-promo-btn ui-btn benefits desktop">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M19.5 12L12 19.5L4.5 12" stroke="#23372B" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
                   <path d="M19.5 4.5L12 12L4.5 4.5" stroke="#23372B" stroke-width="2" stroke-linecap="round"
                     stroke-linejoin="round" />
                 </svg>
-                Исследовать
+                Вперед!
               </button>
-            </div>
-          </div>
-          <div class="col-md-6 col-sm-6 col-xs-6">
-            <div class="screen-promo-bottle">
-              <div class="screen-promo-imgs">
-                <img src="./images/bottle.png" srcset="./images/bottle@2x.png" alt="bottle">
-              </div>
-              <button class="screen-promo-btn ui-btn benefits">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M19.5 12L12 19.5L4.5 12" stroke="#23372B" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                  <path d="M19.5 4.5L12 12L4.5 4.5" stroke="#23372B" stroke-width="2" stroke-linecap="round"
-                    stroke-linejoin="round" />
-                </svg>
-                Исследовать
-              </button>
-            </div>
-          </div>
-          <div class="col-md-2 col-sm-2 col-xs-2">
-            <div class="screen-promo-logo">
-              <img src="./images/logo-main.png" alt="logo">
             </div>
           </div>
         </div>
       </div>
+
+      <div class="bottle-wrapper">
+        <div class="row">
+          <div class="col-md-10 col-sm-8 col-xs-12">
+            <img src="./images/bottle.png" srcset="./images/bottle@2x.png" alt="bottle">
+          </div>
+        </div>
+      </div>
+
+      <div class="container mobile">
+        <button class="screen-promo-btn ui-btn benefits mobile">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M19.5 12L12 19.5L4.5 12" stroke="#23372B" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+            <path d="M19.5 4.5L12 12L4.5 4.5" stroke="#23372B" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" />
+          </svg>
+          Вперед!
+        </button>
+      </div>
+
+      <img src="./images/gold.png" alt="ticket" class="ticket">
+      <img src="./images/slogan.png" alt="slogan" class="screen-slogan">
+      <!-- <img src="./images/gold.png" alt="ticket" class="screen-ticket"> -->
+
 
       <img src="./images/top-screen-bg.jpg" class="screen-promo-bg" alt="bg">
 
@@ -134,6 +175,216 @@
     </div>
     <!-- main screen end -->
 
+
+    <!-- about-contest start -->
+    <div class="screen screen-about-contest">
+      <div class="container">
+        <div class="contest-content">
+          <div class="h3 screen-about-contest__title">
+            Поделись своими планами
+            и получи возможность
+            выиграть приз!
+          </div>
+          <div class="screen-about-contest__period">
+            С 1 июля по 30 сентября
+          </div>
+          <div class="screen-about-contest__text">
+            <p>
+              Каждые 2 недели будут выбираться три самых интересных и ярких плана на лето.
+            </p>
+            <p>
+              Авторы самых креативных историй получат ценные призы от бренда «Белый Медведь», которые сделают лето еще
+              более захватывающим!
+            </p>
+          </div>
+        </div>
+
+        <!-- <div class="screen-about-contest__cards">
+          <div class="card-item">
+            <div class="card-item-title">
+              6 розыгрышей
+            </div>
+            <p class="card-item-text">
+              3 победителя каждые 2 недели
+            </p>
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">
+              18 уникальных призов
+            </div>
+            <div class="card-item-images">
+              <div class="card-item-images__image">
+                <img src="./images/present-1.png" alt="present">
+              </div>
+              <div class="card-item-images__image">
+                <img src="./images/present-2.png" alt="present">
+              </div>
+              <div class="card-item-images__image">
+                <img src="./images/present-3.png" alt="present">
+              </div>
+              <div class="card-item-images__image">
+                <span>+15</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-item">
+            <div class="card-item-title">
+              Шанс есть у каждого
+            </div>
+            <p class="card-item-text">
+              Призы получат самые креативные и амбициозные исследователи!
+            </p>
+          </div>
+        </div> -->
+
+
+        <div class="screen-about-contest__cards">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="card-item">
+                <div class="card-item-title">
+                  6 розыгрышей
+                </div>
+                <p class="card-item-text">
+                  3 победителя каждые 2 недели
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-item">
+                <div class="card-item-title">
+                  18 уникальных призов
+                </div>
+                <div class="card-item-images">
+                  <div class="card-item-images__image">
+                    <img src="./images/present-1.png" alt="present">
+                  </div>
+                  <div class="card-item-images__image">
+                    <img src="./images/present-2.png" alt="present">
+                  </div>
+                  <div class="card-item-images__image">
+                    <img src="./images/present-3.png" alt="present">
+                  </div>
+                  <div class="card-item-images__image mfp-link" data-href="./popups/popup-presents.html">
+                    <span>+15</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="card-item">
+                <div class="card-item-title">
+                  Шанс есть у каждого
+                </div>
+                <p class="card-item-text">
+                  Призы получат самые креативные и амбициозные исследователи!
+                </p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+
+
+        <!-- <div class="contest-steps">
+          <div class="contest-steps-item">
+            <div class="contest-steps-item__num">
+              <img src="./images/star.png" alt="star">
+              <span>1</span>
+            </div>
+            <div class="contest-steps-item__text">
+              Расскажи, что бы ты хотел открыть для себя этим летом
+            </div>
+            <img src="./images/path-1.svg" alt="path" class="contest-steps-item__path">
+          </div>
+          <div class="contest-steps-item">
+            <img src="./images/path-2.svg" alt="path" class="contest-steps-item__path">
+            <div class="contest-steps-item__num">
+              <img src="./images/star.png" alt="star">
+              <span>2</span>
+            </div>
+            <div class="contest-steps-item__text">
+              Позови друзей поддержать
+              твои планы!
+            </div>
+          </div>
+          <div class="contest-steps-item">
+            <div class="contest-steps-item__num">
+              <img src="./images/star.png" alt="star">
+              <span>3</span>
+            </div>
+            <div class="contest-steps-item__text">
+              Авторы самых креативных и популярных историй
+              получат призы для яркого летнего отдыха
+            </div>
+            <img src="./images/path-3.svg" alt="path" class="contest-steps-item__path">
+          </div>
+
+          <button class="ui-btn mfp-link" data-href="./popups/popup-presents.html">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12.1499 16.5V18.6" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M7.1499 22H17.1499V21C17.1499 19.9 16.2499 19 15.1499 19H9.1499C8.0499 19 7.1499 19.9 7.1499 21V22V22Z"
+                stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
+              <path d="M6.1499 22H18.1499" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M12 16C8.13 16 5 12.87 5 9V6C5 3.79 6.79 2 9 2H15C17.21 2 19 3.79 19 6V9C19 12.87 15.87 16 12 16Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M5.47004 11.65C4.72004 11.41 4.06004 10.97 3.54004 10.45C2.64004 9.44998 2.04004 8.24998 2.04004 6.84998C2.04004 5.44998 3.14004 4.34998 4.54004 4.34998H5.19004C4.99004 4.80998 4.89004 5.31998 4.89004 5.84998V8.84998C4.89004 9.84998 5.10004 10.79 5.47004 11.65Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M18.53 11.65C19.28 11.41 19.94 10.97 20.46 10.45C21.36 9.44998 21.96 8.24998 21.96 6.84998C21.96 5.44998 20.86 4.34998 19.46 4.34998H18.81C19.01 4.80998 19.11 5.31998 19.11 5.84998V8.84998C19.11 9.84998 18.9 10.79 18.53 11.65Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Что нужно делать
+          </button>
+        </div> -->
+
+
+        <div class="contest-steps">
+          <!-- <img src="./images/steps-all-2.svg" alt="steps">
+          <img src="./images/steps-all-desc-min.svg" alt=""> -->
+          <picture>
+            <source srcset="./images/steps-all-2.svg" media="(min-width: 1367px)">
+            <source srcset="./images/steps-all-desc-min.svg" media="(min-width: 1025px)">
+            <source srcset="./images/steps-all-tablet.svg" media="(min-width: 599px)">
+            <img src="./images/steps-all-mobile.svg" alt="alt" loading="lazy" />
+          </picture>
+
+          <button class="ui-btn ui-btn-colored">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M12.1499 16.5V18.6" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M7.1499 22H17.1499V21C17.1499 19.9 16.2499 19 15.1499 19H9.1499C8.0499 19 7.1499 19.9 7.1499 21V22V22Z"
+                stroke="white" stroke-width="1.5" stroke-miterlimit="10" />
+              <path d="M6.1499 22H18.1499" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+              <path
+                d="M12 16C8.13 16 5 12.87 5 9V6C5 3.79 6.79 2 9 2H15C17.21 2 19 3.79 19 6V9C19 12.87 15.87 16 12 16Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M5.47004 11.65C4.72004 11.41 4.06004 10.97 3.54004 10.45C2.64004 9.44998 2.04004 8.24998 2.04004 6.84998C2.04004 5.44998 3.14004 4.34998 4.54004 4.34998H5.19004C4.99004 4.80998 4.89004 5.31998 4.89004 5.84998V8.84998C4.89004 9.84998 5.10004 10.79 5.47004 11.65Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+              <path
+                d="M18.53 11.65C19.28 11.41 19.94 10.97 20.46 10.45C21.36 9.44998 21.96 8.24998 21.96 6.84998C21.96 5.44998 20.86 4.34998 19.46 4.34998H18.81C19.01 4.80998 19.11 5.31998 19.11 5.84998V8.84998C19.11 9.84998 18.9 10.79 18.53 11.65Z"
+                stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            Принять участие
+          </button>
+        </div>
+      </div>
+      <img src="./images/gold.png" alt="ticket" class="ticket">
+      <img src="./images/alert.svg" alt="alert" class="screen-alert">
+      <img src="./images/alert-mobile.svg" alt="alert" class="screen-alert mobile">
+    </div>
+
+    <!-- about-contest end -->
 
     <!-- second screen start -->
     <div class="screen screen-benefits">

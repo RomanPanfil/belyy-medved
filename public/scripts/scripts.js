@@ -76,12 +76,12 @@ const benefitsSwiper = new Swiper('.benefits-slider', {
 buildPreviews(benefitsSwiper);
 
 (function () {
-  if (!document.querySelector('.screen-promo-btn.benefits') || !document.querySelector('.screen-benefits')) return
+  if (!document.querySelector('.screen-promo-btn.benefits') || !document.querySelector('.screen.screen-about-contest')) return
 
   document.querySelectorAll('.screen-promo-btn.benefits').forEach((el) => {
     el.addEventListener('click', (e) => {
       e.preventDefault()
-      document.querySelector('.screen-benefits').scrollIntoView({behavior: "smooth"})
+      document.querySelector('.screen.screen-about-contest').scrollIntoView({behavior: "smooth"})
     })
   })
 
