@@ -6199,6 +6199,13 @@ img {
 .popup-presents .mfp-popup-inner {
   width: 100%;
   position: relative;
+  max-height: 95vh;
+  overflow: auto;
+}
+.popup-presents .mfp-popup-inner::-webkit-scrollbar-thumb {
+  width: 3px;
+  height: 3px;
+  background-color: #5E6738;
 }
 .popup-presents .popup-text {
   margin-bottom: 24px;
