@@ -496,3 +496,129 @@ $(document).ready(function () {
   }
 
 })();
+
+// slider
+
+
+(function() {
+  if(!document.querySelector('.screen.screen-slider')) return
+
+  let state = 1;
+
+  const prew = document.querySelector('.prew');
+  const next = document.querySelector('.next');
+
+  next.addEventListener('click', nextSlider);
+  prew.addEventListener('click', prewSlider);
+
+  function nextSlider() {
+    if (state < 3) {
+      state++
+    }
+
+    next.classList.remove('disabled')
+    prew.classList.remove('disabled')
+
+    changeView()  
+  }
+
+  function prewSlider() {
+    if (state > 1) {
+      state--
+    }
+
+    next.classList.remove('disabled')
+    prew.classList.remove('disabled')
+
+    changeView()  
+  }
+
+
+  function changeView() {
+    if (state === 1) {
+      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.remove('second', 'first')
+      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.add('third')
+  
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('first', 'third')
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('second')
+  
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('third', 'second')
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('first')
+  
+  
+      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow', 'orange', 'brown')
+      document.querySelector('.slider-right .slider-item-bg.second').classList.add('green')
+      document.querySelector('.slider-right .slider-item-bg.third').classList.remove('yellow', 'brown', 'green')
+      document.querySelector('.slider-right .slider-item-bg.third').classList.add('orange')
+  
+  
+      document.querySelector('.screen-slider').classList.remove('brown', 'green')
+      document.querySelector('.screen-slider').classList.add('orange')
+  
+  
+      document.querySelectorAll('.slider-content').forEach((el) => {
+        el.classList.remove('active')
+      })
+      document.querySelector('.slider-content.first').classList.add('active')
+  
+  
+      prew.classList.add('disabled')
+    }
+
+    if (state === 2) {
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('second', 'third')
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('first')
+  
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('first', 'second')
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('third')
+  
+      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.remove('third', 'first')
+      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.add('second')
+  
+  
+      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow', 'brown', 'green')
+      document.querySelector('.slider-right .slider-item-bg.second').classList.add('orange')
+      document.querySelector('.slider-right .slider-item-bg.third').classList.remove('yellow', 'orange', 'green')
+      document.querySelector('.slider-right .slider-item-bg.third').classList.add('brown')
+  
+  
+      document.querySelector('.screen-slider').classList.remove('orange', 'brown')
+      document.querySelector('.screen-slider').classList.add('green')
+  
+  
+      document.querySelectorAll('.slider-content').forEach((el) => {
+        el.classList.remove('active')
+      })
+      document.querySelector('.slider-content.second').classList.add('active')
+    }
+
+    if (state === 3) {
+      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.remove('second', 'third')
+      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.add('first')
+  
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('first', 'second')
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('third')
+  
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('third', 'first')
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('second')
+  
+  
+      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow', 'orange', 'green')
+      document.querySelector('.slider-right .slider-item-bg.second').classList.add('brown')
+      document.querySelector('.slider-right .slider-item-bg.third').classList.remove('yellow', 'orange', 'brown')
+      document.querySelector('.slider-right .slider-item-bg.third').classList.add('green')
+  
+  
+      document.querySelector('.screen-slider').classList.remove('orange', 'green')
+      document.querySelector('.screen-slider').classList.add('brown')
+  
+  
+      document.querySelectorAll('.slider-content').forEach((el) => {
+        el.classList.remove('active')
+      })
+      document.querySelector('.slider-content.third').classList.add('active')
+  
+      next.classList.add('disabled')
+    }
+  }  
+})();
