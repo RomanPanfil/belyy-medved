@@ -3727,12 +3727,24 @@
       &:nth-child(1) {
         border-radius: 0px 0px 80px 80px;
         background: #FFF8D9;
+        @media (max-width: 1024px) {
+          border-radius: 0px 0px 60px 60px;
+        }
+        @media (max-width: 599px) {
+          border-radius: 0px 0px 40px 40px;
+        }
       }
       &:nth-child(2) {
-        border-radius: 0px 0px 40px 40px;
+        border-radius: 0px 0px 40px 40px;   
+        @media (max-width: 599px) {
+          border-radius: 0px 0px 30px 30px;
+        }     
       }
       &:nth-child(3) {
         border-radius: 0px 0px 40px 40px;
+        @media (max-width: 1024px) {
+          border-radius: 0px 0px 20px 20px;
+        }
       }
     }
   }
@@ -3965,7 +3977,7 @@
   .slider-images .slider-image.third {
     width: 16%;
     height: 30%;
-    left: 85%;
+    left: 84%;
     img {
       transform: translateY(20%);
     }
