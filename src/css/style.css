@@ -6033,6 +6033,38 @@ img {
   max-width: 570px;
   margin: 0 auto;
 }
+.popup-plane .likes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 100px;
+  border: 4px solid #FFF;
+  background: #FFF8D9;
+  padding: 8px 14px;
+  color: #23372B;
+  font-size: 22px;
+  font-size: 1.375rem;
+  font-weight: 700;
+  position: absolute;
+  z-index: 1;
+  top: -20px;
+  left: 50px;
+}
+.popup-plane .likes span {
+  margin-right: 6px;
+}
+@media (max-width: 599px) {
+  .popup-plane .likes {
+    padding: 6px 12px;
+    color: #23372B;
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+  .popup-plane .likes img {
+    width: 20px;
+    height: 20px;
+  }
+}
 .popup-plane .mfp-popup-inner {
   width: 100%;
   position: relative;
