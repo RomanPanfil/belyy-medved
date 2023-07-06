@@ -2347,6 +2347,7 @@ img {
   top: unset;
   right: 0px;
   bottom: 80px;
+  cursor: pointer;
 }
 @media (max-width: 1680px) {
   .screen-promo .ticket {
@@ -2361,10 +2362,7 @@ img {
 }
 @media (max-width: 768px) {
   .screen-promo .ticket {
-    max-height: 80px;
-    top: 17px;
-    right: 10vw;
-    z-index: 10;
+    display: none;
   }
 }
 .screen-promo .bottle-wrapper {
@@ -3731,6 +3729,20 @@ img {
   .screen-header .header-nav {
     margin-left: unset;
     margin-right: unset;
+  }
+}
+.screen-header .header-nav .ticket {
+  position: absolute;
+  display: none;
+  max-height: 80px;
+  top: 17px;
+  right: 24vw;
+  z-index: 10;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .screen-header .header-nav .ticket {
+    display: block;
   }
 }
 .screen-header .header-nav .burger-btn {
@@ -5166,6 +5178,7 @@ img {
   padding-right: 52px;
   top: 46px;
   right: 114px;
+  cursor: pointer;
 }
 @media (max-width: 1680px) {
   .screen-about-contest .ticket {
@@ -5182,10 +5195,7 @@ img {
 }
 @media (max-width: 768px) {
   .screen-about-contest .ticket {
-    max-height: 80px;
-    top: 17px;
-    right: 10vw;
-    z-index: 10;
+    display: none;
   }
 }
 
@@ -5238,6 +5248,35 @@ img {
   .screen-plans-cards [class*=col-] {
     padding-left: 8px;
     padding-right: 8px;
+  }
+}
+.screen-plans-cards__empty {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 18px;
+  font-size: 1.125rem;
+  background-color: #23372B;
+  color: #FFF;
+  border-radius: 10px;
+  padding: 24px 32px;
+  margin-bottom: 30px;
+}
+.screen-plans-cards__empty span {
+  font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .screen-plans-cards__empty {
+    font-size: 16px;
+    font-size: 1rem;
+    padding: 22px 30px;
+  }
+}
+@media (max-width: 599px) {
+  .screen-plans-cards__empty {
+    text-align: center;
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding: 20px 28px;
   }
 }
 .screen-plans-cards__wrapper {
@@ -5503,6 +5542,25 @@ img {
   font-family: "Inter";
   font-weight: 600;
   border-bottom: 1px dashed #5E6738;
+}
+.screen-plans-cards .screen-plans-item.owner {
+  background-color: #23372B;
+  color: #FFF;
+}
+.screen-plans-cards .screen-plans-item.owner .screen-plans-item__likes {
+  border-color: #23372B;
+}
+.screen-plans-cards .screen-plans-item.owner .screen-plans-item__count {
+  display: none;
+}
+.screen-plans-cards .screen-plans-item.owner .screen-plans-item__title {
+  color: #FFF;
+}
+.screen-plans-cards .screen-plans-item.owner .screen-plans-item__text {
+  color: #FFF;
+}
+.screen-plans-cards .screen-plans-item.owner .screen-plans-item__more {
+  color: #FFF8D9;
 }
 .screen-plans-cards .screen-plans-pagination {
   display: -webkit-box;
@@ -6064,9 +6122,23 @@ img {
   z-index: 1;
   top: -20px;
   left: 50px;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .popup-plane .likes span {
   margin-right: 6px;
+}
+.popup-plane .likes img {
+  width: 20px;
+  height: 20px;
+}
+.popup-plane .likes img.black {
+  display: block;
+}
+.popup-plane .likes img.red {
+  display: none;
 }
 @media (max-width: 599px) {
   .popup-plane .likes {
@@ -6116,6 +6188,22 @@ img {
   border-radius: 10px;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+.popup-plane.liked .likes {
+  color: #C74403;
+}
+.popup-plane.liked .likes img.red {
+  display: block;
+}
+.popup-plane.liked .likes img.black {
+  display: none;
+}
+.popup-plane.liked .popup-button {
+  color: #C74403;
+}
+.popup-plane.liked .popup-button svg path {
+  fill: #C74403;
 }
 
 .popup-plane-title {
@@ -6319,6 +6407,42 @@ img {
     font-size: 12px;
     font-size: 0.75rem;
   }
+}
+
+.popup-more {
+  position: relative;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+}
+.popup-more .mfp-popup-inner {
+  background-color: transparent;
+  padding: 0;
+  margin: 0 auto;
+}
+.popup-more .mfp-popup-inner img {
+  margin: 0 auto;
+  display: block;
+  max-height: 100vh;
+}
+.popup-more .mfp-popup-inner .popup-button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+.popup-more .mfp-close {
+  position: absolute;
+  top: 19%;
+  right: 17%;
+  border-radius: 10px;
+  background: #5E6738;
+  opacity: 1;
+  color: #fff;
+  font-size: 0;
 }
 
 .screen-slider {

@@ -118,6 +118,7 @@
     top: unset;
     right: 0px;
     bottom: 80px;
+    cursor: pointer;
 
     @media (max-width: 1680px) {
       max-height: 150px;
@@ -137,11 +138,7 @@
     //   // top: -100px;
     // }
     @media (max-width: 768px) {
-      max-height: 80px;
-      top: 17px;
-      right: 10vw;
-      z-index: 10;
-      // display: none;
+      display: none;    
     }
     // @media (max-width: 599px) {
     //   top: 4px;
@@ -1337,6 +1334,19 @@
     @media (max-width: 768px) {
       margin-left: unset;
       margin-right: unset;
+    }
+    .ticket {
+      position: absolute;
+      display: none;
+      max-height: 80px;
+      top: 17px;
+      right: 24vw;
+      z-index: 10;
+      cursor: pointer;
+      @media (max-width: 768px) {
+        display: block;
+      }
+
     }
     .burger-btn {     
       width: 30px;
@@ -2596,6 +2606,7 @@
     padding-right: 52px;
     top: 46px;
     right: 114px;
+    cursor: pointer;
     @media (max-width: 1680px) {
       max-height: 150px;
       right: 0px;
@@ -2616,12 +2627,8 @@
     //   max-height: 80px;
     //   // top: -100px;
     // }
-    @media (max-width: 768px) {
-      max-height: 80px;
-      top: 17px;
-      right: 10vw;
-      z-index: 10;
-      // display: none;
+    @media (max-width: 768px) {      
+      display: none;
     }
     // @media (max-width: 599px) {
     //   top: 4px;
@@ -2683,6 +2690,28 @@
       padding-right: 8px;
     }
   }
+  &__empty {
+    font-family: $inter;
+    font-weight: 400;
+    @include fz(18);
+    background-color: $bgc;
+    color: $font;
+    border-radius: 10px;
+    padding: 24px 32px;
+    margin-bottom: 30px;
+    span {
+      font-weight: 500;
+    }
+    @media (max-width: 1024px) {
+      @include fz(16);
+      padding: 22px 30px;
+    }
+    @media (max-width: 599px) {
+      text-align: center;
+      @include fz(14);
+      padding: 20px 28px;
+    }
+  }
   &__wrapper {
     transform: rotate(-2deg);
     &:nth-child(odd) {
@@ -2708,7 +2737,8 @@
       padding-left: 25px;
       padding-top: 36px;
       padding-bottom: 26px;
-      margin-bottom: 40px;        
+      margin-bottom: 40px;       
+     
       @media (max-width: 1680px) {
         padding-right: 20px;
         padding-left: 20px;
@@ -2923,6 +2953,26 @@
         // @media (max-width: 480px) {
         //   @include fz(8);
         // }
+      }
+
+      &.owner {
+        background-color: $bgc;
+        color: $font;
+        .screen-plans-item__likes {
+          border-color: $bgc;
+        }
+        .screen-plans-item__count {
+          display: none;
+        }
+        .screen-plans-item__title {
+          color: $font;
+        }
+        .screen-plans-item__text {
+          color: $font;
+        }
+        .screen-plans-item__more {
+          color: $primary;
+        }
       }
     }
     &-pagination {
@@ -3378,7 +3428,7 @@
 .popup-plane {
   position: relative;
   max-width: 570px;
-  margin: 0 auto;
+  margin: 0 auto;  
   .likes {
     display: flex;
     border-radius: 100px;
@@ -3392,14 +3442,26 @@
     z-index: 1;
     top: -20px;
     left: 50px;
+    display: flex;
+    align-items: center;
     span {
       margin-right: 6px;
+    }
+    img {
+      &.black {
+        display: block;
+      }
+      &.red {
+        display: none;
+      }
+      width: 20px;
+      height: 20px;
     }
     @media (max-width: 599px) {
       padding: 6px 12px;
       color: #23372B;
       @include fz(18);
-      img {
+      img {        
         width: 20px;
         height: 20px;
       }
@@ -3431,6 +3493,28 @@
     border-radius: 10px;
     margin-bottom: 30px;
     margin-top: 30px;
+  }
+}
+
+.popup-plane.liked { 
+  .likes {
+    color: $like;
+    img {
+      &.red {
+        display: block;
+      }
+      &.black {
+        display: none;
+      }
+    }
+  }
+  .popup-button  {
+    color: $like;
+    svg {
+      path {
+        fill: $like;
+      }
+    }
   }
 }
 
@@ -3609,6 +3693,39 @@
   }
 }
 
+.popup-more {
+  position: relative;
+  width: fit-content;
+  margin: 0 auto;
+  .mfp-popup-inner {
+    background-color: transparent;
+    padding: 0;
+    // width: max-content;
+    margin: 0 auto;
+    img {
+      margin: 0 auto;
+      display: block;
+      max-height: 100vh;
+    }
+    .popup-button {
+      position: absolute;   
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  .mfp-close {
+    position: absolute;
+    top: 19%;
+    right: 17%;
+    border-radius: 10px;
+    background: #5E6738;
+    opacity: 1;
+    color: #fff;
+    font-size: 0;
+  }
+}
+
 
 // slider
 
@@ -3702,7 +3819,7 @@
   .slider {
     height: 100vh;
     display: flex;
-    gap: 30px;  
+    gap: 30px; 
     @media (max-width: 1024px) {
      height: max-content;
      flex-wrap: wrap;

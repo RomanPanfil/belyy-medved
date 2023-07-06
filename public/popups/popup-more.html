@@ -1,0 +1,29 @@
+<div class="mfp-popup popup-more">
+  <div class="mfp-popup-inner">
+    <img src="./images/bottle-circle.png" alt="bottle">
+    <button class="popup-button more ui-btn">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M19.5 12L12 19.5L4.5 12" stroke="#23372B" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path d="M19.5 4.5L12 12L4.5 4.5" stroke="#23372B" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round" />
+      </svg>
+      Узнать больше
+    </button>
+  </div>
+  <script>
+    (function () {
+      if (!document.querySelector('.popup-button.more') || !document.querySelector('.screen-slider')) return
+      document.querySelectorAll('.popup-button.more').forEach((el) => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault()
+          $.magnificPopup.close();
+          document.querySelector('.screen-slider').scrollIntoView({
+            behavior: "smooth"
+          })
+        })
+      })
+    }());
+
+  </script>
+</div>
