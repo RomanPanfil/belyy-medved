@@ -621,4 +621,90 @@ $(document).ready(function () {
       next.classList.add('disabled')
     }
   }  
+
+  // свайп слайдера
+  let slider = document.querySelector('.slider-right');
+  let isDragging = false;
+  let startX = null;
+  
+  function handleDragStart(event) {
+    isDragging = true;
+    startX = event.clientX || event.touches[0].clientX;
+  }
+  
+  function handleDragMove(event) {
+    if (!isDragging || !startX) return;
+  
+    let diffX = (event.clientX || event.touches[0].clientX) - startX;
+  
+    if (diffX > 50) {
+      // swipe right
+      console.log('swipe right');     
+      prewSlider();
+      startX = null;
+      isDragging = false;
+    } else if (diffX < -50) {
+      // swipe left
+      console.log('swipe left');
+      nextSlider();
+      startX = null;
+      isDragging = false;
+    }
+  }
+  
+  function handleDragEnd(event) {
+    isDragging = false;
+  }
+  
+  slider.addEventListener('mousedown', handleDragStart);
+  slider.addEventListener('mousemove', handleDragMove);
+  slider.addEventListener('mouseup', handleDragEnd);
+  slider.addEventListener('touchstart', handleDragStart);
+  slider.addEventListener('touchmove', handleDragMove);
+  slider.addEventListener('touchend', handleDragEnd);
+
 })();
+
+
+
+// свайп слайдера
+
+(function() {
+  let slider = document.querySelector('.slider-right');
+  let isDragging = false;
+  let startX = null;
+  
+  function handleDragStart(event) {
+    isDragging = true;
+    startX = event.clientX || event.touches[0].clientX;
+  }
+  
+  function handleDragMove(event) {
+    if (!isDragging || !startX) return;
+  
+    let diffX = (event.clientX || event.touches[0].clientX) - startX;
+  
+    if (diffX > 50) {
+      // swipe right
+      console.log('swipe right');
+      startX = null;
+      isDragging = false;
+    } else if (diffX < -50) {
+      // swipe left
+      console.log('swipe left');
+      startX = null;
+      isDragging = false;
+    }
+  }
+  
+  function handleDragEnd(event) {
+    isDragging = false;
+  }
+  
+  slider.addEventListener('mousedown', handleDragStart);
+  slider.addEventListener('mousemove', handleDragMove);
+  slider.addEventListener('mouseup', handleDragEnd);
+  slider.addEventListener('touchstart', handleDragStart);
+  slider.addEventListener('touchmove', handleDragMove);
+  slider.addEventListener('touchend', handleDragEnd);
+})()
