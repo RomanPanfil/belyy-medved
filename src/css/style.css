@@ -3109,6 +3109,12 @@ img {
     right: 35px;
   }
 }
+@media (max-width: 880px) {
+  .benefits-slogan {
+    display: none;
+    visibility: hidden;
+  }
+}
 @media (max-width: 768px) {
   .benefits-slogan {
     display: none;
