@@ -1502,6 +1502,7 @@
     padding-bottom: 30px;
   }
   @media (max-width: 1024px) {
+    display: block;
     min-height: unset;
     // padding-bottom: 50px;
     flex-direction: column;
@@ -2651,6 +2652,9 @@
 
 .screen-plans-cards {
   color: #23372B;
+  min-height: 53vh;
+  display: flex;
+  flex-direction: column;
 
   .row {
     margin-left: -10px;
@@ -2673,6 +2677,7 @@
   }
 
   @media (max-width: 1024px) {
+    min-height: unset;
     .row {
       margin-left: -6px;
       margin-right: -6px;
@@ -2992,7 +2997,7 @@
       display: flex;
       justify-content: space-between;  
       align-items: center;  
-      margin-top: 20px;   
+      margin-top: auto;   
       @media (max-width: 768px) {
         position: relative;
         justify-content: center;
@@ -3013,7 +3018,7 @@
         }
       }  
       @media (max-width: 1680px) {
-        margin-top: 0;
+        // margin-top: 0;
       } 
       @media (max-width: 768px) {
         // position: relative;
