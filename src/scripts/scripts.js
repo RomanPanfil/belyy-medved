@@ -30,7 +30,39 @@ const FARBA = {
       domScript.onload = callback;
     }
   }
-}
+};
+
+(function() {
+  let ornt = window.innerWidth > window.innerHeight ? 'land' : 'port'
+  let prev = window.innerHeight;
+  let vh = prev * 0.01;
+  document.documentElement.style.setProperty('--vh', `${vh}px`);
+
+  window.addEventListener('load', () => {   
+      setTimeout(()=>{ 
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    },1)
+  });
+
+  window.addEventListener('resize', () => {
+    let current = window.innerWidth > window.innerHeight ? 'land' : 'port'
+
+    let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      ornt = current
+
+    if (ornt !== current) {      
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      ornt = current
+    }
+  });
+})();
+
+$(document).on("scroll", ".screen.screen-promo", function() {
+  console.info('scroll');
+});
 
 //делаем превьюшки фоток и навешиваем на них события
 function buildPreviews(swiper) {

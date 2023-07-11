@@ -10,6 +10,9 @@
   @media (max-width: 1024px) {
     scroll-snap-type: unset;
   }
+  @media (max-width: 992px) {
+    max-height: calc(var(--vh, 1vh) * 100);   
+  }
 
   &.main {
     .screen-about-contest {
@@ -97,7 +100,13 @@
   //   padding-top: 86px;
   // }
   @media (max-width: 768px) {
+    max-height: unset;
+    height: max-content;
     padding-top: 110px;
+    padding-bottom: 60px;
+  }  
+  @media (max-width: 599px) {   
+    padding-bottom: 10px;
   }  
 
   .container {
@@ -380,20 +389,21 @@
       // top: 86vh;
       padding-top: 25px;
   }
-  @media (max-width: 599px) {
+  @media (max-width: 960px) {
     visibility: hidden;
     display: none;
     bottom: 20px;
+    transform: translateY(0%);
   }
   &.mobile {
     visibility: hidden;
     display: none;
     z-index: -1;
 
-    @media (max-width: 599px) {
+    @media (max-width: 960px) {
       visibility: visible;
       display: block;
-      z-index: 1;
+      z-index: 1;      
 
 
       
@@ -424,7 +434,13 @@
       transform: translateY(-120%);
       bottom: 0;
     }
-  }  
+  }   
+
+  @media (max-width: 880px) {   
+    .screen-alert {     
+      transform: translateY(0%);    
+    }
+  }   
 
   @media (max-width: 880px) {
     background: #315d34 url(../images/bottom-screen-bg.png) right center no-repeat;
@@ -3765,7 +3781,7 @@
       &.orange {
         visibility: visible;
         display: block;
-        @media (max-width: 599px) {
+        @media (max-width: 960px) {
           visibility: hidden;
           display: none;
         }
@@ -3773,7 +3789,7 @@
           visibility: hidden;
           display: none;
           z-index: 1;
-          @media (max-width: 599px) {
+          @media (max-width: 960px) {
             visibility: visible;
             display: block;
           }
@@ -3791,7 +3807,7 @@
       &.green {
         visibility: visible;
         display: block;
-        @media (max-width: 599px) {
+        @media (max-width: 960px) {
           visibility: hidden;
           display: none;
         }
@@ -3799,7 +3815,7 @@
           visibility: hidden;
           display: none;
           z-index: 1;
-          @media (max-width: 599px) {
+          @media (max-width:960px) {
             visibility: visible;
             display: block;
           }
@@ -3817,7 +3833,7 @@
       &.brown {
         visibility: visible;
         display: block;
-        @media (max-width: 599px) {
+        @media (max-width: 960px) {
           visibility: hidden;
           display: none;
         }
@@ -3825,7 +3841,7 @@
           visibility: hidden;
           display: none;
           z-index: 1;
-          @media (max-width: 599px) {
+          @media (max-width: 960px) {
             visibility: visible;
             display: block;
           }
