@@ -478,7 +478,7 @@ $(document).ready(function () {
           screenPlansItems[i].style.display = 'none';
         }
       }
-    } else if (window.innerWidth < 1023) {
+    } else if (window.innerWidth < 1025) {
       for (let i = 0; i < screenPlansItems.length; i++) {
         screenPlansItems[i].style.display = '';
       }
@@ -546,10 +546,12 @@ $(document).ready(function () {
   function nextSlider() {
     if (state < 3) {
       state++
+    } else {
+      state = 1
     }
 
-    next.classList.remove('disabled')
-    prew.classList.remove('disabled')
+    // next.classList.remove('disabled')
+    // prew.classList.remove('disabled')
 
     changeView()  
   }
@@ -557,10 +559,12 @@ $(document).ready(function () {
   function prewSlider() {
     if (state > 1) {
       state--
+    } else {
+      state = 3
     }
 
-    next.classList.remove('disabled')
-    prew.classList.remove('disabled')
+    // next.classList.remove('disabled')
+    // prew.classList.remove('disabled')
 
     changeView()  
   }
@@ -594,7 +598,7 @@ $(document).ready(function () {
       document.querySelector('.slider-content.first').classList.add('active')
   
   
-      prew.classList.add('disabled')
+      // prew.classList.add('disabled')
     }
 
     if (state === 2) {
@@ -650,7 +654,7 @@ $(document).ready(function () {
       })
       document.querySelector('.slider-content.third').classList.add('active')
   
-      next.classList.add('disabled')
+      // next.classList.add('disabled')
     }
   }  
 
