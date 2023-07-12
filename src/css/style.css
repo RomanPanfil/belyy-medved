@@ -4645,7 +4645,12 @@ img {
   }
 }
 .screen-about-contest .contest-content {
-  max-width: 590px;
+  max-width: 700px;
+}
+@media (max-width: 1680px) {
+  .screen-about-contest .contest-content {
+    max-width: 620px;
+  }
 }
 @media (max-width: 1366px) {
   .screen-about-contest .contest-content {
@@ -4796,9 +4801,16 @@ img {
 }
 @media (max-width: 1140px) {
   .screen-about-contest__text {
-    max-width: 353px;
-    font-size: 14px;
-    font-size: 0.875rem;
+    max-width: 100%;
+    font-size: 12px;
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .screen-about-contest__text {
+    font-size: 13px;
+    font-size: 0.8125rem;
     margin-bottom: 20px;
   }
 }
@@ -4969,6 +4981,12 @@ img {
     font-size: 1.5rem;
   }
 }
+@media (max-width: 1140px) {
+  .screen-about-contest__cards .card-item-title {
+    font-size: 22px;
+    font-size: 1.375rem;
+  }
+}
 @media (max-width: 1024px) {
   .screen-about-contest__cards .card-item-title {
     font-size: 24px;
@@ -4999,6 +5017,12 @@ img {
   .screen-about-contest__cards .card-item-text {
     font-size: 14px;
     font-size: 0.875rem;
+  }
+}
+@media (max-width: 1140px) {
+  .screen-about-contest__cards .card-item-text {
+    font-size: 12px;
+    font-size: 0.75rem;
   }
 }
 @media (max-width: 1024px) {
@@ -5133,6 +5157,11 @@ img {
   top: 4px;
   padding-right: 40px;
 }
+@media (max-width: 1366px) {
+  .screen-about-contest .contest-steps {
+    left: 50%;
+  }
+}
 @media (max-width: 1280px) {
   .screen-about-contest .contest-steps {
     top: 0px;
@@ -5140,7 +5169,7 @@ img {
 }
 @media (max-width: 1140px) {
   .screen-about-contest .contest-steps {
-    left: 43%;
+    left: 46%;
   }
 }
 @media (max-width: 1024px) {
@@ -5175,6 +5204,11 @@ img {
 @media (max-width: 1280px) {
   .screen-about-contest .contest-steps img {
     max-height: 380px;
+  }
+}
+@media (max-width: 1140px) {
+  .screen-about-contest .contest-steps img {
+    max-height: 320px;
   }
 }
 @media (max-width: 1024px) {
@@ -5215,7 +5249,7 @@ img {
   .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
     right: unset;
     bottom: -44px;
-    left: 386px;
+    left: 358px;
   }
 }
 @media (max-width: 1024px) {
@@ -6041,6 +6075,22 @@ img {
 .footer-signature .copy {
   text-transform: uppercase;
 }
+.footer-signature .dot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #fff;
+  border-radius: 50%;
+  opacity: 0.3;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+@media (max-width: 768px) {
+  .footer-signature .dot {
+    display: none;
+  }
+}
 .footer-signature a {
   color: #FFF8D9;
   font-size: 14px;
@@ -6083,25 +6133,6 @@ img {
 @media (max-width: 768px) {
   .footer-signature a:first-of-type {
     margin-bottom: 4px;
-  }
-}
-.footer-signature a:first-of-type::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -14px;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #fff;
-  opacity: 0.3;
-}
-@media (max-width: 768px) {
-  .footer-signature a:first-of-type::after {
-    display: none;
   }
 }
 .footer-signature a:last-of-type {
