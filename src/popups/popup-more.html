@@ -13,14 +13,21 @@
   </div>
   <script>
     (function () {
-      if (!document.querySelector('.popup-button.more') || !document.querySelector('.screen-slider')) return
+      if (!document.querySelector('.popup-button.more')) return
       document.querySelectorAll('.popup-button.more').forEach((el) => {
         el.addEventListener('click', (e) => {
           e.preventDefault()
           $.magnificPopup.close();
-          document.querySelector('.screen-slider').scrollIntoView({
-            behavior: "smooth"
-          })
+
+          if (window.location.pathname === '/') {
+            if (document.querySelector('.screen-slider')) {
+              document.querySelector('.screen-slider').scrollIntoView({
+                behavior: "smooth"
+              });
+            }
+          } else if (window.location.pathname === '/contest') {
+            window.location.href = '/?more=1';
+          }
         })
       })
     }());

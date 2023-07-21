@@ -698,3 +698,24 @@ $(document).ready(function () {
   slider.addEventListener('touchend', handleDragEnd);
 
 })();
+
+// скролл до слайдера при загрузке, если есть query-пареметр more=1
+
+document.addEventListener('DOMContentLoaded', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramValue = urlParams.get('more');
+
+  if (paramValue) {
+    if (!document.querySelector('.screen-slider')) return;
+
+    setTimeout(() => {
+      document.querySelector('.screen-slider').scrollIntoView({
+        behavior: "smooth"
+      });
+    }, 10)   
+
+    urlParams.delete('more');
+    const newUrl = urlParams.toString() ? `${window.location.pathname}?${urlParams}` : window.location.pathname;
+    window.history.pushState({}, '', newUrl);
+  }
+});
