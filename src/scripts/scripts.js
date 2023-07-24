@@ -180,116 +180,143 @@ if (localStorage.getItem('age_confirm') && localStorage.getItem('age_confirm') =
 
 // Проверка возраста
 
-(function () {
-  if (!document.querySelector('.agree-date')) return
+// (function () {
+//   if (!document.querySelector('.agree-date')) return
 
-  document.querySelector(".agree-date").addEventListener("submit", function(event) {   
-    event.preventDefault(); 
+//   document.querySelector(".agree-date").addEventListener("submit", function(event) {   
+//     event.preventDefault(); 
  
-    const day = parseInt(document.getElementById("day").value);
-    const month = parseInt(document.getElementById("month").value);
-    const year = parseInt(document.getElementById("year").value);
+//     const day = parseInt(document.getElementById("day").value);
+//     const month = parseInt(document.getElementById("month").value);
+//     const year = parseInt(document.getElementById("year").value);
     
-    const currentDate = new Date();
-    const birthDate = new Date(year, month - 1, day);
+//     const currentDate = new Date();
+//     const birthDate = new Date(year, month - 1, day);
     
-    let age = currentDate.getFullYear() - birthDate.getFullYear();
+//     let age = currentDate.getFullYear() - birthDate.getFullYear();
     
-    if (currentDate.getMonth() < birthDate.getMonth() ||
-        (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())) {
-      age--; // Уменьшаем возраст, если день рождения в текущем году еще не наступил
-    }
+//     if (currentDate.getMonth() < birthDate.getMonth() ||
+//         (currentDate.getMonth() === birthDate.getMonth() && currentDate.getDate() < birthDate.getDate())) {
+//       age--; // Уменьшаем возраст, если день рождения в текущем году еще не наступил
+//     }
     
-    if(day && month && year) {
-      if (age < 18) {
-      document.querySelector('.agree-date-error-text').classList.remove('hidden')      
-      document.querySelector('.agree-date-inputs .year').classList.add('error')
-      } else {
+//     if(day && month && year) {
+//       if (age < 18) {
+//       document.querySelector('.agree-date-error-text').classList.remove('hidden')      
+//       document.querySelector('.agree-date-inputs .year').classList.add('error')
+//       } else {
+//         document.querySelector('.agree').classList.add('enter')
+//         document.querySelector('.screens').classList.remove('non-scroll')
+//         setTimeout(()=> {
+//           document.querySelector('.agree').remove()
+//         },500)
+//         localStorage.setItem('age_confirm','Y')
+//       }
+//     }    
+//   });
+
+// })();
+
+// подтверждение возраста
+(function() {
+  const confirmButton = document.querySelectorAll('.agree-confirm-btn');
+  const noConfirmText = document.querySelector('.agree-no__confirm');
+
+  const content = document.querySelector('.agree-wrapper');
+  const cookiesText = document.querySelector('.agree-cookie');
+
+  confirmButton.forEach((btn) => {
+    btn.addEventListener('click', (ev) => {
+      if(ev.target.getAttribute('data-answer') === 'yes') {       
         document.querySelector('.agree').classList.add('enter')
         document.querySelector('.screens').classList.remove('non-scroll')
         setTimeout(()=> {
           document.querySelector('.agree').remove()
         },500)
         localStorage.setItem('age_confirm','Y')
-      }
-    }    
-  });
+      } 
+      if(ev.target.getAttribute('data-answer') === 'no') {       
+        noConfirmText.classList.remove('hidden');
+        content.classList.add('hidden');
+        cookiesText.classList.add('hidden');
+      } 
+    });
+  })
+})();
 
-})()
+// document.addEventListener('DOMContentLoaded', function() {
+//   const dayInput = document.getElementById('day');
+//   const monthInput = document.getElementById('month');
+//   const yearInput = document.getElementById('year');
 
-document.addEventListener('DOMContentLoaded', function() {
-  const dayInput = document.getElementById('day');
-  const monthInput = document.getElementById('month');
-  const yearInput = document.getElementById('year');
-
-  // Ограничение ввода только числами и проверка на максимальные значения
-  dayInput.addEventListener('input', function(event) {
-    removeError();
+//   // Ограничение ввода только числами и проверка на максимальные значения
+//   dayInput.addEventListener('input', function(event) {
+//     removeError();
     
-    let inputValue = event.target.value;
-    inputValue = inputValue.replace(/\D/g, ''); // Оставляем только числа
-    inputValue = inputValue.slice(0, 2); // Ограничиваем ввод до двух символов
+//     let inputValue = event.target.value;
+//     inputValue = inputValue.replace(/\D/g, ''); // Оставляем только числа
+//     inputValue = inputValue.slice(0, 2); // Ограничиваем ввод до двух символов
   
-    if (inputValue.length === 2 && inputValue[0] === '0') {
-      inputValue = '0' + inputValue[1]; // Восстанавливаем ведущий ноль
-    }
+//     if (inputValue.length === 2 && inputValue[0] === '0') {
+//       inputValue = '0' + inputValue[1]; // Восстанавливаем ведущий ноль
+//     }
   
-    const numericValue = parseInt(inputValue); // Преобразуем в число
+//     const numericValue = parseInt(inputValue); // Преобразуем в число
   
-    if (isNaN(numericValue) || numericValue < 0 || numericValue > 31) {
-      inputValue = ''; // Сбрасываем значение, если оно некорректно
-    }
+//     if (isNaN(numericValue) || numericValue < 0 || numericValue > 31) {
+//       inputValue = ''; // Сбрасываем значение, если оно некорректно
+//     }
   
-    event.target.value = inputValue; // Устанавливаем значение
-  });
+//     event.target.value = inputValue; // Устанавливаем значение
+//   });
   
-  monthInput.addEventListener('input', function(event) {
-    removeError();
+//   monthInput.addEventListener('input', function(event) {
+//     removeError();
 
-    let inputValue = event.target.value;
-    inputValue = inputValue.replace(/\D/g, ''); // Оставляем только числа
-    inputValue = inputValue.slice(0, 2); // Ограничиваем ввод до двух символов
+//     let inputValue = event.target.value;
+//     inputValue = inputValue.replace(/\D/g, ''); // Оставляем только числа
+//     inputValue = inputValue.slice(0, 2); // Ограничиваем ввод до двух символов
   
-    if (inputValue.length === 2 && inputValue[0] === '0') {
-      inputValue = '0' + inputValue[1]; // Восстанавливаем ведущий ноль
-    }
+//     if (inputValue.length === 2 && inputValue[0] === '0') {
+//       inputValue = '0' + inputValue[1]; // Восстанавливаем ведущий ноль
+//     }
   
-    const numericValue = parseInt(inputValue); // Преобразуем в число
+//     const numericValue = parseInt(inputValue); // Преобразуем в число
   
-    if (isNaN(numericValue) || numericValue < 0 || numericValue > 12) {
-      inputValue = ''; // Сбрасываем значение, если оно некорректно
-    }
+//     if (isNaN(numericValue) || numericValue < 0 || numericValue > 12) {
+//       inputValue = ''; // Сбрасываем значение, если оно некорректно
+//     }
   
-    event.target.value = inputValue; // Устанавливаем значение
-  });
+//     event.target.value = inputValue; // Устанавливаем значение
+//   });
 
-  yearInput.addEventListener('input', function(event) {
-    removeError()
-    let inputValue = event.target.value;
-    inputValue = inputValue.replace(/\D/g, ''); // Оставляем только числа
-    inputValue = inputValue.slice(0, 4); // Ограничиваем ввод до четырех символов
-    event.target.value = inputValue;
-  });
+//   yearInput.addEventListener('input', function(event) {
+//     removeError()
+//     let inputValue = event.target.value;
+//     inputValue = inputValue.replace(/\D/g, ''); // Оставляем только числа
+//     inputValue = inputValue.slice(0, 4); // Ограничиваем ввод до четырех символов
+//     event.target.value = inputValue;
+//   });
 
-  // Переход к следующему полю после ввода
-  dayInput.addEventListener('input', function() {
-    if (this.value.length >= 2) {
-      monthInput.focus();
-    }
-  });
+//   // Переход к следующему полю после ввода
+//   dayInput.addEventListener('input', function() {
+//     if (this.value.length >= 2) {
+//       monthInput.focus();
+//     }
+//   });
 
-  monthInput.addEventListener('input', function() {
-    if (this.value.length >= 2) {
-      yearInput.focus();
-    }
-  });
+//   monthInput.addEventListener('input', function() {
+//     if (this.value.length >= 2) {
+//       yearInput.focus();
+//     }
+//   });
 
-  // очистка сообщения и цвета бордера при ошибке входа  
-  function removeError() {
-    document.querySelector('.agree-date-inputs .year').classList.remove('error');
-    document.querySelector('.agree-date-error-text').classList.add('hidden');
-  }
-});
+//   // очистка сообщения и цвета бордера при ошибке входа  
+//   function removeError() {
+//     document.querySelector('.agree-date-inputs .year').classList.remove('error');
+//     document.querySelector('.agree-date-error-text').classList.add('hidden');
+//   }
+// });
 
 
 // // расположение навигации слайдера

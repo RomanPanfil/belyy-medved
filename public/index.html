@@ -587,23 +587,25 @@
   <!-- confirm block start -->
   <div class="agree">
     <div class="agree-flex">
+      <div class="agree-no__confirm hidden">
+        Извините, но сайт доступен только для совершеннолетних
+      </div>
       <div class="agree-content">
         <div class="agree-logo">
           <img src="./images/Logo-big.png" alt="logo">
         </div>
-        <div class="agree-question">Добро пожаловать на сайт Белый Медведь. Доступ разрешен только лицам
-          старше 18 лет. Укажите дату своего рождения, чтобы войти на сайт.</div>
-        <form class="agree-date">
-          <div class="agree-date-inputs">
-            <input type="text" autocomplete="off" placeholder="01" id="day" class="day" value="01">
-            <input type="text" autocomplete="off" placeholder="01" id="month" class="month" value="01">
-            <input type="text" autocomplete="off" placeholder="1970" id="year" class="year" value="1970">
+        <div class="agree-wrapper">
+          <div class="agree-title">
+            Добро пожаловать на сайт Белый Медведь.<br>
+            Доступ разрешен только лицам старше 18 лет
           </div>
-          <div class="agree-date-error-text hidden">
-            Ваш возраст не позволяет нам пустить вас на сайт :(
+          <div class="agree-question">Вам уже есть 18 лет?
           </div>
-          <button type="submit" class="ui-btn agree-confirm-btn">Подтвердить</button>
-        </form>
+          <div class="agree-buttons">
+            <button class="ui-btn agree-confirm-btn" data-answer="yes">Да</button>
+            <button class="ui-btn agree-confirm-btn" data-answer="no">Нет</button>
+          </div>
+        </div>
       </div>
       <div class="agree-cookie">
         НАЖИМАЯ “ПОДТВЕРДИТЬ” ВЫ ДАЕТЕ СОГЛАСИЕ НА ИСПОЛЬЗОВАНИЕ ФАЙЛОВ COOKIE,
