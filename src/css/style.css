@@ -953,11 +953,18 @@ img {
 .ui-field .ui-input.error {
   margin-bottom: 0px;
 }
+@media (max-width: 1366px) {
+  .ui-field .ui-input {
+    font-size: 16px;
+    font-size: 1rem;
+    padding: 20px 30px;
+  }
+}
 @media (max-width: 1024px) {
   .ui-field .ui-input {
-    font-size: 15px;
-    font-size: 0.9375rem;
-    padding: 16px 20px;
+    font-size: 14px;
+    font-size: 0.875rem;
+    padding: 14px 20px;
   }
 }
 .ui-field .ui-input::-webkit-input-placeholder {
@@ -994,36 +1001,30 @@ img {
 }
 @media (max-width: 1366px) {
   .ui-field .ui-textarea {
-    font-size: 14px;
-    font-size: 0.875rem;
+    font-size: 16px;
+    font-size: 1rem;
     padding: 18px 26px;
   }
 }
 @media (max-width: 1024px) {
   .ui-field .ui-textarea {
-    font-size: 12px;
-    font-size: 0.75rem;
+    font-size: 14px;
+    font-size: 0.875rem;
     padding: 12px 20px;
   }
 }
 @media (max-width: 992px) {
   .ui-field .ui-textarea {
-    font-size: 12px;
-    font-size: 0.75rem;
     padding: 12px 20px;
   }
 }
 @media (max-width: 768px) {
   .ui-field .ui-textarea {
-    font-size: 18px;
-    font-size: 1.125rem;
-    padding: 18px 26px;
+    padding: 18px 20px;
   }
 }
 @media (max-width: 480px) {
   .ui-field .ui-textarea {
-    font-size: 12px;
-    font-size: 0.75rem;
     padding: 12px 20px;
   }
 }
@@ -6349,12 +6350,12 @@ img {
 }
 @media (max-width: 1366px) {
   .screen-contest-form form {
-    padding: 80px 80px 90px;
+    padding: 60px 80px 70px;
   }
 }
 @media (max-width: 1140px) {
   .screen-contest-form form {
-    padding: 50px 50px 60px;
+    padding: 50px 50px 50px;
   }
 }
 @media (max-width: 1024px) {
@@ -6403,8 +6404,8 @@ img {
 }
 @media (max-width: 1024px) {
   .screen-contest-form form .h2 {
-    font-size: 22px;
-    font-size: 1.375rem;
+    font-size: 20px;
+    font-size: 1.25rem;
     margin-bottom: 40px;
   }
 }
@@ -6421,41 +6422,30 @@ img {
 .screen-contest-form-left {
   width: 50%;
   padding-right: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
-@media (max-width: 1366px) {
+@media (max-width: 1024px) {
   .screen-contest-form-left {
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 992px) {
-  .screen-contest-form-left {
-    margin-bottom: 30px;
+    padding-right: 12px;
   }
 }
 @media (max-width: 768px) {
   .screen-contest-form-left {
     padding-right: 0;
     width: 100%;
-    margin-bottom: 16px;
   }
 }
 .screen-contest-form-right {
   width: 50%;
   padding-left: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
 }
 .screen-contest-form-right .ui-field {
   height: 100%;
 }
-@media (max-width: 1366px) {
+@media (max-width: 1024px) {
   .screen-contest-form-right {
-    margin-bottom: 50px;
-  }
-}
-@media (max-width: 992px) {
-  .screen-contest-form-right {
-    margin-bottom: 30px;
+    padding-left: 12px;
   }
 }
 @media (max-width: 768px) {
@@ -6466,6 +6456,29 @@ img {
     width: 100%;
   }
 }
+.screen-contest-form-confirm {
+  font-family: "Inter";
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 40px;
+}
+@media (max-width: 1366px) {
+  .screen-contest-form-confirm {
+    font-size: 13px;
+    font-size: 0.8125rem;
+    margin-bottom: 30px;
+  }
+}
+@media (max-width: 599px) {
+  .screen-contest-form-confirm {
+    margin-bottom: 20px;
+  }
+}
+.screen-contest-form-confirm label a {
+  color: #5E6738;
+  text-decoration: underline;
+}
 .screen-contest-form-bottom {
   width: 100%;
   position: relative;
@@ -6475,9 +6488,6 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 30px;
@@ -7624,5 +7634,33 @@ img {
 }
 .screen-slider .next.disabled {
   opacity: 0.6;
+}
+
+.jq-checkbox {
+  width: 16px;
+  height: 16px;
+  border: 1px solid #D2D2D2;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-right: 6px;
+  position: relative;
+  top: 3px;
+}
+.jq-checkbox.checked {
+  position: relative;
+  border-color: #218DF1;
+}
+.jq-checkbox.checked::after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  content: "";
+  background-color: #218DF1;
+  border-radius: 2px;
+  width: 12px;
+  height: 12px;
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */

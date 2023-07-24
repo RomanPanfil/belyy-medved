@@ -393,7 +393,14 @@ if (localStorage.getItem('age_confirm') && localStorage.getItem('age_confirm') =
   if(!document.querySelector('.screen-plans-select select')) return
 
   $('.screen-plans-select select').styler();
-})()
+})();
+
+// стилизация чекбокса
+(function() {
+  if(!document.querySelector('.screen-contest-form-confirm input')) return
+
+  $('.screen-contest-form-confirm input').styler();
+})();
 
 
 $(document).on("click", ".mfp-link", function () {
