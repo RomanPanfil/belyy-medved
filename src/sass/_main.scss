@@ -4215,6 +4215,9 @@
       font-family: $inter;
       font-weight: 500;
       line-height: 145%;
+      span {
+        font-weight: 400;
+      }
       @media (max-width: 1680px) {
         @include fz(14);
       }

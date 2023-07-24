@@ -7100,6 +7100,9 @@ img {
   font-weight: 500;
   line-height: 145%;
 }
+.popup-presents .presents-card-info__title span {
+  font-weight: 400;
+}
 @media (max-width: 1680px) {
   .popup-presents .presents-card-info__title {
     font-size: 14px;
