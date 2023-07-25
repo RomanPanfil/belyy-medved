@@ -19,7 +19,7 @@
           e.preventDefault()
           $.magnificPopup.close();
 
-          if (window.location.pathname === '/') {
+          if (window.location.pathname === '/' || window.location.pathname === '/about') {
             if (document.querySelector('.screen-slider')) {
               document.querySelector('.screen-slider').scrollIntoView({
                 behavior: "smooth"
