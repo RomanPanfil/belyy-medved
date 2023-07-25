@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <meta name="viewport" content="width=1024"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Белый медведь — исследуй и создавай!</title>
+  <meta name="keywords" content="Белый медведь, Природа дружбы, исследуй создавай, пиво" />
+  <meta name="description" content="Белый медведь — исследуй и создавай!" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="format-detection" content="telephone=no" />
+
+  <style>
+    @font-face {
+      font-family: 'Bebas Neue Pro';
+      src: local('Bebas Neue Pro'), local('Bebas Neue Pro Regular'),
+        url('./fonts/bebas/BebasNeuePro-Regular.woff2') format('woff2'),
+        url('./fonts/bebas/BebasNeuePro-Regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: 'Bebas Neue Pro';
+      src: local('Bebas Neue Pro'), local('Bebas Neue Pro Bold'),
+        url('./fonts/bebas/BebasNeuePro-Bold.woff2') format('woff2'),
+        url('./fonts/bebas/BebasNeuePro-Bold.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css"
+    integrity="sha512-+EoPw+Fiwh6eSeRK7zwIKG2MA8i3rV/DGa3tdttQGgWyatG/SkncT53KHQaS5Jh9MNOT3dmFL0FjTY08And/Cw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.css">
+
+  <link rel="stylesheet" href="./css/style.css" type="text/css" media="all" />
+
+  <!-- <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon"> -->
+
+  <!--[if lt IE 9]>
+    <script>
+    var e = ("abbr,article,aside,audio,canvas,datalist,details," +
+    "figure,footer,header,hgroup,mark,menu,meter,nav,output," +
+    "progress,section,time,video").split(',');
+    for (var i = 0; i < e.length; i++) {
+    document.createElement(e[i]);
+    }
+    </script>
+  <![endif]-->
+
+  <!-- Google Tag Manager -->
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-MLTPHBD');
+
+  </script>
+  <!-- End Google Tag Manager -->
+</head>
+
+<body>
+  <div id="screens" class="screens main non-scroll">
+
+    <!-- header start -->
+    <header class="screen screen-header">
+      <div class="container">
+        <div class="header-flex">
+          <div class="header-logo">
+            <a href="#">
+              <img src="./images/logo-main.png" alt="logo">
+            </a>
+          </div>
+          <nav class="header-nav">
+            <button class="burger-btn">
+              <span></span>
+            </button>
+            <img src="./images/gold.png" alt="ticket" class="ticket mfp-link" data-href="./popups/popup-more.html">
+            <ul>
+              <li>
+                <a href="#">Главная</a>
+              </li>
+              <li>
+                <a href="#">Конкурс</a>
+              </li>
+              <li>
+                <a href="#" class="active">О бренде</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- header end -->
+
+    <!-- main screen start -->
+    <div class="screen screen-promo about">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-5 col-sm-6 col-xs-12">
+            <div class="screen-promo-left">
+              <div class="promo-text">
+                <div class="h3 promo-text-title about">
+                  Порой, чтобы открыть новые возможности, нужно посмотреть на привычное свежим взглядом. Оправиться
+                  вместе исследовать неизведанные маршруты, почувствовать дух приключений
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bottle-wrapper about">
+        <div class="row">
+          <div class="col-md-10 col-sm-7 col-xs-12">
+            <img src="./images/bottle.png" srcset="./images/bottle@2x.png 2x" alt="bottle">
+          </div>
+        </div>
+      </div>
+
+      <img src="./images/gold.png" alt="ticket" class="ticket mfp-link" data-href="./popups/popup-more.html">
+      <img src="./images/slogan.png" alt="slogan" class="screen-slogan">
+      <!-- <img src="./images/gold.png" alt="ticket" class="screen-ticket"> -->
+
+
+      <img src="./images/top-screen-bg.jpg" class="screen-promo-bg" alt="bg">
+
+      <img src="./images/alert.svg" alt="alert" class="screen-alert">
+      <img src="./images/alert-mobile.svg" alt="alert" class="screen-alert mobile">
+    </div>
+    <!-- main screen end -->
+
+
+    <!-- goals screen start -->
+    <div class="screen screen-goals">
+      <!-- <div class="bottle-wrapper about">
+        <div class="row">
+          <div class="col-md-10 col-sm-7 col-xs-12">
+            <img src="./images/bottles.png" srcset="./images/bottles@2x.png 2x" alt="bottle">
+          </div>
+        </div>
+      </div> -->
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-4 bottles">
+            <img src="./images/bottles.png" srcset="./images/bottles@2x.png 2x" alt="bottle">
+          </div>
+          <div class="col-md-8 flex valign-center ">
+            <div class="goals-text">
+              Узнавать друг друга, находить общее, плечом к плечу проходить вместе любые испытания. Создавать тысячи
+              поводов для новых встреч, увлекаться самыми захватывающими историями, наполнять общение искренностью и
+              эмоциями.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <img src="./images/alert.svg" alt="alert" class="screen-alert">
+      <img src="./images/alert-mobile.svg" alt="alert" class="screen-alert mobile">
+    </div>
+    <!-- goals screen end -->
+
+    <!-- motto screen start -->
+    <div class="screen screen-motto">
+      <div class="container">
+        <div class="row screen-motto-text">
+          <!-- <div class="col-md-7">
+            <img src="./images/medved.png" srcset="./images/medved@2x.png 2x" alt="bottle">
+          </div> -->
+          <div class="col-md-5 col-sm-6 col-xs-12 flex valign-center ">
+            <div class="motto-text">
+              Исследуй мир
+              и создавай новое
+              вместе с брендом
+              <span>«Белый Медведь»!</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen-motto-wrapper">
+        <div class="row">
+          <div class="col-md-7">
+            <img src="./images/medved.png" srcset="./images/medved@2x.png 2x" alt="bottle">
+          </div>
+        </div>
+      </div>
+
+      <img src="./images/alert.svg" alt="alert" class="screen-alert">
+      <img src="./images/alert-mobile.svg" alt="alert" class="screen-alert mobile">
+    </div>
+    <!-- motto screen end -->
+
+
+    <!-- slider screen start -->
+    <div class="screen screen-slider orange">
+      <div class="container">
+        <div class="slider">
+          <div class="slider-left">
+            <div class="slider-content first active">
+              <div class="h2 slider-content-title">
+                “БЕЛЫЙ МЕДВЕДЬ”
+                <span>ЗОЛОТОЕ</span>
+              </div>
+              <p>
+                Легкий питкий лагер с природным мягким вкусом,
+                тонкой хмелевой горчинкой и солодовым послевкусием.
+                Особая технология приготовления сохраняет аромат свежесобранного хмеля и придаёт пиву благородный
+                оттенок настоящего золота.
+              </p>
+              <div class="slider-content-description">
+                <div class="slider-content-description__wrapper">
+                  <div class="image">
+                    <img src="./images/kolos-1.png" alt="kolos">
+                  </div>
+                  <div class="param">
+                    <span>СОРТ:</span>
+                    <span>Светлый лагер</span>
+                  </div>
+                </div>
+                <div class="slider-content-description__wrapper">
+                  <div class="image">
+                    <img src="./images/kolos-2.png" alt="kolos">
+                  </div>
+                  <div class="param">
+                    <span>АЛКОГОЛЬ:</span>
+                    <span>5.0%</span>
+                  </div>
+                </div>
+                <div class="slider-content-description__wrapper">
+                  <div class="image">
+                    <img src="./images/kolos-3.png" alt="kolos">
+                  </div>
+                  <div class="param">
+                    <span>ПЛОТНОСТЬ:</span>
+                    <span>11,0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-content second">
+              <div class="h2 slider-content-title">
+                “БЕЛЫЙ МЕДВЕДЬ”
+                <span>СВЕТЛОЕ</span>
+              </div>
+              <p>
+                Флагман бренда «Белый Медведь». Классический
+                светлый лагер из натуральных, тщательно отобранных ингредиентов. Идеальное сочетание немецкого хмеля
+                и отборного солода придают пиву насыщенный бархатистый вкус, богатый аромат и характерную горчинку. 13
+                медалей международного конкурса
+                Monde Selection Quality Awards.
+              </p>
+              <div class="slider-content-description">
+                <div class="slider-content-description__wrapper">
+                  <div class="image">
+                    <img src="./images/kolos-1.png" alt="kolos">
+                  </div>
+                  <div class="param">
+                    <span>СОРТ:</span>
+                    <span>Светлый лагер</span>
+                  </div>
+                </div>
+                <div class="slider-content-description__wrapper">
+                  <div class="image">
+                    <img src="./images/kolos-2.png" alt="kolos">
+                  </div>
+                  <div class="param">
+                    <span>АЛКОГОЛЬ:</span>
+                    <span>5.0%</span>
+                  </div>
+                </div>
+                <div class="slider-content-description__wrapper">
+                  <div class="image">
+                    <img src="./images/kolos-3.png" alt="kolos">
+                  </div>
+                  <div class="param">
+                    <span>ПЛОТНОСТЬ:</span>
+                    <span>11,0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-content third">
+              <div class="h2 slider-content-title">
+                “БЕЛЫЙ МЕДВЕДЬ”
+                <span>ЖИВОЙ</span>
+              </div>
+              <p>
+                Пивной напиток с ярко выраженным насыщенным вкусом только что сваренного пива. Обладает легким хмелевым
+                ароматом, мягким и приятным вкусом с нотками хлеба
+                и сладковатым послевкусием. 6 медалей международного конкурса Monde Selection Quality Awards.
+              </p>
+              <div class="slider-content-description">
+                <div class="slider-content-description__wrapper">
+                  <div class="image">
+                    <img src="./images/kolos-1.png" alt="kolos">
+                  </div>
+                  <div class="param">
+                    <span>СОРТ:</span>
+                    <span>Нефильтрованное</span>
+                  </div>
+                </div>
+                <div class="slider-content-description__wrapper">
+                  <div class="image">
+                    <img src="./images/kolos-2.png" alt="kolos">
+                  </div>
+                  <div class="param">
+                    <span>АЛКОГОЛЬ:</span>
+                    <span>5.0%</span>
+                  </div>
+                </div>
+                <div class="slider-content-description__wrapper">
+                  <div class="image">
+                    <img src="./images/kolos-3.png" alt="kolos">
+                  </div>
+                  <div class="param">
+                    <span>ПЛОТНОСТЬ:</span>
+                    <span>11,0%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-navigation">
+              <button class="arrow-btn prew"></button>
+              <button class="arrow-btn next"></button>
+            </div>
+
+          </div>
+          <div class="slider-right">
+            <div class="slider-bgs">
+              <div class="slider-item-bg first yellow">
+              </div>
+              <div class="slider-item-bg second green">
+              </div>
+              <div class="slider-item-bg third orange">
+              </div>
+            </div>
+            <div class="slider-images">
+              <div class="slider-image first">
+                <img src="./images/BELYI MEDVED_ Gold_bytilka 1.png" alt="" class="first">
+              </div>
+              <div class="slider-image second">
+                <img src="./images/BELYI MEDVED_ Splash_v1b_bytilka 2.png" alt="" class="second">
+              </div>
+              <div class="slider-image third">
+                <img src="./images/BELYI MEDVED_ Gold_bytilka 3.png" alt="" class="third">
+              </div>
+            </div>
+          </div>
+        </div>
+        <img src="./images/alert.svg" alt="alert" class="screen-alert green">
+        <img src="./images/alert-mobile.svg" alt="alert" class="screen-alert green mobile">
+
+        <img src="./images/alert-orange.svg" alt="alert" class="screen-alert orange">
+        <img src="./images/alert-mobile-orange.svg" alt="alert" class="screen-alert orange mobile">
+
+        <img src="./images/alert-orange.svg" alt="alert" class="screen-alert brown">
+        <img src="./images/alert-mobile-orange.svg" alt="alert" class="screen-alert brown mobile">
+      </div>
+    </div>
+
+    <!-- slider screen End -->
+
+    <!-- <footer class="screen footer">
+      <div class="container">
+        <div class="flex">
+          <div class="footer-logo">
+            <img src="./images/logo-main.png" alt="logo">
+          </div>
+          <div class="footer-signature">
+            ©2023, ИООО «ЭфесТрэйд БиУай», УНП 190980621
+          </div>
+        </div>
+      </div>
+    </footer> -->
+    <footer class="footer screen screen-footer">
+      <div class="container">
+        <div class="flex">
+          <div class="footer-logo">
+            <img src="./images/footer-logo.png" alt="logo">
+          </div>
+          <div class="footer-signature">
+            <div class="copy">
+              ©2023, ИООО «ЭфесТрэйд БиУай», УНП 190980621
+            </div>
+            <a href="javascript:void(0)" class="mfp-link" data-href="./popups/popup-agree.html">
+              Согласие на обработку персональных данных
+            </a>
+            <a href="javascript:void(0)" class="mfp-link" data-href="./popups/popup-conditions.html">
+              Условия конкурса
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- second screen end -->
+  </div>
+
+  <!-- confirm block start -->
+  <div class="agree">
+    <div class="agree-flex">
+      <div class="agree-no__confirm hidden">
+        Извините, но сайт доступен только для совершеннолетних
+      </div>
+      <div class="agree-content">
+        <div class="agree-logo">
+          <img src="./images/Logo-big.png" alt="logo">
+        </div>
+        <div class="agree-wrapper">
+          <div class="agree-title">
+            Добро пожаловать на сайт Белый Медведь.<br>
+            Доступ разрешен только лицам старше 18 лет
+          </div>
+          <div class="agree-question">Вам уже есть 18 лет?
+          </div>
+          <div class="agree-buttons">
+            <button class="ui-btn agree-confirm-btn" data-answer="yes">Да</button>
+            <button class="ui-btn agree-confirm-btn" data-answer="no">Нет</button>
+          </div>
+        </div>
+      </div>
+      <div class="agree-cookie">
+        НАЖИМАЯ “ПОДТВЕРДИТЬ” ВЫ ДАЕТЕ СОГЛАСИЕ НА ИСПОЛЬЗОВАНИЕ ФАЙЛОВ COOKIE,
+        помогающих нам сделать сайт удобнее для вас
+      </div>
+    </div>
+
+    <img src="./images/Noise.png" class="agree-bg" alt="bg">
+  </div>
+  <!-- confirm block end -->
+
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MLTPHBD" height="0" width="0"
+      style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-form-styler@latest/dist/jquery.formstyler.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"
+    integrity="sha512-IsNh5E3eYy3tr/JiX2Yx4vsCujtkhwl7SLqgnwLNgf04Hrt9BT9SXlLlZlWx+OK4ndzAoALhsMNcCmkggjZB1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="./scripts/scripts.js"></script>
+</body>
+
+</html>

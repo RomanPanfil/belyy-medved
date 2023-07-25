@@ -108,24 +108,44 @@ const benefitsSwiper = new Swiper('.benefits-slider', {
 buildPreviews(benefitsSwiper);
 
 (function () {
-  if (!document.querySelector('.screen-promo-btn.benefits') || !document.querySelector('.screen.screen-about-contest')) return
+  if (!document.querySelector('.screen-promo-btn.benefits') || !document.querySelector('.screen.screen-main-contest')) return
 
   document.querySelectorAll('.screen-promo-btn.benefits').forEach((el) => {
-    el.addEventListener('click', (e) => {
+    el.addEventListener('click', (e) => {      
       e.preventDefault()
-      document.querySelector('.screen.screen-about-contest').scrollIntoView({behavior: "smooth"})
+      document.querySelector('.screen.screen-main-contest').scrollIntoView({behavior: "smooth"})
     })
   })
 
 }());
 
-(function () {
-  if (!document.querySelector('.contest-steps .ui-btn') || !document.querySelector('.screen-contest-form')) return
+// (function () {
+//   if (!document.querySelector('.contest-steps .ui-btn') || !document.querySelector('.screen-contest-form')) return
 
+//   document.querySelectorAll('.contest-steps .ui-btn').forEach((el) => {
+//     el.addEventListener('click', (e) => {
+//       e.preventDefault()
+//       document.querySelector('.screen-contest-form').scrollIntoView({behavior: "smooth"})
+//     })
+//   })
+// }());
+
+// скролл по клику на кнопку "принять участие" к форме конкурса
+(function () {
+  if (!document.querySelector('.contest-steps .ui-btn')) return
   document.querySelectorAll('.contest-steps .ui-btn').forEach((el) => {
     el.addEventListener('click', (e) => {
-      e.preventDefault()
-      document.querySelector('.screen-contest-form').scrollIntoView({behavior: "smooth"})
+      e.preventDefault();
+
+      if (window.location.pathname === '/contest') {
+        if (document.querySelector('.screen-contest-form')) {
+          document.querySelector('.screen-contest-form').scrollIntoView({
+            behavior: "smooth"
+          });
+        }
+      } else if (window.location.pathname === '/') {
+        window.location.href = '/contest?contest=1';
+      }
     })
   })
 }());
@@ -749,6 +769,26 @@ document.addEventListener('DOMContentLoaded', function() {
     }, 10)   
 
     urlParams.delete('more');
+    const newUrl = urlParams.toString() ? `${window.location.pathname}?${urlParams}` : window.location.pathname;
+    window.history.pushState({}, '', newUrl);
+  }
+});
+
+// скролл до формы при загрузке, если есть query-пареметр contest=1
+document.addEventListener('DOMContentLoaded', function() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const paramValue = urlParams.get('contest');
+
+  if (paramValue) {
+    if (!document.querySelector('.screen-contest-form')) return;
+
+    setTimeout(() => {
+      document.querySelector('.screen-contest-form').scrollIntoView({
+        behavior: "smooth"
+      });
+    }, 10)   
+
+    urlParams.delete('contest');
     const newUrl = urlParams.toString() ? `${window.location.pathname}?${urlParams}` : window.location.pathname;
     window.history.pushState({}, '', newUrl);
   }
