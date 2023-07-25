@@ -7156,15 +7156,18 @@ img {
 }
 .popup-presents .presents-card-image img {
   position: absolute;
-  width: 56px;
-  height: 56px;
-  top: -10px;
+  width: 32px;
+  height: 32px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 @media (max-width: 1680px) {
   .popup-presents .presents-card-image img {
-    width: 48px;
-    height: 48px;
-    top: -8px;
+    width: 26px;
+    height: 26px;
   }
 }
 .popup-presents .presents-card-info__title {
@@ -7393,7 +7396,7 @@ img {
 }
 .screen-slider .slider-navigation {
   position: relative;
-  z-index: 6;
+  z-index: 1;
 }
 @media (max-width: 1024px) {
   .screen-slider .slider-navigation {
@@ -7953,7 +7956,7 @@ img {
 }
 .screen-motto-wrapper {
   position: absolute;
-  left: 0;
+  right: 0;
   bottom: 0;
   height: 100%;
 }
@@ -7974,5 +7977,19 @@ img {
 }
 .screen-motto .motto-text span {
   font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+  .screen-header.about {
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+}
+@media (max-width: 768px) {
+  .screen-header.about {
+    background-color: transparent;
+  }
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */
