@@ -2306,6 +2306,37 @@ img {
   padding-bottom: 70px;
   min-height: 100vh;
 }
+.screen-promo.about {
+  background-image: url(../images/about-page-mask-bg.svg), url(../images/top-screen-bg.jpg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  .screen-promo.about .screen-slogan {
+    display: none;
+  }
+}
+@media (max-width: 1024px) {
+  .screen-promo.about {
+    min-height: 100vh;
+  }
+}
+@media (max-width: 959px) {
+  .screen-promo.about {
+    min-height: unset;
+  }
+}
+@media (max-width: 768px) {
+  .screen-promo.about {
+    padding-top: 30px;
+  }
+}
+@media (max-width: 599px) {
+  .screen-promo.about {
+    padding-top: 10px;
+  }
+}
 @media (max-width: 1366px) {
   .screen-promo {
     padding-top: 124px;
@@ -2398,7 +2429,6 @@ img {
 }
 @media (max-width: 1024px) {
   .screen-promo .bottle-wrapper.about img {
-    height: 66%;
     margin-left: 0;
   }
 }
@@ -2682,6 +2712,11 @@ img {
     width: 100%;
     padding-right: 15px;
     padding-top: 25px;
+  }
+}
+@media (max-width: 960px) {
+  .screen-alert.about {
+    margin-top: -81px;
   }
 }
 
@@ -3769,8 +3804,8 @@ img {
 }
 @media (max-width: 599px) {
   .screen-promo-left .promo-text-title.about {
-    font-size: 24px;
-    font-size: 1.5rem;
+    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 1.14;
   }
 }
@@ -7670,6 +7705,17 @@ img {
     left: 0;
   }
 }
+@media (max-width: 599px) {
+  .screen-slider .slider-right.about {
+    max-height: 90vw;
+    height: 90vw;
+  }
+}
+@media (max-width: 599px) {
+  .screen-slider .slider-right.about .slider-images {
+    margin-top: 20vw;
+  }
+}
 .screen-slider .slider-right img {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
@@ -7796,8 +7842,8 @@ img {
 }
 
 .screen-goals {
-  background: url(../images/goals-mask.svg), -o-radial-gradient(50% 29.3%, 36.82% 70.7%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
-  background: url(../images/goals-mask.svg), radial-gradient(36.82% 70.7% at 50% 29.3%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
+  background: -o-radial-gradient(50% 29.3%, 36.82% 70.7%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
+  background: radial-gradient(36.82% 70.7% at 50% 29.3%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
   position: relative;
   background-repeat: no-repeat;
   background-position: bottom left;
@@ -7830,6 +7876,26 @@ img {
   }
 }
 @media (max-width: 768px) {
+  .screen-goals .goals {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+.screen-goals .camping-wrapper {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+@media (max-width: 768px) {
+  .screen-goals .camping-wrapper {
+    position: static;
+  }
+}
+.screen-goals .camping-wrapper img {
+  width: 100%;
+}
+@media (max-width: 768px) {
   .screen-goals {
     max-height: unset;
     height: -webkit-max-content;
@@ -7837,27 +7903,17 @@ img {
     height: max-content;
     padding-bottom: 60px;
     background-size: cover;
+    padding-top: 70px;
   }
 }
 @media (max-width: 599px) {
   .screen-goals {
     padding-bottom: 10px;
+    padding-top: 60px;
   }
 }
-@media (max-width: 768px) {
-  .screen-goals .row .bottles {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-}
-@media (max-width: 768px) {
-  .screen-goals .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
+.screen-goals .text-wrapper {
+  margin-left: auto;
 }
 .screen-goals .goals-text {
   font-size: 56px;
@@ -7865,6 +7921,7 @@ img {
   font-weight: 400;
   line-height: 125%;
   text-transform: uppercase;
+  padding-left: 70px;
 }
 @media (max-width: 1680px) {
   .screen-goals .goals-text {
@@ -7896,12 +7953,13 @@ img {
     font-size: 38px;
     font-size: 2.375rem;
     line-height: 1.1;
+    padding-left: 0;
   }
 }
 @media (max-width: 599px) {
   .screen-goals .goals-text {
-    font-size: 28px;
-    font-size: 1.75rem;
+    font-size: 36px;
+    font-size: 2.25rem;
     line-height: 1.14;
   }
 }
@@ -7960,6 +8018,12 @@ img {
   bottom: 0;
   height: 100%;
 }
+@media (max-width: 599px) {
+  .screen-motto-wrapper {
+    position: relative;
+    margin-top: -50%;
+  }
+}
 .screen-motto-wrapper .row {
   height: 100%;
 }
@@ -7968,15 +8032,54 @@ img {
   width: auto;
   max-width: unset;
 }
+@media (max-width: 599px) {
+  .screen-motto-wrapper img.desktop {
+    display: none;
+  }
+}
+.screen-motto-wrapper img.mobile {
+  display: none;
+}
+@media (max-width: 599px) {
+  .screen-motto-wrapper img.mobile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100vw;
+  }
+}
 .screen-motto .motto-text {
   font-size: 64px;
   font-size: 4rem;
   font-weight: 400;
   line-height: 125%;
   text-transform: uppercase;
+  position: relative;
+  z-index: 2;
 }
 .screen-motto .motto-text span {
   font-weight: 700;
+}
+@media (max-width: 959px) {
+  .screen-motto .motto-text {
+    font-size: 36px;
+    font-size: 2.25rem;
+    max-width: 60%;
+  }
+}
+@media (max-width: 769px) {
+  .screen-motto .motto-text {
+    font-size: 42px;
+    font-size: 2.625rem;
+    max-width: 50%;
+  }
+}
+@media (max-width: 599px) {
+  .screen-motto .motto-text {
+    font-size: 36px;
+    font-size: 2.25rem;
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -7985,11 +8088,9 @@ img {
     height: -moz-max-content;
     height: max-content;
     background-color: rgba(0, 0, 0, 0.1);
-  }
-}
-@media (max-width: 768px) {
-  .screen-header.about {
-    background-color: transparent;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), color-stop(47.92%, rgba(0, 0, 0, 0.272)), to(rgba(0, 0, 0, 0)));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.272) 47.92%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.272) 47.92%, rgba(0, 0, 0, 0) 100%);
   }
 }
 /*# sourceMappingURL=sourcemaps/style.css.map */
