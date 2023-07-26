@@ -7964,12 +7964,11 @@ img {
 }
 
 .screen-goals {
-  background: -o-radial-gradient(50% 29.3%, 36.82% 70.7%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
-  background: radial-gradient(36.82% 70.7% at 50% 29.3%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
   position: relative;
+  background-image: url(../images/top-screen-goals-bg.jpg);
   background-repeat: no-repeat;
   background-position: bottom left;
-  background-size: contain;
+  background-size: cover;
   padding-top: 50px;
   padding-bottom: 50px;
   display: -webkit-box;
@@ -8105,12 +8104,11 @@ img {
 }
 
 .screen-motto {
-  background: -o-radial-gradient(50% 29.3%, 36.82% 70.7%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
-  background: radial-gradient(36.82% 70.7% at 50% 29.3%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
+  background-image: url(../images/top-screen-motto-bg.jpg);
   position: relative;
   background-repeat: no-repeat;
   background-position: bottom left;
-  background-size: contain;
+  background-size: cover;
   padding-top: 50px;
   padding-bottom: 50px;
   display: -webkit-box;

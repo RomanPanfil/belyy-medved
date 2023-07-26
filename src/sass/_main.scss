@@ -4939,13 +4939,13 @@
 
 
 .screen-goals {
-  background: radial-gradient(36.82% 70.7% at 50% 29.3%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
+  // background: radial-gradient(36.82% 70.7% at 50% 29.3%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
   position: relative;
   // height: 100vh;
-  // background-image: url(../images/form-mask-bg.svg), url(../images/form-contest-bg.jpg);
+  background-image: url(../images/top-screen-goals-bg.jpg);
   background-repeat: no-repeat;
   background-position: bottom left;
-  background-size: contain;  
+  background-size: cover;  
   padding-top: 50px;
   padding-bottom: 50px; 
   display: flex;
@@ -5044,11 +5044,12 @@
 }
 
 .screen-motto {
-  background: radial-gradient(36.82% 70.7% at 50% 29.3%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
+  // background: radial-gradient(36.82% 70.7% at 50% 29.3%, rgba(255, 248, 217, 0.07) 0%, rgba(0, 0, 0, 0) 100%), #23372B;
+  background-image: url(../images/top-screen-motto-bg.jpg);
   position: relative;
   background-repeat: no-repeat;
   background-position: bottom left;
-  background-size: contain;  
+  background-size: cover;  
   padding-top: 50px;
   padding-bottom: 50px; 
   display: flex;
