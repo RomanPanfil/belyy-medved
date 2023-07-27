@@ -5136,6 +5136,24 @@
 }
 
 .screen-header.about {
+  .header-flex {
+    height: 14vh;
+    @media (max-width: 1024px) {
+      height: unset;
+    }
+  }
+  .header-logo {
+    display: none;
+    @media (max-width: 1024px) {
+      display: block;
+    }
+  }
+  .header-nav {
+    margin-left: 0;
+    @media (max-width: 1024px) {
+      margin-left: 65px;
+    }
+  }
   @media (max-width: 1024px) {
     height: max-content;
     background-color: rgba(0, 0, 0, 0.1);
