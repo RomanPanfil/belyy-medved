@@ -6961,6 +6961,14 @@ img {
   color: #fff;
   font-size: 0;
 }
+@media (max-width: 768px) {
+  .mfp-close-btn-in .mfp-close {
+    top: 8px;
+    right: 8px;
+    width: 38px;
+    height: 38px;
+  }
+}
 .mfp-close-btn-in .mfp-close::after {
   position: absolute;
   width: 24px;
