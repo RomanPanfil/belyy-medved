@@ -6501,6 +6501,14 @@ img {
       -ms-transform: translateX(-50%);
           transform: translateX(-50%);
 }
+@media (max-width: 960px) {
+  .screen-plans-cards .screen-plans-pagination__create {
+    left: 60%;
+    -webkit-transform: translateX(-60%);
+        -ms-transform: translateX(-60%);
+            transform: translateX(-60%);
+  }
+}
 @media (max-width: 768px) {
   .screen-plans-cards .screen-plans-pagination__create {
     position: unset;
@@ -7200,7 +7208,6 @@ img {
 }
 
 .mfp-container {
-  height: 100vh;
   overflow: auto;
 }
 @media (max-width: 1680px) {

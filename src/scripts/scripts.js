@@ -793,3 +793,117 @@ document.addEventListener('DOMContentLoaded', function() {
     window.history.pushState({}, '', newUrl);
   }
 });
+
+// пагиниция экрана карточек конкурса
+(function() {
+  if(!document.querySelector('.pagination-pages') || !document.querySelector('.pagination-btn') || !document.querySelector('.pagination__arrows .next') || !document.querySelector('.pagination__arrows .prew')) return
+
+
+  const pagination = document.querySelector('.pagination-pages');
+  const totalPages = pagination.querySelectorAll('.pagination-btn').length;
+
+  let currentPage = 1; 
+  let isFirstLoad = true;
+
+  pagination.addEventListener('click', evt => {
+    if (evt.target.classList.contains('pagination-btn')) {
+      currentPage = +evt.target.textContent;
+      updatePagination();
+    }
+  });
+
+  const nextBtn = document.querySelector('.pagination__arrows .next');
+  nextBtn.addEventListener('click', () => {
+    if (currentPage < totalPages) {
+      currentPage++;
+      updatePagination();
+    }
+  });
+
+  const prevBtn = document.querySelector('.pagination__arrows .prew');
+  prevBtn.addEventListener('click', () => {
+    if (currentPage > 1) {
+      currentPage--;
+      updatePagination();
+    }  
+  });
+
+  function updatePagination() {
+
+    pagination.innerHTML = '';  
+
+    let pagesToShow;
+
+    if (totalPages <= 2) {
+      pagesToShow = [...Array(totalPages).keys()].map(i => i + 1);
+    } else if (currentPage <= 2) {
+      pagesToShow = [1, 2, totalPages];
+    } else if (currentPage >= totalPages - 1) {
+      pagesToShow = [1, totalPages - 1, totalPages];
+    } else {
+      pagesToShow = [currentPage - 1, currentPage, totalPages];
+    }
+
+    if (!pagesToShow.includes(1)) {
+      pagesToShow.unshift(1);
+    }
+    
+    let prevPage = 0;
+
+    for (let page of pagesToShow) {
+      
+      if (page - prevPage !== 1 && totalPages > 2) {
+        
+        const dots = document.createElement('span');
+        dots.classList.add('pagination-dots');
+        dots.textContent = '...';
+        pagination.appendChild(dots); 
+      }
+
+      const btn = document.createElement('a');
+      btn.textContent = page;
+      btn.classList.add('pagination-btn');
+      
+      if (page === currentPage) {
+        btn.classList.add('active');
+      }
+      
+      prevPage = page;
+      
+      pagination.appendChild(btn);
+    }
+
+    if (totalPages > 2 && pagesToShow[pagesToShow.length - 1] < totalPages) {
+    
+      const dots = document.createElement('span');
+      dots.classList.add('pagination-dots');
+      dots.textContent = '...';
+      pagination.appendChild(dots);
+    }
+
+    const lastBtn = document.createElement('a');
+    lastBtn.textContent = totalPages;
+    lastBtn.classList.add('pagination-btn');
+    // pagination.appendChild(lastBtn);
+
+    isFirstLoad = false;  
+
+    updateButtons();
+  }
+
+  function updateButtons() {
+    nextBtn.classList.remove('disabled');
+    prevBtn.classList.remove('disabled');
+
+    if (currentPage === 1) {
+      prevBtn.classList.add('disabled');
+    }
+
+    if (currentPage === totalPages) {
+      nextBtn.classList.add('disabled');
+    }  
+  }
+
+  updatePagination();
+
+})();
