@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "sass": "1.32.13",
-    "sass-loader": "10.4.1"
+    "sass-loader": "10.4.1",
+    "zopflipng-bin": "^7.1.0"
   }
 }
