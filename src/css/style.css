@@ -773,7 +773,7 @@ img {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
-    z-index: 10;
+    z-index: 2;
   }
 }
 
@@ -4000,6 +4000,26 @@ img {
   bottom: 0;
   height: 155px;
 }
+@media (max-width: 768px) {
+  .screen-header::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+    background-color: rgba(0, 0, 0, 0.1);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.4)), color-stop(47.92%, rgba(0, 0, 0, 0.272)), to(rgba(0, 0, 0, 0)));
+    background: -o-linear-gradient(top, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.272) 47.92%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.272) 47.92%, rgba(0, 0, 0, 0) 100%);
+    z-index: 9;
+  }
+}
+@media (max-width: 599px) {
+  .screen-header::before {
+    height: 120px;
+  }
+}
 .screen-header .header-logo a {
   display: inline-block;
 }
@@ -4118,6 +4138,18 @@ img {
     display: -ms-flexbox;
     display: flex;
     z-index: 10;
+    position: fixed;
+    right: 35px;
+  }
+}
+@media (max-width: 599px) {
+  .screen-header .header-nav .burger-btn {
+    right: 30px;
+  }
+}
+@media (max-width: 420px) {
+  .screen-header .header-nav .burger-btn {
+    right: 20px;
   }
 }
 .screen-header .header-nav .burger-btn span {
@@ -4191,7 +4223,7 @@ img {
 }
 @media (max-width: 768px) {
   .screen-header .header-nav ul {
-    position: absolute;
+    position: fixed;
     padding-top: 200px;
     background-color: #23372B;
     -webkit-box-orient: vertical;
@@ -4206,7 +4238,7 @@ img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    z-index: 5;
+    z-index: 9;
     height: 100vh;
     -webkit-transform: translateY(-100%);
         -ms-transform: translateY(-100%);
@@ -4759,6 +4791,7 @@ img {
   border-radius: 10px;
   border: 1px solid #607367;
   margin-left: 20px;
+  z-index: 2;
 }
 @media (max-width: 1366px) {
   .screen-plans .jq-selectbox.jqselect {
@@ -8856,7 +8889,6 @@ img {
   padding-right: 28px;
   scrollbar-color: #5E6738 #D9D9D9;
   scrollbar-width: thin;
-  -webkit-overflow-scrolling: touch;
 }
 .screen-winners-item__text::-webkit-scrollbar {
   width: 6px;
