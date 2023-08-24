@@ -2725,6 +2725,11 @@ img {
     padding-top: 25px;
   }
 }
+@media (max-width: 599px) {
+  .screen-alert.mobile {
+    bottom: 8px;
+  }
+}
 @media (max-width: 960px) {
   .screen-alert.about {
     margin-top: -81px;
@@ -5322,6 +5327,12 @@ img {
             flex-direction: column;
   }
 }
+@media (max-width: 599px) {
+  .screen-about-contest {
+    padding-top: 126px;
+    min-height: calc(var(--vh, 1vh) * 100);
+  }
+}
 .screen-about-contest .contest-content {
   max-width: 700px;
 }
@@ -5353,12 +5364,14 @@ img {
   font-weight: 700;
   text-transform: uppercase;
   margin-bottom: 20px;
+  max-width: 670px;
 }
 @media (max-width: 1680px) {
   .screen-about-contest__title {
     font-size: 42px;
     font-size: 2.625rem;
     margin-bottom: 16px;
+    max-width: 550px;
   }
 }
 @media (max-width: 1366px) {
@@ -5366,6 +5379,7 @@ img {
     font-size: 36px;
     font-size: 2.25rem;
     margin-bottom: 14px;
+    max-width: 460px;
   }
 }
 @media (max-width: 1280px) {
@@ -5373,6 +5387,7 @@ img {
     font-size: 32px;
     font-size: 2rem;
     margin-bottom: 14px;
+    max-width: 420px;
   }
 }
 @media (max-width: 1280px) and (max-height: 640px) {
@@ -5380,6 +5395,7 @@ img {
     font-size: 30px;
     font-size: 1.875rem;
     margin-bottom: 12px;
+    max-width: 400px;
   }
 }
 @media (max-width: 1140px) {
@@ -5387,6 +5403,11 @@ img {
     font-size: 32px;
     font-size: 2rem;
     margin-bottom: 10px;
+    max-width: 400px;
+  }
+}
+@media (max-width: 1024px) {
+  .screen-about-contest__title {
     max-width: 542px;
   }
 }
@@ -5394,6 +5415,12 @@ img {
   .screen-about-contest__title {
     font-size: 50px;
     font-size: 3.125rem;
+  }
+}
+@media (max-width: 599px) {
+  .screen-about-contest__title {
+    line-height: 1;
+    margin-bottom: 5px;
   }
 }
 @media (max-width: 480px) {
@@ -5449,6 +5476,13 @@ img {
   .screen-about-contest__period {
     font-size: 24px;
     font-size: 1.5rem;
+  }
+}
+@media (max-width: 599px) {
+  .screen-about-contest__period {
+    font-size: 20px;
+    font-size: 1.25rem;
+    margin-bottom: 5px;
   }
 }
 .screen-about-contest__text {
@@ -5513,6 +5547,11 @@ img {
     max-width: 100%;
   }
 }
+@media (max-width: 599px) {
+  .screen-about-contest__text {
+    margin-bottom: 20px;
+  }
+}
 .screen-about-contest__text p {
   margin-bottom: 32px;
 }
@@ -5534,6 +5573,12 @@ img {
 @media (max-width: 1140px) {
   .screen-about-contest__text p {
     margin-bottom: 12px;
+  }
+}
+@media (max-width: 599px) {
+  .screen-about-contest__text p {
+    line-height: 1.05;
+    margin-bottom: 6px;
   }
 }
 .screen-about-contest__cards {
@@ -5572,6 +5617,11 @@ img {
 .screen-about-contest__cards .row {
   margin-left: -10px;
   margin-right: -10px;
+}
+@media (max-width: 599px) {
+  .screen-about-contest__cards .row > div:nth-child(3) {
+    display: none;
+  }
 }
 .screen-about-contest__cards [class*=col-] {
   padding-left: 10px;
@@ -5618,6 +5668,11 @@ img {
     gap: 15px;
   }
 }
+@media (max-width: 599px) {
+  .screen-about-contest__cards .row {
+    gap: 12px;
+  }
+}
 .screen-about-contest__cards .card-item {
   max-width: 326px;
   height: 100%;
@@ -5647,6 +5702,12 @@ img {
   .screen-about-contest__cards .card-item {
     max-width: 100%;
     padding: 15px;
+  }
+}
+@media (max-width: 599px) {
+  .screen-about-contest__cards .card-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
   }
 }
 .screen-about-contest__cards .card-item-title {
@@ -5691,6 +5752,11 @@ img {
     font-size: 1.25rem;
   }
 }
+@media (max-width: 599px) {
+  .screen-about-contest__cards .card-item-title {
+    line-height: 1.1;
+  }
+}
 .screen-about-contest__cards .card-item-text {
   font-size: 16px;
   font-size: 1rem;
@@ -5729,6 +5795,11 @@ img {
     font-size: 0.875rem;
   }
 }
+@media (max-width: 599px) {
+  .screen-about-contest__cards .card-item-text {
+    line-height: 1.1;
+  }
+}
 .screen-about-contest__cards .card-item-link {
   color: #C74403;
   font-family: "Inter";
@@ -5760,6 +5831,7 @@ img {
   .screen-about-contest__cards .card-item-link {
     font-size: 12px;
     font-size: 0.75rem;
+    display: none;
   }
 }
 .screen-about-contest__cards .card-item-images {
@@ -5768,6 +5840,11 @@ img {
   display: flex;
   gap: 10px;
   margin-top: 10px;
+}
+@media (max-width: 599px) {
+  .screen-about-contest__cards .card-item-images {
+    margin-top: 6px;
+  }
 }
 .screen-about-contest__cards .card-item-images__image {
   position: relative;
@@ -5971,17 +6048,18 @@ img {
 @media (max-width: 1280px) {
   .screen-about-contest .contest-steps {
     top: 0px;
+    left: 52%;
   }
 }
 @media (max-width: 1280px) and (max-height: 640px) {
   .screen-about-contest .contest-steps {
-    left: 53%;
+    left: 55%;
     top: -15px;
   }
 }
 @media (max-width: 1140px) {
   .screen-about-contest .contest-steps {
-    left: 46%;
+    left: 50%;
   }
 }
 @media (max-width: 1024px) {
@@ -5997,35 +6075,35 @@ img {
 }
 @media (max-width: 599px) {
   .screen-about-contest .contest-steps {
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 12px;
+    padding-bottom: 6px;
     max-width: 80vw;
-    margin-left: auto;
-    margin-right: auto;
+    width: 100%;
+    max-width: 100%;
     padding-right: 0;
   }
 }
 .screen-about-contest .contest-steps img {
-  max-height: 535px;
+  max-height: 480px;
 }
 @media (max-width: 1680px) {
   .screen-about-contest .contest-steps img {
-    max-height: 460px;
+    max-height: 430px;
   }
 }
 @media (max-width: 1280px) {
   .screen-about-contest .contest-steps img {
-    max-height: 380px;
+    max-height: 320px;
   }
 }
 @media (max-width: 1280px) and (max-height: 640px) {
   .screen-about-contest .contest-steps img {
-    max-height: 340px;
+    max-height: 300px;
   }
 }
 @media (max-width: 1140px) {
   .screen-about-contest .contest-steps img {
-    max-height: 320px;
+    max-height: 270px;
   }
 }
 @media (max-width: 1024px) {
@@ -6037,6 +6115,11 @@ img {
   .screen-about-contest .contest-steps img {
     max-width: 80vw;
     max-height: 330px;
+  }
+}
+@media (max-width: 599px) {
+  .screen-about-contest .contest-steps img {
+    display: none;
   }
 }
 .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
@@ -6066,7 +6149,7 @@ img {
   .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
     right: unset;
     bottom: -44px;
-    left: 358px;
+    left: 300px;
   }
 }
 @media (max-width: 1024px) {
@@ -6085,11 +6168,19 @@ img {
 }
 @media (max-width: 599px) {
   .screen-about-contest .contest-steps button, .screen-about-contest .contest-steps a {
+    font-size: 20px;
+    font-size: 1.25rem;
+    height: 50px;
+    line-height: 50px;
     width: 100%;
     display: block;
     position: unset;
     margin-left: auto;
     margin-right: auto;
+  }
+  .screen-about-contest .contest-steps button svg, .screen-about-contest .contest-steps a svg {
+    width: 30px;
+    height: 30px;
   }
 }
 .screen-about-contest .ticket {

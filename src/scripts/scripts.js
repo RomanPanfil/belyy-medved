@@ -134,7 +134,7 @@ buildPreviews(benefitsSwiper);
 (function () {
   if (!document.querySelector('.contest-steps .ui-btn')) return
   document.querySelectorAll('.contest-steps .ui-btn').forEach((el) => {
-    el.addEventListener('click', (e) => {
+    el.addEventListener('click', (e) => {    
       e.preventDefault();
 
       if (window.location.pathname === '/contest') {
