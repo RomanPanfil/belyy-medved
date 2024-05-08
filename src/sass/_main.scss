@@ -4729,6 +4729,10 @@
     }
 
     &-item-bg {
+
+      &.hidden {
+        opacity: 0;
+      }
       &:nth-child(1) {
         border-radius: 0px 0px 80px 80px;
         background: #FFF8D9;

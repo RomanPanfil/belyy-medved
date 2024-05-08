@@ -522,10 +522,11 @@ $(document).ready(function () {
 // отображение кол-ва карточек в зависимости от разрешения
 
 (function() {
-  if(!document.querySelector('.screen-plans-cards') || !document.querySelector('.screen-plans-item')) return
+  if(!document.querySelector('.screen-plans-cards') || !document.querySelector('.screen-plans-cards__wrapper')) return
   function updateScreenPlansItems() {
     const screenPlansCards = document.querySelector('.screen-plans-cards');
-    const screenPlansItems = screenPlansCards.querySelectorAll('.screen-plans-item');
+    const screenPlansItems = screenPlansCards.querySelectorAll('.screen-plans-cards__wrapper');
+    console.log(screenPlansItems);
     if (window.innerWidth < 768) {
       if (screenPlansItems.length > 4) {
         for (let i = 4; i < screenPlansItems.length; i++) {
@@ -586,6 +587,174 @@ $(document).ready(function () {
 // slider
 
 
+// (function() {
+//   if(!document.querySelector('.screen.screen-slider')) return
+
+//   let state = 1;
+
+//   const prew = document.querySelector('.prew');
+//   const next = document.querySelector('.next');
+
+//   next.addEventListener('click', nextSlider);
+//   prew.addEventListener('click', prewSlider);
+
+//   function nextSlider() {
+//     if (state < 3) {
+//       state++
+//     } else {
+//       state = 1
+//     }
+
+//     // next.classList.remove('disabled')
+//     // prew.classList.remove('disabled')
+
+//     changeView()  
+//   }
+
+//   function prewSlider() {
+//     if (state > 1) {
+//       state--
+//     } else {
+//       state = 3
+//     }
+
+//     // next.classList.remove('disabled')
+//     // prew.classList.remove('disabled')
+
+//     changeView()  
+//   }
+
+
+//   function changeView() {
+//     if (state === 1) {
+//       document.querySelector('.slider-images .slider-image:nth-child(3)').classList.remove('second', 'first')
+//       document.querySelector('.slider-images .slider-image:nth-child(3)').classList.add('third')
+  
+//       document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('first', 'third')
+//       document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('second')
+  
+//       document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('third', 'second')
+//       document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('first')
+  
+  
+//       document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow', 'orange', 'brown')
+//       document.querySelector('.slider-right .slider-item-bg.second').classList.add('green')
+//       document.querySelector('.slider-right .slider-item-bg.third').classList.remove('yellow', 'brown', 'green')
+//       document.querySelector('.slider-right .slider-item-bg.third').classList.add('orange')
+  
+  
+//       document.querySelector('.screen-slider').classList.remove('brown', 'green')
+//       document.querySelector('.screen-slider').classList.add('orange')
+  
+  
+//       document.querySelectorAll('.slider-content').forEach((el) => {
+//         el.classList.remove('active')
+//       })
+//       document.querySelector('.slider-content.first').classList.add('active')
+  
+  
+//       // prew.classList.add('disabled')
+//     }
+
+//     if (state === 2) {
+//       document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('second', 'third')
+//       document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('first')
+  
+//       document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('first', 'second')
+//       document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('third')
+  
+//       document.querySelector('.slider-images .slider-image:nth-child(3)').classList.remove('third', 'first')
+//       document.querySelector('.slider-images .slider-image:nth-child(3)').classList.add('second')
+  
+  
+//       document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow', 'brown', 'green')
+//       document.querySelector('.slider-right .slider-item-bg.second').classList.add('orange')
+//       document.querySelector('.slider-right .slider-item-bg.third').classList.remove('yellow', 'orange', 'green')
+//       document.querySelector('.slider-right .slider-item-bg.third').classList.add('brown')
+  
+  
+//       document.querySelector('.screen-slider').classList.remove('orange', 'brown')
+//       document.querySelector('.screen-slider').classList.add('green')
+  
+  
+//       document.querySelectorAll('.slider-content').forEach((el) => {
+//         el.classList.remove('active')
+//       })
+//       document.querySelector('.slider-content.second').classList.add('active')
+//     }
+
+//     if (state === 3) {
+//       document.querySelector('.slider-images .slider-image:nth-child(3)').classList.remove('second', 'third')
+//       document.querySelector('.slider-images .slider-image:nth-child(3)').classList.add('first')
+  
+//       document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('first', 'second')
+//       document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('third')
+  
+//       document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('third', 'first')
+//       document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('second')
+  
+  
+//       document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow', 'orange', 'green')
+//       document.querySelector('.slider-right .slider-item-bg.second').classList.add('brown')
+//       document.querySelector('.slider-right .slider-item-bg.third').classList.remove('yellow', 'orange', 'brown')
+//       document.querySelector('.slider-right .slider-item-bg.third').classList.add('green')
+  
+  
+//       document.querySelector('.screen-slider').classList.remove('orange', 'green')
+//       document.querySelector('.screen-slider').classList.add('brown')
+  
+  
+//       document.querySelectorAll('.slider-content').forEach((el) => {
+//         el.classList.remove('active')
+//       })
+//       document.querySelector('.slider-content.third').classList.add('active')
+  
+//       // next.classList.add('disabled')
+//     }
+//   }  
+
+//   // свайп слайдера
+//   let slider = document.querySelector('.slider-right');
+//   let isDragging = false;
+//   let startX = null;
+  
+//   function handleDragStart(event) {
+//     isDragging = true;
+//     startX = event.clientX || event.touches[0].clientX;
+//   }
+  
+//   function handleDragMove(event) {
+//     if (!isDragging || !startX) return;
+  
+//     let diffX = (event.clientX || event.touches[0].clientX) - startX;
+  
+//     if (diffX > 50) {
+//       // swipe right   
+//       prewSlider();
+//       startX = null;
+//       isDragging = false;
+//     } else if (diffX < -50) {
+//       // swipe left     
+//       nextSlider();
+//       startX = null;
+//       isDragging = false;
+//     }
+//   }
+  
+//   function handleDragEnd(event) {
+//     isDragging = false;
+//   }
+  
+//   slider.addEventListener('mousedown', handleDragStart);
+//   slider.addEventListener('mousemove', handleDragMove);
+//   slider.addEventListener('mouseup', handleDragEnd);
+//   slider.addEventListener('touchstart', handleDragStart);
+//   slider.addEventListener('touchmove', handleDragMove);
+//   slider.addEventListener('touchend', handleDragEnd);
+
+// })();
+
+// для слайдера с двумя изображениями
 (function() {
   if(!document.querySelector('.screen.screen-slider')) return
 
@@ -598,119 +767,66 @@ $(document).ready(function () {
   prew.addEventListener('click', prewSlider);
 
   function nextSlider() {
-    if (state < 3) {
-      state++
+    if (state === 1) {
+      state = 2;
     } else {
-      state = 1
+      state = 1;
     }
-
-    // next.classList.remove('disabled')
-    // prew.classList.remove('disabled')
-
-    changeView()  
+  
+    changeView();
   }
-
+  
   function prewSlider() {
-    if (state > 1) {
-      state--
+    if (state === 1) {
+      state = 2;
     } else {
-      state = 3
+      state = 1;
     }
-
-    // next.classList.remove('disabled')
-    // prew.classList.remove('disabled')
-
-    changeView()  
+  
+    changeView();
   }
 
 
   function changeView() {
-    if (state === 1) {
-      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.remove('second', 'first')
-      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.add('third')
+    if (state === 1) {     
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('first');
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('second');
   
-      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('first', 'third')
-      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('second')
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('second');
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('first');
   
-      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('third', 'second')
-      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('first')
+      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('orange');
+      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow');
+      document.querySelector('.slider-right .slider-item-bg.second').classList.add('green');
   
-  
-      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow', 'orange', 'brown')
-      document.querySelector('.slider-right .slider-item-bg.second').classList.add('green')
-      document.querySelector('.slider-right .slider-item-bg.third').classList.remove('yellow', 'brown', 'green')
-      document.querySelector('.slider-right .slider-item-bg.third').classList.add('orange')
-  
-  
-      document.querySelector('.screen-slider').classList.remove('brown', 'green')
-      document.querySelector('.screen-slider').classList.add('orange')
-  
+      document.querySelector('.screen-slider').classList.remove('green');
+      document.querySelector('.screen-slider').classList.add('orange');
   
       document.querySelectorAll('.slider-content').forEach((el) => {
-        el.classList.remove('active')
-      })
-      document.querySelector('.slider-content.first').classList.add('active')
-  
-  
-      // prew.classList.add('disabled')
+        el.classList.remove('active');
+      });
+      document.querySelector('.slider-content.first').classList.add('active');
     }
-
+  
     if (state === 2) {
-      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('second', 'third')
-      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('first')
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('first');
+      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('second');
   
-      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('first', 'second')
-      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('third')
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('second');
+      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('first');
   
-      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.remove('third', 'first')
-      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.add('second')
+      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow');
+      document.querySelector('.slider-right .slider-item-bg.second').classList.add('orange');
   
-  
-      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow', 'brown', 'green')
-      document.querySelector('.slider-right .slider-item-bg.second').classList.add('orange')
-      document.querySelector('.slider-right .slider-item-bg.third').classList.remove('yellow', 'orange', 'green')
-      document.querySelector('.slider-right .slider-item-bg.third').classList.add('brown')
-  
-  
-      document.querySelector('.screen-slider').classList.remove('orange', 'brown')
-      document.querySelector('.screen-slider').classList.add('green')
-  
+      document.querySelector('.screen-slider').classList.remove('orange');
+      document.querySelector('.screen-slider').classList.add('green');
   
       document.querySelectorAll('.slider-content').forEach((el) => {
-        el.classList.remove('active')
-      })
-      document.querySelector('.slider-content.second').classList.add('active')
+        el.classList.remove('active');
+      });
+      document.querySelector('.slider-content.second').classList.add('active');
     }
-
-    if (state === 3) {
-      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.remove('second', 'third')
-      document.querySelector('.slider-images .slider-image:nth-child(3)').classList.add('first')
-  
-      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.remove('first', 'second')
-      document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('third')
-  
-      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.remove('third', 'first')
-      document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('second')
-  
-  
-      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow', 'orange', 'green')
-      document.querySelector('.slider-right .slider-item-bg.second').classList.add('brown')
-      document.querySelector('.slider-right .slider-item-bg.third').classList.remove('yellow', 'orange', 'brown')
-      document.querySelector('.slider-right .slider-item-bg.third').classList.add('green')
-  
-  
-      document.querySelector('.screen-slider').classList.remove('orange', 'green')
-      document.querySelector('.screen-slider').classList.add('brown')
-  
-  
-      document.querySelectorAll('.slider-content').forEach((el) => {
-        el.classList.remove('active')
-      })
-      document.querySelector('.slider-content.third').classList.add('active')
-  
-      // next.classList.add('disabled')
-    }
-  }  
+  } 
 
   // свайп слайдера
   let slider = document.querySelector('.slider-right');

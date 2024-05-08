@@ -7739,6 +7739,9 @@ img {
     height: 48px;
   }
 }
+.screen-slider .slider-item-bg.hidden {
+  opacity: 0;
+}
 .screen-slider .slider-item-bg:nth-child(1) {
   border-radius: 0px 0px 80px 80px;
   background: #FFF8D9;
