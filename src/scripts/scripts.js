@@ -796,7 +796,7 @@ $(document).ready(function () {
       document.querySelector('.slider-images .slider-image:nth-child(1)').classList.add('first');
   
       document.querySelector('.slider-right .slider-item-bg.second').classList.remove('orange');
-      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow');
+      document.querySelector('.slider-right .slider-item-bg.second').classList.remove('brown');
       document.querySelector('.slider-right .slider-item-bg.second').classList.add('green');
   
       document.querySelector('.screen-slider').classList.remove('green');
@@ -816,7 +816,7 @@ $(document).ready(function () {
       document.querySelector('.slider-images .slider-image:nth-child(2)').classList.add('first');
   
       document.querySelector('.slider-right .slider-item-bg.second').classList.remove('yellow');
-      document.querySelector('.slider-right .slider-item-bg.second').classList.add('orange');
+      document.querySelector('.slider-right .slider-item-bg.second').classList.add('brown');
   
       document.querySelector('.screen-slider').classList.remove('orange');
       document.querySelector('.screen-slider').classList.add('green');
